@@ -1,0 +1,30 @@
+﻿gosling.Datum
+=============
+
+.. currentmodule:: gosling
+
+.. autoclass:: Datum
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Datum.__init__
+      ~Datum.copy
+      ~Datum.from_dict
+      ~Datum.from_json
+      ~Datum.resolve_references
+      ~Datum.to_dict
+      ~Datum.to_json
+      ~Datum.validate
+      ~Datum.validate_property
+   
+   
+
+   
+   
+   

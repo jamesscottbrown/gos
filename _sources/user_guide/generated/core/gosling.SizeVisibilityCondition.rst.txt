@@ -1,0 +1,30 @@
+﻿gosling.SizeVisibilityCondition
+===============================
+
+.. currentmodule:: gosling
+
+.. autoclass:: SizeVisibilityCondition
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SizeVisibilityCondition.__init__
+      ~SizeVisibilityCondition.copy
+      ~SizeVisibilityCondition.from_dict
+      ~SizeVisibilityCondition.from_json
+      ~SizeVisibilityCondition.resolve_references
+      ~SizeVisibilityCondition.to_dict
+      ~SizeVisibilityCondition.to_json
+      ~SizeVisibilityCondition.validate
+      ~SizeVisibilityCondition.validate_property
+   
+   
+
+   
+   
+   

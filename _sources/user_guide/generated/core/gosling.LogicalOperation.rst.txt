@@ -1,0 +1,30 @@
+﻿gosling.LogicalOperation
+========================
+
+.. currentmodule:: gosling
+
+.. autoclass:: LogicalOperation
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LogicalOperation.__init__
+      ~LogicalOperation.copy
+      ~LogicalOperation.from_dict
+      ~LogicalOperation.from_json
+      ~LogicalOperation.resolve_references
+      ~LogicalOperation.to_dict
+      ~LogicalOperation.to_json
+      ~LogicalOperation.validate
+      ~LogicalOperation.validate_property
+   
+   
+
+   
+   
+   

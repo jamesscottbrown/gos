@@ -1,0 +1,6 @@
+﻿gosling.serial
+==============
+
+.. currentmodule:: gosling
+
+.. autofunction:: serial

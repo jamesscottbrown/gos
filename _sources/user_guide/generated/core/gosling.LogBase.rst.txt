@@ -1,0 +1,30 @@
+﻿gosling.LogBase
+===============
+
+.. currentmodule:: gosling
+
+.. autoclass:: LogBase
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LogBase.__init__
+      ~LogBase.copy
+      ~LogBase.from_dict
+      ~LogBase.from_json
+      ~LogBase.resolve_references
+      ~LogBase.to_dict
+      ~LogBase.to_json
+      ~LogBase.validate
+      ~LogBase.validate_property
+   
+   
+
+   
+   
+   

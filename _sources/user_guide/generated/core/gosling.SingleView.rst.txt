@@ -1,0 +1,30 @@
+﻿gosling.SingleView
+==================
+
+.. currentmodule:: gosling
+
+.. autoclass:: SingleView
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SingleView.__init__
+      ~SingleView.copy
+      ~SingleView.from_dict
+      ~SingleView.from_json
+      ~SingleView.resolve_references
+      ~SingleView.to_dict
+      ~SingleView.to_json
+      ~SingleView.validate
+      ~SingleView.validate_property
+   
+   
+
+   
+   
+   

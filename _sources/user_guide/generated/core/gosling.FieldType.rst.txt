@@ -1,0 +1,30 @@
+﻿gosling.FieldType
+=================
+
+.. currentmodule:: gosling
+
+.. autoclass:: FieldType
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FieldType.__init__
+      ~FieldType.copy
+      ~FieldType.from_dict
+      ~FieldType.from_json
+      ~FieldType.resolve_references
+      ~FieldType.to_dict
+      ~FieldType.to_json
+      ~FieldType.validate
+      ~FieldType.validate_property
+   
+   
+
+   
+   
+   

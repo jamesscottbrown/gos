@@ -1,0 +1,60 @@
+﻿gosling.Track
+=============
+
+.. currentmodule:: gosling
+
+.. autoclass:: Track
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Track.__init__
+      ~Track.copy
+      ~Track.encode
+      ~Track.from_dict
+      ~Track.from_json
+      ~Track.mark_area
+      ~Track.mark_bar
+      ~Track.mark_betweenLink
+      ~Track.mark_brush
+      ~Track.mark_header
+      ~Track.mark_line
+      ~Track.mark_point
+      ~Track.mark_rect
+      ~Track.mark_rule
+      ~Track.mark_text
+      ~Track.mark_triangleBottom
+      ~Track.mark_triangleLeft
+      ~Track.mark_triangleRight
+      ~Track.mark_withinLink
+      ~Track.properties
+      ~Track.resolve_references
+      ~Track.to_dict
+      ~Track.to_json
+      ~Track.transform_coverage
+      ~Track.transform_displace
+      ~Track.transform_exon_split
+      ~Track.transform_filter
+      ~Track.transform_filter_not
+      ~Track.transform_json_parse
+      ~Track.transform_log
+      ~Track.transform_str_concat
+      ~Track.transform_str_replace
+      ~Track.validate
+      ~Track.validate_property
+      ~Track.view
+      ~Track.visibility_ge
+      ~Track.visibility_gt
+      ~Track.visibility_le
+      ~Track.visibility_lt
+   
+   
+
+   
+   
+   

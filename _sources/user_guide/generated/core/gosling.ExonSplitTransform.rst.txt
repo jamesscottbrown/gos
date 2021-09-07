@@ -1,0 +1,30 @@
+﻿gosling.ExonSplitTransform
+==========================
+
+.. currentmodule:: gosling
+
+.. autoclass:: ExonSplitTransform
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ExonSplitTransform.__init__
+      ~ExonSplitTransform.copy
+      ~ExonSplitTransform.from_dict
+      ~ExonSplitTransform.from_json
+      ~ExonSplitTransform.resolve_references
+      ~ExonSplitTransform.to_dict
+      ~ExonSplitTransform.to_json
+      ~ExonSplitTransform.validate
+      ~ExonSplitTransform.validate_property
+   
+   
+
+   
+   
+   

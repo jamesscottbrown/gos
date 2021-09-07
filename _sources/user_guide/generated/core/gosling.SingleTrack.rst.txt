@@ -1,0 +1,30 @@
+﻿gosling.SingleTrack
+===================
+
+.. currentmodule:: gosling
+
+.. autoclass:: SingleTrack
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SingleTrack.__init__
+      ~SingleTrack.copy
+      ~SingleTrack.from_dict
+      ~SingleTrack.from_json
+      ~SingleTrack.resolve_references
+      ~SingleTrack.to_dict
+      ~SingleTrack.to_json
+      ~SingleTrack.validate
+      ~SingleTrack.validate_property
+   
+   
+
+   
+   
+   

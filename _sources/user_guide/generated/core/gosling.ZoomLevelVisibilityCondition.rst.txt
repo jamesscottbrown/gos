@@ -1,0 +1,30 @@
+﻿gosling.ZoomLevelVisibilityCondition
+====================================
+
+.. currentmodule:: gosling
+
+.. autoclass:: ZoomLevelVisibilityCondition
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ZoomLevelVisibilityCondition.__init__
+      ~ZoomLevelVisibilityCondition.copy
+      ~ZoomLevelVisibilityCondition.from_dict
+      ~ZoomLevelVisibilityCondition.from_json
+      ~ZoomLevelVisibilityCondition.resolve_references
+      ~ZoomLevelVisibilityCondition.to_dict
+      ~ZoomLevelVisibilityCondition.to_json
+      ~ZoomLevelVisibilityCondition.validate
+      ~ZoomLevelVisibilityCondition.validate_property
+   
+   
+
+   
+   
+   

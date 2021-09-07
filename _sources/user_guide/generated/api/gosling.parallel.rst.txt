@@ -1,0 +1,6 @@
+﻿gosling.parallel
+================
+
+.. currentmodule:: gosling
+
+.. autofunction:: parallel

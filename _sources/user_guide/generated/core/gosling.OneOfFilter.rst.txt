@@ -1,0 +1,30 @@
+﻿gosling.OneOfFilter
+===================
+
+.. currentmodule:: gosling
+
+.. autoclass:: OneOfFilter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~OneOfFilter.__init__
+      ~OneOfFilter.copy
+      ~OneOfFilter.from_dict
+      ~OneOfFilter.from_json
+      ~OneOfFilter.resolve_references
+      ~OneOfFilter.to_dict
+      ~OneOfFilter.to_json
+      ~OneOfFilter.validate
+      ~OneOfFilter.validate_property
+   
+   
+
+   
+   
+   

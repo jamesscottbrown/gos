@@ -1,0 +1,30 @@
+﻿gosling.PartialTrack
+====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: PartialTrack
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PartialTrack.__init__
+      ~PartialTrack.copy
+      ~PartialTrack.from_dict
+      ~PartialTrack.from_json
+      ~PartialTrack.resolve_references
+      ~PartialTrack.to_dict
+      ~PartialTrack.to_json
+      ~PartialTrack.validate
+      ~PartialTrack.validate_property
+   
+   
+
+   
+   
+   

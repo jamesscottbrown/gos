@@ -1,0 +1,30 @@
+﻿gosling.TemplateTrack
+=====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: TemplateTrack
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TemplateTrack.__init__
+      ~TemplateTrack.copy
+      ~TemplateTrack.from_dict
+      ~TemplateTrack.from_json
+      ~TemplateTrack.resolve_references
+      ~TemplateTrack.to_dict
+      ~TemplateTrack.to_json
+      ~TemplateTrack.validate
+      ~TemplateTrack.validate_property
+   
+   
+
+   
+   
+   

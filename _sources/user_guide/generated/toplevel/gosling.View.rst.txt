@@ -1,0 +1,32 @@
+﻿gosling.View
+============
+
+.. currentmodule:: gosling
+
+.. autoclass:: View
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~View.__init__
+      ~View.copy
+      ~View.display
+      ~View.from_dict
+      ~View.from_json
+      ~View.properties
+      ~View.resolve_references
+      ~View.to_dict
+      ~View.to_json
+      ~View.validate
+      ~View.validate_property
+   
+   
+
+   
+   
+   

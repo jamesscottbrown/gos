@@ -1,0 +1,30 @@
+﻿gosling.DomainInterval
+======================
+
+.. currentmodule:: gosling
+
+.. autoclass:: DomainInterval
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DomainInterval.__init__
+      ~DomainInterval.copy
+      ~DomainInterval.from_dict
+      ~DomainInterval.from_json
+      ~DomainInterval.resolve_references
+      ~DomainInterval.to_dict
+      ~DomainInterval.to_json
+      ~DomainInterval.validate
+      ~DomainInterval.validate_property
+   
+   
+
+   
+   
+   

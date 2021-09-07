@@ -1,0 +1,851 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
+
+    <link rel="shortcut icon" href="_static/favicon.ico"/><meta name="generator" content="sphinx-4.1.2, furo 2021.08.31"/><title>Index - gos</title>
+<link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=c7c65a82b42f6b978e58466c1e9ef2509836d916" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/higlass@1.11.3/dist/hglib.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="_static/theme_overrides.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">gos</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/favicon.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">gos</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/installation.html#development-install">Development Install</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Gallery</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="gallery/index.html">Example Gallery</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="gallery/area_chart.html">Area Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/bar_chart.html">Bar Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/circos.html">Circos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/comparative_matrices.html">Comparative Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/genes.html">Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/ideograms.html">Ideograms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/line_chart.html">Line Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/multiscale_lollipop_plot.html">Multiscale Lollipop Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/multiscale_sequence.html">Multiscale Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/overview_detail.html">Overview Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/point_plot.html">Point Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/text_marks.html">Text Marks</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="user_guide/API.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/toplevel/gosling.View.html">gosling.View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/toplevel/gosling.Track.html">gosling.Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/channels/gosling.Channel.html">gosling.Channel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/channels/gosling.ChannelValue.html">gosling.ChannelValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/api/gosling.horizontal.html">gosling.horizontal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/api/gosling.overlay.html">gosling.overlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/api/gosling.parallel.html">gosling.parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/api/gosling.serial.html">gosling.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/api/gosling.stack.html">gosling.stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/api/gosling.value.html">gosling.value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/api/gosling.vertical.html">gosling.vertical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Aggregate.html">gosling.Aggregate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Assembly.html">gosling.Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.AxisPosition.html">gosling.AxisPosition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.BAMData.html">gosling.BAMData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.BEDDBData.html">gosling.BEDDBData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.BIGWIGData.html">gosling.BIGWIGData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.CSVData.html">gosling.CSVData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Channel.html">gosling.Channel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.ChannelBind.html">gosling.ChannelBind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.ChannelDeep.html">gosling.ChannelDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.ChannelType.html">gosling.ChannelType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.ChannelValue.html">gosling.ChannelValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Chromosome.html">gosling.Chromosome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.CoverageTransform.html">gosling.CoverageTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.DataDeep.html">gosling.DataDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.DataTrack.html">gosling.DataTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.DataTransform.html">gosling.DataTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Datum.html">gosling.Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.DisplaceTransform.html">gosling.DisplaceTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Displacement.html">gosling.Displacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.DisplacementType.html">gosling.DisplacementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Domain.html">gosling.Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.DomainChr.html">gosling.DomainChr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.DomainChrInterval.html">gosling.DomainChrInterval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.DomainGene.html">gosling.DomainGene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.DomainInterval.html">gosling.DomainInterval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.ExonSplitTransform.html">gosling.ExonSplitTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.FieldType.html">gosling.FieldType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.FilterTransform.html">gosling.FilterTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.FlatTracks.html">gosling.FlatTracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.GlyphElement.html">gosling.GlyphElement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.GoslingSchema.html">gosling.GoslingSchema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.GoslingSpec.html">gosling.GoslingSpec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.IncludeFilter.html">gosling.IncludeFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.JSONData.html">gosling.JSONData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.JSONParseTransform.html">gosling.JSONParseTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Layout.html">gosling.Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.LogBase.html">gosling.LogBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.LogTransform.html">gosling.LogTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.LogicalOperation.html">gosling.LogicalOperation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Mark.html">gosling.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.MarkBind.html">gosling.MarkBind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.MarkDeep.html">gosling.MarkDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.MarkGlyph.html">gosling.MarkGlyph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.MarkGlyphPreset.html">gosling.MarkGlyphPreset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.MarkStyleInGlyph.html">gosling.MarkStyleInGlyph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.MarkType.html">gosling.MarkType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.MatrixData.html">gosling.MatrixData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.MultipleViews.html">gosling.MultipleViews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.MultivecData.html">gosling.MultivecData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.OneOfFilter.html">gosling.OneOfFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Orientation.html">gosling.Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.OverlaidTrack.html">gosling.OverlaidTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.OverlaidTracks.html">gosling.OverlaidTracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.PREDEFINED_COLORS.html">gosling.PREDEFINED_COLORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.PartialTrack.html">gosling.PartialTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Range.html">gosling.Range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.RangeFilter.html">gosling.RangeFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Root.html">gosling.Root</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.RootSpecWithMultipleViews.html">gosling.RootSpecWithMultipleViews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.RootSpecWithSingleView.html">gosling.RootSpecWithSingleView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.SchemaBase.html">gosling.SchemaBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.SingleTrack.html">gosling.SingleTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.SingleView.html">gosling.SingleView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.SizeVisibilityCondition.html">gosling.SizeVisibilityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.StackedTracks.html">gosling.StackedTracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.StrConcatTransform.html">gosling.StrConcatTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.StrReplaceTransform.html">gosling.StrReplaceTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Style.html">gosling.Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.TemplateTrack.html">gosling.TemplateTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Tooltip.html">gosling.Tooltip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.Track.html">gosling.Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.VectorData.html">gosling.VectorData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.VisibilityCondition.html">gosling.VisibilityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide/generated/core/gosling.ZoomLevelVisibilityCondition.html">gosling.ZoomLevelVisibilityCondition</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <article role="main">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        
+<section class="genindex-section">
+  <h1 id="index">Index</h1>
+  <div class="genindex-jumpbox"><a href="#_"><strong>_</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#J"><strong>J</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#V"><strong>V</strong></a> | <a href="#Z"><strong>Z</strong></a></div>
+</section>
+<section id="_" class="genindex-section">
+  <h2>_</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.Aggregate.html#gosling.Aggregate.__init__">__init__() (gosling.Aggregate method)</a>
+
+        <ul>
+          <li><a href="user_guide/generated/core/gosling.Assembly.html#gosling.Assembly.__init__">(gosling.Assembly method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.AxisPosition.html#gosling.AxisPosition.__init__">(gosling.AxisPosition method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.BAMData.html#gosling.BAMData.__init__">(gosling.BAMData method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.BEDDBData.html#gosling.BEDDBData.__init__">(gosling.BEDDBData method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.BIGWIGData.html#gosling.BIGWIGData.__init__">(gosling.BIGWIGData method)</a>
+</li>
+          <li><a href="user_guide/generated/channels/gosling.Channel.html#gosling.Channel.__init__">(gosling.Channel method)</a>, <a href="user_guide/generated/core/gosling.Channel.html#gosling.Channel.__init__">[1]</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.ChannelBind.html#gosling.ChannelBind.__init__">(gosling.ChannelBind method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.ChannelDeep.html#gosling.ChannelDeep.__init__">(gosling.ChannelDeep method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.ChannelType.html#gosling.ChannelType.__init__">(gosling.ChannelType method)</a>
+</li>
+          <li><a href="user_guide/generated/channels/gosling.ChannelValue.html#gosling.ChannelValue.__init__">(gosling.ChannelValue method)</a>, <a href="user_guide/generated/core/gosling.ChannelValue.html#gosling.ChannelValue.__init__">[1]</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Chromosome.html#gosling.Chromosome.__init__">(gosling.Chromosome method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.CoverageTransform.html#gosling.CoverageTransform.__init__">(gosling.CoverageTransform method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.CSVData.html#gosling.CSVData.__init__">(gosling.CSVData method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.DataDeep.html#gosling.DataDeep.__init__">(gosling.DataDeep method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.DataTrack.html#gosling.DataTrack.__init__">(gosling.DataTrack method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.DataTransform.html#gosling.DataTransform.__init__">(gosling.DataTransform method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Datum.html#gosling.Datum.__init__">(gosling.Datum method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Displacement.html#gosling.Displacement.__init__">(gosling.Displacement method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.DisplacementType.html#gosling.DisplacementType.__init__">(gosling.DisplacementType method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.DisplaceTransform.html#gosling.DisplaceTransform.__init__">(gosling.DisplaceTransform method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Domain.html#gosling.Domain.__init__">(gosling.Domain method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.DomainChr.html#gosling.DomainChr.__init__">(gosling.DomainChr method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.DomainChrInterval.html#gosling.DomainChrInterval.__init__">(gosling.DomainChrInterval method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.DomainGene.html#gosling.DomainGene.__init__">(gosling.DomainGene method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.DomainInterval.html#gosling.DomainInterval.__init__">(gosling.DomainInterval method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.ExonSplitTransform.html#gosling.ExonSplitTransform.__init__">(gosling.ExonSplitTransform method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.FieldType.html#gosling.FieldType.__init__">(gosling.FieldType method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.FilterTransform.html#gosling.FilterTransform.__init__">(gosling.FilterTransform method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.FlatTracks.html#gosling.FlatTracks.__init__">(gosling.FlatTracks method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.GlyphElement.html#gosling.GlyphElement.__init__">(gosling.GlyphElement method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.GoslingSchema.html#gosling.GoslingSchema.__init__">(gosling.GoslingSchema method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.GoslingSpec.html#gosling.GoslingSpec.__init__">(gosling.GoslingSpec method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.IncludeFilter.html#gosling.IncludeFilter.__init__">(gosling.IncludeFilter method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.JSONData.html#gosling.JSONData.__init__">(gosling.JSONData method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.JSONParseTransform.html#gosling.JSONParseTransform.__init__">(gosling.JSONParseTransform method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Layout.html#gosling.Layout.__init__">(gosling.Layout method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.LogBase.html#gosling.LogBase.__init__">(gosling.LogBase method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.LogicalOperation.html#gosling.LogicalOperation.__init__">(gosling.LogicalOperation method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.LogTransform.html#gosling.LogTransform.__init__">(gosling.LogTransform method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Mark.html#gosling.Mark.__init__">(gosling.Mark method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.MarkBind.html#gosling.MarkBind.__init__">(gosling.MarkBind method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.MarkDeep.html#gosling.MarkDeep.__init__">(gosling.MarkDeep method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.MarkGlyph.html#gosling.MarkGlyph.__init__">(gosling.MarkGlyph method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.MarkGlyphPreset.html#gosling.MarkGlyphPreset.__init__">(gosling.MarkGlyphPreset method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.MarkStyleInGlyph.html#gosling.MarkStyleInGlyph.__init__">(gosling.MarkStyleInGlyph method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.MarkType.html#gosling.MarkType.__init__">(gosling.MarkType method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.MatrixData.html#gosling.MatrixData.__init__">(gosling.MatrixData method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.MultipleViews.html#gosling.MultipleViews.__init__">(gosling.MultipleViews method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.MultivecData.html#gosling.MultivecData.__init__">(gosling.MultivecData method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.OneOfFilter.html#gosling.OneOfFilter.__init__">(gosling.OneOfFilter method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Orientation.html#gosling.Orientation.__init__">(gosling.Orientation method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.OverlaidTrack.html#gosling.OverlaidTrack.__init__">(gosling.OverlaidTrack method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.OverlaidTracks.html#gosling.OverlaidTracks.__init__">(gosling.OverlaidTracks method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.PartialTrack.html#gosling.PartialTrack.__init__">(gosling.PartialTrack method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.PREDEFINED_COLORS.html#gosling.PREDEFINED_COLORS.__init__">(gosling.PREDEFINED_COLORS method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Range.html#gosling.Range.__init__">(gosling.Range method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.RangeFilter.html#gosling.RangeFilter.__init__">(gosling.RangeFilter method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Root.html#gosling.Root.__init__">(gosling.Root method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.RootSpecWithMultipleViews.html#gosling.RootSpecWithMultipleViews.__init__">(gosling.RootSpecWithMultipleViews method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.RootSpecWithSingleView.html#gosling.RootSpecWithSingleView.__init__">(gosling.RootSpecWithSingleView method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.SchemaBase.html#gosling.SchemaBase.__init__">(gosling.SchemaBase method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.SingleTrack.html#gosling.SingleTrack.__init__">(gosling.SingleTrack method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.SingleView.html#gosling.SingleView.__init__">(gosling.SingleView method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.SizeVisibilityCondition.html#gosling.SizeVisibilityCondition.__init__">(gosling.SizeVisibilityCondition method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.StackedTracks.html#gosling.StackedTracks.__init__">(gosling.StackedTracks method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.StrConcatTransform.html#gosling.StrConcatTransform.__init__">(gosling.StrConcatTransform method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.StrReplaceTransform.html#gosling.StrReplaceTransform.__init__">(gosling.StrReplaceTransform method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Style.html#gosling.Style.__init__">(gosling.Style method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.TemplateTrack.html#gosling.TemplateTrack.__init__">(gosling.TemplateTrack method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Tooltip.html#gosling.Tooltip.__init__">(gosling.Tooltip method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.Track.html#gosling.Track.__init__">(gosling.Track method)</a>, <a href="user_guide/generated/toplevel/gosling.Track.html#gosling.Track.__init__">[1]</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.VectorData.html#gosling.VectorData.__init__">(gosling.VectorData method)</a>
+</li>
+          <li><a href="user_guide/generated/toplevel/gosling.View.html#gosling.View.__init__">(gosling.View method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.VisibilityCondition.html#gosling.VisibilityCondition.__init__">(gosling.VisibilityCondition method)</a>
+</li>
+          <li><a href="user_guide/generated/core/gosling.ZoomLevelVisibilityCondition.html#gosling.ZoomLevelVisibilityCondition.__init__">(gosling.ZoomLevelVisibilityCondition method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="A" class="genindex-section">
+  <h2>A</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.Aggregate.html#gosling.Aggregate">Aggregate (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.Assembly.html#gosling.Assembly">Assembly (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.AxisPosition.html#gosling.AxisPosition">AxisPosition (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="B" class="genindex-section">
+  <h2>B</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.BAMData.html#gosling.BAMData">BAMData (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.BEDDBData.html#gosling.BEDDBData">BEDDBData (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.BIGWIGData.html#gosling.BIGWIGData">BIGWIGData (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="C" class="genindex-section">
+  <h2>C</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/channels/gosling.Channel.html#gosling.Channel">Channel (class in gosling)</a>, <a href="user_guide/generated/core/gosling.Channel.html#gosling.Channel">[1]</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.ChannelBind.html#gosling.ChannelBind">ChannelBind (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.ChannelDeep.html#gosling.ChannelDeep">ChannelDeep (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.ChannelType.html#gosling.ChannelType">ChannelType (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/channels/gosling.ChannelValue.html#gosling.ChannelValue">ChannelValue (class in gosling)</a>, <a href="user_guide/generated/core/gosling.ChannelValue.html#gosling.ChannelValue">[1]</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.Chromosome.html#gosling.Chromosome">Chromosome (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.CoverageTransform.html#gosling.CoverageTransform">CoverageTransform (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.CSVData.html#gosling.CSVData">CSVData (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="D" class="genindex-section">
+  <h2>D</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.DataDeep.html#gosling.DataDeep">DataDeep (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.DataTrack.html#gosling.DataTrack">DataTrack (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.DataTransform.html#gosling.DataTransform">DataTransform (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.Datum.html#gosling.Datum">Datum (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.Displacement.html#gosling.Displacement">Displacement (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.DisplacementType.html#gosling.DisplacementType">DisplacementType (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.DisplaceTransform.html#gosling.DisplaceTransform">DisplaceTransform (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.Domain.html#gosling.Domain">Domain (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.DomainChr.html#gosling.DomainChr">DomainChr (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.DomainChrInterval.html#gosling.DomainChrInterval">DomainChrInterval (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.DomainGene.html#gosling.DomainGene">DomainGene (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.DomainInterval.html#gosling.DomainInterval">DomainInterval (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="E" class="genindex-section">
+  <h2>E</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.ExonSplitTransform.html#gosling.ExonSplitTransform">ExonSplitTransform (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="F" class="genindex-section">
+  <h2>F</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.FieldType.html#gosling.FieldType">FieldType (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.FilterTransform.html#gosling.FilterTransform">FilterTransform (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.FlatTracks.html#gosling.FlatTracks">FlatTracks (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="G" class="genindex-section">
+  <h2>G</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.GlyphElement.html#gosling.GlyphElement">GlyphElement (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.GoslingSchema.html#gosling.GoslingSchema">GoslingSchema (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.GoslingSpec.html#gosling.GoslingSpec">GoslingSpec (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="H" class="genindex-section">
+  <h2>H</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/api/gosling.horizontal.html#gosling.horizontal">horizontal() (in module gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="I" class="genindex-section">
+  <h2>I</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.IncludeFilter.html#gosling.IncludeFilter">IncludeFilter (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="J" class="genindex-section">
+  <h2>J</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.JSONData.html#gosling.JSONData">JSONData (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.JSONParseTransform.html#gosling.JSONParseTransform">JSONParseTransform (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="L" class="genindex-section">
+  <h2>L</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.Layout.html#gosling.Layout">Layout (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.LogBase.html#gosling.LogBase">LogBase (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.LogicalOperation.html#gosling.LogicalOperation">LogicalOperation (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.LogTransform.html#gosling.LogTransform">LogTransform (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.Mark.html#gosling.Mark">Mark (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.MarkBind.html#gosling.MarkBind">MarkBind (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.MarkDeep.html#gosling.MarkDeep">MarkDeep (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.MarkGlyph.html#gosling.MarkGlyph">MarkGlyph (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.MarkGlyphPreset.html#gosling.MarkGlyphPreset">MarkGlyphPreset (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.MarkStyleInGlyph.html#gosling.MarkStyleInGlyph">MarkStyleInGlyph (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.MarkType.html#gosling.MarkType">MarkType (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.MatrixData.html#gosling.MatrixData">MatrixData (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.MultipleViews.html#gosling.MultipleViews">MultipleViews (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.MultivecData.html#gosling.MultivecData">MultivecData (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="O" class="genindex-section">
+  <h2>O</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.OneOfFilter.html#gosling.OneOfFilter">OneOfFilter (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.Orientation.html#gosling.Orientation">Orientation (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.OverlaidTrack.html#gosling.OverlaidTrack">OverlaidTrack (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.OverlaidTracks.html#gosling.OverlaidTracks">OverlaidTracks (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/api/gosling.overlay.html#gosling.overlay">overlay() (in module gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="P" class="genindex-section">
+  <h2>P</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/api/gosling.parallel.html#gosling.parallel">parallel() (in module gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.PartialTrack.html#gosling.PartialTrack">PartialTrack (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.PREDEFINED_COLORS.html#gosling.PREDEFINED_COLORS">PREDEFINED_COLORS (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="R" class="genindex-section">
+  <h2>R</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.Range.html#gosling.Range">Range (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.RangeFilter.html#gosling.RangeFilter">RangeFilter (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.Root.html#gosling.Root">Root (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.RootSpecWithMultipleViews.html#gosling.RootSpecWithMultipleViews">RootSpecWithMultipleViews (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.RootSpecWithSingleView.html#gosling.RootSpecWithSingleView">RootSpecWithSingleView (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.SchemaBase.html#gosling.SchemaBase">SchemaBase (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/api/gosling.serial.html#gosling.serial">serial() (in module gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.SingleTrack.html#gosling.SingleTrack">SingleTrack (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.SingleView.html#gosling.SingleView">SingleView (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.SizeVisibilityCondition.html#gosling.SizeVisibilityCondition">SizeVisibilityCondition (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/api/gosling.stack.html#gosling.stack">stack() (in module gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.StackedTracks.html#gosling.StackedTracks">StackedTracks (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.StrConcatTransform.html#gosling.StrConcatTransform">StrConcatTransform (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.StrReplaceTransform.html#gosling.StrReplaceTransform">StrReplaceTransform (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.Style.html#gosling.Style">Style (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="T" class="genindex-section">
+  <h2>T</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.TemplateTrack.html#gosling.TemplateTrack">TemplateTrack (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.Tooltip.html#gosling.Tooltip">Tooltip (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.Track.html#gosling.Track">Track (class in gosling)</a>, <a href="user_guide/generated/toplevel/gosling.Track.html#gosling.Track">[1]</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="V" class="genindex-section">
+  <h2>V</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/api/gosling.value.html#gosling.value">value() (in module gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.VectorData.html#gosling.VectorData">VectorData (class in gosling)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/api/gosling.vertical.html#gosling.vertical">vertical() (in module gosling)</a>
+</li>
+        <li><a href="user_guide/generated/toplevel/gosling.View.html#gosling.View">View (class in gosling)</a>
+</li>
+        <li><a href="user_guide/generated/core/gosling.VisibilityCondition.html#gosling.VisibilityCondition">VisibilityCondition (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="Z" class="genindex-section">
+  <h2>Z</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="user_guide/generated/core/gosling.ZoomLevelVisibilityCondition.html#gosling.ZoomLevelVisibilityCondition">ZoomLevelVisibilityCondition (class in gosling)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, Trevor Manz
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/main.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/pixi.js@5/dist/pixi.js"></script>
+    <script src="https://unpkg.com/gosling.js@0.9.4/dist/gosling.js"></script>
+    </body>
+</html>

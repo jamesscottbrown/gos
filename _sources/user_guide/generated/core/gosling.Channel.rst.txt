@@ -1,0 +1,30 @@
+﻿gosling.Channel
+===============
+
+.. currentmodule:: gosling
+
+.. autoclass:: Channel
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Channel.__init__
+      ~Channel.copy
+      ~Channel.from_dict
+      ~Channel.from_json
+      ~Channel.resolve_references
+      ~Channel.to_dict
+      ~Channel.to_json
+      ~Channel.validate
+      ~Channel.validate_property
+   
+   
+
+   
+   
+   

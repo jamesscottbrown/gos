@@ -1,0 +1,1466 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Genes" href="genes.html" /><link rel="prev" title="Circos" href="circos.html" />
+
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-4.1.2, furo 2021.08.31"/>
+        <title>Comparative Matrices - gos</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=c7c65a82b42f6b978e58466c1e9ef2509836d916" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/higlass@1.11.3/dist/hglib.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_overrides.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">gos</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/favicon.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">gos</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html#development-install">Development Install</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Gallery</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Example Gallery</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="area_chart.html">Area Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bar_chart.html">Bar Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circos.html">Circos</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Comparative Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genes.html">Genes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideograms.html">Ideograms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="line_chart.html">Line Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiscale_lollipop_plot.html">Multiscale Lollipop Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiscale_sequence.html">Multiscale Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview_detail.html">Overview Detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="point_plot.html">Point Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text_marks.html">Text Marks</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../user_guide/API.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/toplevel/gosling.View.html">gosling.View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/toplevel/gosling.Track.html">gosling.Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Channel.html">gosling.Channel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.ChannelValue.html">gosling.ChannelValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.horizontal.html">gosling.horizontal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.overlay.html">gosling.overlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.parallel.html">gosling.parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.serial.html">gosling.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.stack.html">gosling.stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.value.html">gosling.value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.vertical.html">gosling.vertical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Aggregate.html">gosling.Aggregate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Assembly.html">gosling.Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.AxisPosition.html">gosling.AxisPosition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.BAMData.html">gosling.BAMData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.BEDDBData.html">gosling.BEDDBData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.BIGWIGData.html">gosling.BIGWIGData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.CSVData.html">gosling.CSVData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Channel.html">gosling.Channel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ChannelBind.html">gosling.ChannelBind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ChannelDeep.html">gosling.ChannelDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ChannelType.html">gosling.ChannelType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ChannelValue.html">gosling.ChannelValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Chromosome.html">gosling.Chromosome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.CoverageTransform.html">gosling.CoverageTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DataDeep.html">gosling.DataDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DataTrack.html">gosling.DataTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DataTransform.html">gosling.DataTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Datum.html">gosling.Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DisplaceTransform.html">gosling.DisplaceTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Displacement.html">gosling.Displacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DisplacementType.html">gosling.DisplacementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Domain.html">gosling.Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DomainChr.html">gosling.DomainChr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DomainChrInterval.html">gosling.DomainChrInterval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DomainGene.html">gosling.DomainGene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DomainInterval.html">gosling.DomainInterval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ExonSplitTransform.html">gosling.ExonSplitTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.FieldType.html">gosling.FieldType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.FilterTransform.html">gosling.FilterTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.FlatTracks.html">gosling.FlatTracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.GlyphElement.html">gosling.GlyphElement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.GoslingSchema.html">gosling.GoslingSchema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.GoslingSpec.html">gosling.GoslingSpec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.IncludeFilter.html">gosling.IncludeFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.JSONData.html">gosling.JSONData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.JSONParseTransform.html">gosling.JSONParseTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Layout.html">gosling.Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.LogBase.html">gosling.LogBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.LogTransform.html">gosling.LogTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.LogicalOperation.html">gosling.LogicalOperation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Mark.html">gosling.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MarkBind.html">gosling.MarkBind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MarkDeep.html">gosling.MarkDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MarkGlyph.html">gosling.MarkGlyph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MarkGlyphPreset.html">gosling.MarkGlyphPreset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MarkStyleInGlyph.html">gosling.MarkStyleInGlyph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MarkType.html">gosling.MarkType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MatrixData.html">gosling.MatrixData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MultipleViews.html">gosling.MultipleViews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MultivecData.html">gosling.MultivecData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.OneOfFilter.html">gosling.OneOfFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Orientation.html">gosling.Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.OverlaidTrack.html">gosling.OverlaidTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.OverlaidTracks.html">gosling.OverlaidTracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.PREDEFINED_COLORS.html">gosling.PREDEFINED_COLORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.PartialTrack.html">gosling.PartialTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Range.html">gosling.Range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.RangeFilter.html">gosling.RangeFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Root.html">gosling.Root</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.RootSpecWithMultipleViews.html">gosling.RootSpecWithMultipleViews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.RootSpecWithSingleView.html">gosling.RootSpecWithSingleView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.SchemaBase.html">gosling.SchemaBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.SingleTrack.html">gosling.SingleTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.SingleView.html">gosling.SingleView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.SizeVisibilityCondition.html">gosling.SizeVisibilityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.StackedTracks.html">gosling.StackedTracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.StrConcatTransform.html">gosling.StrConcatTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.StrReplaceTransform.html">gosling.StrReplaceTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Style.html">gosling.Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.TemplateTrack.html">gosling.TemplateTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Tooltip.html">gosling.Tooltip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Track.html">gosling.Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.VectorData.html">gosling.VectorData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.VisibilityCondition.html">gosling.VisibilityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ZoomLevelVisibilityCondition.html">gosling.ZoomLevelVisibilityCondition</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <article role="main">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <section id="comparative-matrices">
+<span id="gallery-comparative-matrices"></span><h1>Comparative Matrices<a class="headerlink" href="#comparative-matrices" title="Permalink to this headline">¶</a></h1>
+<div id="comparative_matrices-rst-gosling-plot-0">
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+      var spec = {
+  "arrangement": "horizontal",
+  "linkingId": "-",
+  "spacing": 1,
+  "subtitle": "Comparison of Micro-C and Hi-C for HFFc6 Cells",
+  "title": "Matrix Visualization",
+  "views": [
+    {
+      "alignment": "stack",
+      "orientation": "vertical",
+      "tracks": [
+        {
+          "color": {
+            "value": "darkgreen"
+          },
+          "data": {
+            "binSize": 8,
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_H3K4me3.bigWig",
+            "value": "peak"
+          },
+          "height": 375,
+          "mark": "bar",
+          "title": "HFFc6_H3K4me3",
+          "width": 25.0,
+          "x": {
+            "axis": "top",
+            "field": "start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "axis": "none",
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "color": {
+            "value": "#E79F00"
+          },
+          "data": {
+            "binSize": 8,
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_Atacseq.mRp.clN.bigWig",
+            "value": "peak"
+          },
+          "height": 375,
+          "mark": "bar",
+          "title": "HFFc6_ATAC",
+          "width": 25.0,
+          "x": {
+            "field": "start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "axis": "none",
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "alignment": "overlay",
+          "height": 375,
+          "tracks": [
+            {
+              "color": {
+                "value": "#0072B2"
+              },
+              "data": {
+                "binSize": 8,
+                "column": "position",
+                "type": "bigwig",
+                "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFC6_CTCF.mRp.clN.bigWig",
+                "value": "peak"
+              },
+              "mark": "bar",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "axis": "none",
+                "field": "peak",
+                "type": "quantitative"
+              }
+            },
+            {
+              "color": {
+                "value": "#CB7AA7"
+              },
+              "data": {
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                "valueFields": [
+                  {
+                    "index": 5,
+                    "name": "strand",
+                    "type": "nominal"
+                  },
+                  {
+                    "index": 3,
+                    "name": "name",
+                    "type": "nominal"
+                  }
+                ]
+              },
+              "dataTransform": [
+                {
+                  "field": "strand",
+                  "oneOf": [
+                    "+"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "triangleRight",
+              "row": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "type": "nominal"
+              },
+              "size": {
+                "value": 13
+              },
+              "stroke": {
+                "value": "white"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "style": {
+                "backgroundOpacity": 0
+              },
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "value": "#029F73"
+              },
+              "data": {
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                "valueFields": [
+                  {
+                    "index": 5,
+                    "name": "strand",
+                    "type": "nominal"
+                  },
+                  {
+                    "index": 3,
+                    "name": "name",
+                    "type": "nominal"
+                  }
+                ]
+              },
+              "dataTransform": [
+                {
+                  "field": "strand",
+                  "oneOf": [
+                    "-"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "triangleLeft",
+              "row": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "type": "nominal"
+              },
+              "size": {
+                "value": 13
+              },
+              "stroke": {
+                "value": "white"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "style": {
+                "backgroundOpacity": 0
+              },
+              "title": "HFFC6_CTCF",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              }
+            }
+          ],
+          "width": 25.0
+        }
+      ],
+      "yOffset": 102.73972602739727
+    },
+    {
+      "spacing": 30,
+      "views": [
+        {
+          "arrangement": "vertical",
+          "spacing": 0,
+          "views": [
+            {
+              "alignment": "stack",
+              "tracks": [
+                {
+                  "color": {
+                    "value": "darkgreen"
+                  },
+                  "data": {
+                    "binSize": 8,
+                    "column": "position",
+                    "type": "bigwig",
+                    "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_H3K4me3.bigWig",
+                    "value": "peak"
+                  },
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "HFFc6_H3K4me3",
+                  "width": 375,
+                  "x": {
+                    "axis": "top",
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "peak",
+                    "type": "quantitative"
+                  }
+                },
+                {
+                  "color": {
+                    "value": "#E79F00"
+                  },
+                  "data": {
+                    "binSize": 8,
+                    "column": "position",
+                    "type": "bigwig",
+                    "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_Atacseq.mRp.clN.bigWig",
+                    "value": "peak"
+                  },
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "HFFc6_ATAC",
+                  "width": 375,
+                  "x": {
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "peak",
+                    "type": "quantitative"
+                  }
+                },
+                {
+                  "alignment": "overlay",
+                  "height": 25.0,
+                  "tracks": [
+                    {
+                      "color": {
+                        "value": "#0072B2"
+                      },
+                      "data": {
+                        "binSize": 8,
+                        "column": "position",
+                        "type": "bigwig",
+                        "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFC6_CTCF.mRp.clN.bigWig",
+                        "value": "peak"
+                      },
+                      "mark": "bar",
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      },
+                      "xe": {
+                        "field": "end",
+                        "type": "genomic"
+                      },
+                      "y": {
+                        "axis": "none",
+                        "field": "peak",
+                        "type": "quantitative"
+                      }
+                    },
+                    {
+                      "color": {
+                        "value": "#CB7AA7"
+                      },
+                      "data": {
+                        "genomicFields": [
+                          {
+                            "index": 1,
+                            "name": "start"
+                          },
+                          {
+                            "index": 2,
+                            "name": "end"
+                          }
+                        ],
+                        "type": "beddb",
+                        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                        "valueFields": [
+                          {
+                            "index": 5,
+                            "name": "strand",
+                            "type": "nominal"
+                          },
+                          {
+                            "index": 3,
+                            "name": "name",
+                            "type": "nominal"
+                          }
+                        ]
+                      },
+                      "dataTransform": [
+                        {
+                          "field": "strand",
+                          "oneOf": [
+                            "+"
+                          ],
+                          "type": "filter"
+                        }
+                      ],
+                      "mark": "triangleRight",
+                      "row": {
+                        "domain": [
+                          "+",
+                          "-"
+                        ],
+                        "field": "strand",
+                        "type": "nominal"
+                      },
+                      "size": {
+                        "value": 13
+                      },
+                      "stroke": {
+                        "value": "white"
+                      },
+                      "strokeWidth": {
+                        "value": 1
+                      },
+                      "style": {
+                        "backgroundOpacity": 0
+                      },
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      }
+                    },
+                    {
+                      "color": {
+                        "value": "#029F73"
+                      },
+                      "data": {
+                        "genomicFields": [
+                          {
+                            "index": 1,
+                            "name": "start"
+                          },
+                          {
+                            "index": 2,
+                            "name": "end"
+                          }
+                        ],
+                        "type": "beddb",
+                        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                        "valueFields": [
+                          {
+                            "index": 5,
+                            "name": "strand",
+                            "type": "nominal"
+                          },
+                          {
+                            "index": 3,
+                            "name": "name",
+                            "type": "nominal"
+                          }
+                        ]
+                      },
+                      "dataTransform": [
+                        {
+                          "field": "strand",
+                          "oneOf": [
+                            "-"
+                          ],
+                          "type": "filter"
+                        }
+                      ],
+                      "mark": "triangleLeft",
+                      "row": {
+                        "domain": [
+                          "+",
+                          "-"
+                        ],
+                        "field": "strand",
+                        "type": "nominal"
+                      },
+                      "size": {
+                        "value": 13
+                      },
+                      "stroke": {
+                        "value": "white"
+                      },
+                      "strokeWidth": {
+                        "value": 1
+                      },
+                      "style": {
+                        "backgroundOpacity": 0
+                      },
+                      "title": "HFFC6_CTCF",
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      }
+                    }
+                  ],
+                  "width": 375
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "color": {
+                    "field": "value",
+                    "range": "warm",
+                    "type": "quantitative"
+                  },
+                  "data": {
+                    "type": "matrix",
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=hffc6-microc-hg38"
+                  },
+                  "height": 375,
+                  "mark": "rect",
+                  "title": "HFFc6_Micro-C",
+                  "width": 375,
+                  "x": {
+                    "axis": "none",
+                    "field": "position1",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "position2",
+                    "type": "genomic"
+                  }
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "color": {
+                    "field": "category",
+                    "range": [
+                      "#FF0000",
+                      "#FF4500",
+                      "#32CD32",
+                      "#008000",
+                      "#006400",
+                      "#C2E105",
+                      "#FFFF00",
+                      "#66CDAA",
+                      "#8A91D0",
+                      "#CD5C5C",
+                      "#E9967A",
+                      "#BDB76B",
+                      "#808080",
+                      "#C0C0C0",
+                      "gray"
+                    ],
+                    "type": "nominal"
+                  },
+                  "data": {
+                    "binSize": 8,
+                    "categories": [
+                      "Active TSS",
+                      "Flanking Active TSS",
+                      "Transcr at gene 5\\' and 3\\'",
+                      "Strong transcription",
+                      "Weak transcription",
+                      "Genic enhancers",
+                      "Enhancers",
+                      "ZNF genes & repeats",
+                      "Heterochromatin",
+                      "Bivalent/Poised TSS",
+                      "Flanking Bivalent TSS/Enh",
+                      "Bivalent Enhancer",
+                      "Repressed PolyComb",
+                      "Weak Repressed PolyComb",
+                      "Quiescent/Low"
+                    ],
+                    "column": "position",
+                    "row": "category",
+                    "type": "multivec",
+                    "url": "https:/multivec.gosling-lang.org/api/v1/tileset_info/?d=epilogos-hg38",
+                    "value": "value"
+                  },
+                  "dataTransform": [
+                    {
+                      "field": "value",
+                      "inRange": [
+                        0,
+                        999999
+                      ],
+                      "type": "filter"
+                    }
+                  ],
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "Epilogos (hg38)",
+                  "width": 375,
+                  "x": {
+                    "axis": "none",
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "value",
+                    "type": "quantitative"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "arrangement": "vertical",
+          "spacing": 0,
+          "views": [
+            {
+              "alignment": "stack",
+              "tracks": [
+                {
+                  "color": {
+                    "value": "darkgreen"
+                  },
+                  "data": {
+                    "binSize": 8,
+                    "column": "position",
+                    "type": "bigwig",
+                    "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_H3K4me3.bigWig",
+                    "value": "peak"
+                  },
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "HFFc6_H3K4me3",
+                  "width": 375,
+                  "x": {
+                    "axis": "top",
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "peak",
+                    "type": "quantitative"
+                  }
+                },
+                {
+                  "color": {
+                    "value": "#E79F00"
+                  },
+                  "data": {
+                    "binSize": 8,
+                    "column": "position",
+                    "type": "bigwig",
+                    "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_Atacseq.mRp.clN.bigWig",
+                    "value": "peak"
+                  },
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "HFFc6_ATAC",
+                  "width": 375,
+                  "x": {
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "peak",
+                    "type": "quantitative"
+                  }
+                },
+                {
+                  "alignment": "overlay",
+                  "height": 25.0,
+                  "tracks": [
+                    {
+                      "color": {
+                        "value": "#0072B2"
+                      },
+                      "data": {
+                        "binSize": 8,
+                        "column": "position",
+                        "type": "bigwig",
+                        "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFC6_CTCF.mRp.clN.bigWig",
+                        "value": "peak"
+                      },
+                      "mark": "bar",
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      },
+                      "xe": {
+                        "field": "end",
+                        "type": "genomic"
+                      },
+                      "y": {
+                        "axis": "none",
+                        "field": "peak",
+                        "type": "quantitative"
+                      }
+                    },
+                    {
+                      "color": {
+                        "value": "#CB7AA7"
+                      },
+                      "data": {
+                        "genomicFields": [
+                          {
+                            "index": 1,
+                            "name": "start"
+                          },
+                          {
+                            "index": 2,
+                            "name": "end"
+                          }
+                        ],
+                        "type": "beddb",
+                        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                        "valueFields": [
+                          {
+                            "index": 5,
+                            "name": "strand",
+                            "type": "nominal"
+                          },
+                          {
+                            "index": 3,
+                            "name": "name",
+                            "type": "nominal"
+                          }
+                        ]
+                      },
+                      "dataTransform": [
+                        {
+                          "field": "strand",
+                          "oneOf": [
+                            "+"
+                          ],
+                          "type": "filter"
+                        }
+                      ],
+                      "mark": "triangleRight",
+                      "row": {
+                        "domain": [
+                          "+",
+                          "-"
+                        ],
+                        "field": "strand",
+                        "type": "nominal"
+                      },
+                      "size": {
+                        "value": 13
+                      },
+                      "stroke": {
+                        "value": "white"
+                      },
+                      "strokeWidth": {
+                        "value": 1
+                      },
+                      "style": {
+                        "backgroundOpacity": 0
+                      },
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      }
+                    },
+                    {
+                      "color": {
+                        "value": "#029F73"
+                      },
+                      "data": {
+                        "genomicFields": [
+                          {
+                            "index": 1,
+                            "name": "start"
+                          },
+                          {
+                            "index": 2,
+                            "name": "end"
+                          }
+                        ],
+                        "type": "beddb",
+                        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                        "valueFields": [
+                          {
+                            "index": 5,
+                            "name": "strand",
+                            "type": "nominal"
+                          },
+                          {
+                            "index": 3,
+                            "name": "name",
+                            "type": "nominal"
+                          }
+                        ]
+                      },
+                      "dataTransform": [
+                        {
+                          "field": "strand",
+                          "oneOf": [
+                            "-"
+                          ],
+                          "type": "filter"
+                        }
+                      ],
+                      "mark": "triangleLeft",
+                      "row": {
+                        "domain": [
+                          "+",
+                          "-"
+                        ],
+                        "field": "strand",
+                        "type": "nominal"
+                      },
+                      "size": {
+                        "value": 13
+                      },
+                      "stroke": {
+                        "value": "white"
+                      },
+                      "strokeWidth": {
+                        "value": 1
+                      },
+                      "style": {
+                        "backgroundOpacity": 0
+                      },
+                      "title": "HFFC6_CTCF",
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      }
+                    }
+                  ],
+                  "width": 375
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "color": {
+                    "field": "value",
+                    "range": "warm",
+                    "type": "quantitative"
+                  },
+                  "data": {
+                    "type": "matrix",
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=hffc6-hic-hg38"
+                  },
+                  "height": 375,
+                  "mark": "rect",
+                  "title": "HFFc6_Hi-C",
+                  "width": 375,
+                  "x": {
+                    "axis": "none",
+                    "field": "position1",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "position2",
+                    "type": "genomic"
+                  }
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "color": {
+                    "field": "category",
+                    "range": [
+                      "#FF0000",
+                      "#FF4500",
+                      "#32CD32",
+                      "#008000",
+                      "#006400",
+                      "#C2E105",
+                      "#FFFF00",
+                      "#66CDAA",
+                      "#8A91D0",
+                      "#CD5C5C",
+                      "#E9967A",
+                      "#BDB76B",
+                      "#808080",
+                      "#C0C0C0",
+                      "gray"
+                    ],
+                    "type": "nominal"
+                  },
+                  "data": {
+                    "binSize": 8,
+                    "categories": [
+                      "Active TSS",
+                      "Flanking Active TSS",
+                      "Transcr at gene 5\\' and 3\\'",
+                      "Strong transcription",
+                      "Weak transcription",
+                      "Genic enhancers",
+                      "Enhancers",
+                      "ZNF genes & repeats",
+                      "Heterochromatin",
+                      "Bivalent/Poised TSS",
+                      "Flanking Bivalent TSS/Enh",
+                      "Bivalent Enhancer",
+                      "Repressed PolyComb",
+                      "Weak Repressed PolyComb",
+                      "Quiescent/Low"
+                    ],
+                    "column": "position",
+                    "row": "category",
+                    "type": "multivec",
+                    "url": "https:/multivec.gosling-lang.org/api/v1/tileset_info/?d=epilogos-hg38",
+                    "value": "value"
+                  },
+                  "dataTransform": [
+                    {
+                      "field": "value",
+                      "inRange": [
+                        0,
+                        999999
+                      ],
+                      "type": "filter"
+                    }
+                  ],
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "Epilogos (hg38)",
+                  "width": 375,
+                  "x": {
+                    "axis": "none",
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "value",
+                    "type": "quantitative"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "xDomain": {
+    "chromosome": "7",
+    "interval": [
+      77700000,
+      81000000
+    ]
+  }
+};
+      console.log(spec);
+      var opt = { padding: 0 };
+      var el = document.querySelector('#comparative_matrices-rst-gosling-plot-0');
+      gosling.embed(el, spec, opt).catch(console.err);
+  });
+</script>
+</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
+<span class="kn">from</span> <span class="nn">gosling.data</span> <span class="kn">import</span> <span class="n">bigwig</span><span class="p">,</span> <span class="n">beddb</span><span class="p">,</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">multivec</span>
+
+<span class="n">size</span> <span class="o">=</span> <span class="mi">375</span>
+<span class="n">scaled_size</span> <span class="o">=</span> <span class="n">size</span> <span class="o">/</span> <span class="mi">15</span>
+
+<span class="c1"># Data</span>
+
+<span class="n">HFFc6_H3K4me3</span> <span class="o">=</span> <span class="n">bigwig</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">"https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_H3K4me3.bigWig"</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">"position"</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">"peak"</span><span class="p">,</span>
+    <span class="n">binSize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">HFFc6_Atacseq</span> <span class="o">=</span> <span class="n">bigwig</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">"https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_Atacseq.mRp.clN.bigWig"</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">"position"</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">"peak"</span><span class="p">,</span>
+    <span class="n">binSize</span><span class="o">=</span><span class="mi">8</span>
+<span class="p">)</span>
+
+<span class="n">HFFC6_CTCF</span> <span class="o">=</span> <span class="n">bigwig</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">"https://s3.amazonaws.com/gosling-lang.org/data/HFFC6_CTCF.mRp.clN.bigWig"</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">"position"</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">"peak"</span><span class="p">,</span>
+    <span class="n">binSize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">genes</span> <span class="o">=</span> <span class="n">beddb</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">"https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation"</span><span class="p">,</span>
+    <span class="n">genomicFields</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span><span class="s2">"index"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"start"</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">"index"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"end"</span><span class="p">},</span>
+    <span class="p">],</span>
+    <span class="n">valueFields</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span><span class="s2">"index"</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"strand"</span><span class="p">,</span> <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"nominal"</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">"index"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"name"</span><span class="p">,</span> <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"nominal"</span><span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">micro_c</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="s2">"https://server.gosling-lang.org/api/v1/tileset_info/?d=hffc6-microc-hg38"</span><span class="p">)</span>
+<span class="n">hi_c</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="s2">"https://server.gosling-lang.org/api/v1/tileset_info/?d=hffc6-hic-hg38"</span><span class="p">)</span>
+
+<span class="n">epilogos_data</span> <span class="o">=</span> <span class="n">multivec</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">"https:/multivec.gosling-lang.org/api/v1/tileset_info/?d=epilogos-hg38"</span><span class="p">,</span>
+    <span class="n">row</span><span class="o">=</span><span class="s2">"category"</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">"position"</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">"value"</span><span class="p">,</span>
+    <span class="n">categories</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">"Active TSS"</span><span class="p">,</span> <span class="s2">"Flanking Active TSS"</span><span class="p">,</span> <span class="s2">"Transcr at gene 5</span><span class="se">\\</span><span class="s2">' and 3</span><span class="se">\\</span><span class="s2">'"</span><span class="p">,</span>
+        <span class="s2">"Strong transcription"</span><span class="p">,</span> <span class="s2">"Weak transcription"</span><span class="p">,</span> <span class="s2">"Genic enhancers"</span><span class="p">,</span>
+        <span class="s2">"Enhancers"</span><span class="p">,</span> <span class="s2">"ZNF genes &amp; repeats"</span><span class="p">,</span> <span class="s2">"Heterochromatin"</span><span class="p">,</span>
+        <span class="s2">"Bivalent/Poised TSS"</span><span class="p">,</span> <span class="s2">"Flanking Bivalent TSS/Enh"</span><span class="p">,</span> <span class="s2">"Bivalent Enhancer"</span><span class="p">,</span>
+        <span class="s2">"Repressed PolyComb"</span><span class="p">,</span> <span class="s2">"Weak Repressed PolyComb"</span><span class="p">,</span> <span class="s2">"Quiescent/Low"</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">binSize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Tracks &amp; Views</span>
+
+<span class="n">track1</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">HFFc6_H3K4me3</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"start:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"top"</span><span class="p">),</span>
+    <span class="n">xe</span><span class="o">=</span><span class="s2">"end:G"</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"peak:Q"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"none"</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">"darkgreen"</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"HFFc6_H3K4me3"</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">scaled_size</span><span class="p">)</span>
+
+<span class="n">track2</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">HFFc6_Atacseq</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">"start:G"</span><span class="p">,</span>
+    <span class="n">xe</span><span class="o">=</span><span class="s2">"end:G"</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"peak:Q"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"none"</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">"#E79F00"</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"HFFc6_ATAC"</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">scaled_size</span><span class="p">)</span>
+
+<span class="n">gene_anno_base</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">genes</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">"start:G"</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">13</span><span class="p">),</span>
+    <span class="n">stroke</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">"white"</span><span class="p">),</span>
+    <span class="n">strokeWidth</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">"#CB7AA7"</span><span class="p">),</span>
+    <span class="n">row</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"strand:N"</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s2">"+"</span><span class="p">,</span> <span class="s2">"-"</span><span class="p">]),</span>
+<span class="p">)</span>
+
+<span class="n">gene_overlay</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span>
+    <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">HFFC6_CTCF</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">"start:G"</span><span class="p">,</span>
+        <span class="n">xe</span><span class="o">=</span><span class="s2">"end:G"</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"peak:Q"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"none"</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">"#0072B2"</span><span class="p">)</span>
+    <span class="p">),</span>
+    <span class="n">gene_anno_base</span><span class="o">.</span><span class="n">mark_triangleRight</span><span class="p">(</span><span class="n">backgroundOpacity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">"#CB7AA7"</span><span class="p">),</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="s2">"strand"</span><span class="p">,</span> <span class="n">oneOf</span><span class="o">=</span><span class="p">[</span><span class="s2">"+"</span><span class="p">]),</span>
+    <span class="n">gene_anno_base</span><span class="o">.</span><span class="n">mark_triangleLeft</span><span class="p">(</span><span class="n">backgroundOpacity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">"#029F73"</span><span class="p">),</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="s2">"strand"</span><span class="p">,</span> <span class="n">oneOf</span><span class="o">=</span><span class="p">[</span><span class="s2">"-"</span><span class="p">])</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"HFFC6_CTCF"</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">scaled_size</span><span class="p">)</span>
+
+<span class="c1"># Configure Layout</span>
+
+<span class="n">left</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">track1</span><span class="p">,</span> <span class="n">track2</span><span class="p">,</span> <span class="n">gene_overlay</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">orientation</span><span class="o">=</span><span class="s2">"vertical"</span><span class="p">,</span>
+    <span class="n">yOffset</span><span class="o">=</span><span class="n">size</span> <span class="o">/</span> <span class="mf">3.65</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">top</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span>
+    <span class="n">track1</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">scaled_size</span><span class="p">),</span>
+    <span class="n">track2</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">scaled_size</span><span class="p">),</span>
+    <span class="n">gene_overlay</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">scaled_size</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">matrix</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">micro_c</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"position1:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"none"</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"position2:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"none"</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"value:Q"</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="s2">"warm"</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"HFFc6_Micro-C"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+
+
+<span class="n">bottom</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">epilogos_data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"start:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"none"</span><span class="p">),</span>
+    <span class="n">xe</span><span class="o">=</span><span class="s2">"end:G"</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"value:Q"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"none"</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"category:N"</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">"#FF0000"</span><span class="p">,</span> <span class="s2">"#FF4500"</span><span class="p">,</span> <span class="s2">"#32CD32"</span><span class="p">,</span> <span class="s2">"#008000"</span><span class="p">,</span> <span class="s2">"#006400"</span><span class="p">,</span>
+        <span class="s2">"#C2E105"</span><span class="p">,</span> <span class="s2">"#FFFF00"</span><span class="p">,</span> <span class="s2">"#66CDAA"</span><span class="p">,</span> <span class="s2">"#8A91D0"</span><span class="p">,</span> <span class="s2">"#CD5C5C"</span><span class="p">,</span>
+        <span class="s2">"#E9967A"</span><span class="p">,</span> <span class="s2">"#BDB76B"</span><span class="p">,</span> <span class="s2">"#808080"</span><span class="p">,</span> <span class="s2">"#C0C0C0"</span><span class="p">,</span> <span class="s2">"gray"</span>
+    <span class="p">]),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span><span class="s2">"value"</span><span class="p">,</span> <span class="n">inRange</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">999999</span><span class="p">])</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">"Epilogos (hg38)"</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="n">scaled_size</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<span class="n">left_matrix</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">vertical</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">right_matrix</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">vertical</span><span class="p">(</span>
+    <span class="n">top</span><span class="p">,</span>
+    <span class="c1"># replace data source for right side, change title</span>
+    <span class="n">matrix</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">hi_c</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"HFFc6_Hi-C"</span><span class="p">),</span>
+    <span class="n">bottom</span><span class="p">,</span>
+    <span class="n">spacing</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">right</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">View</span><span class="p">(</span><span class="n">views</span><span class="o">=</span><span class="p">[</span><span class="n">left_matrix</span><span class="p">,</span> <span class="n">right_matrix</span><span class="p">],</span> <span class="n">spacing</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="n">gos</span><span class="o">.</span><span class="n">horizontal</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">"Matrix Visualization"</span><span class="p">,</span>
+    <span class="n">subtitle</span><span class="o">=</span><span class="s2">"Comparison of Micro-C and Hi-C for HFFc6 Cells"</span><span class="p">,</span>
+    <span class="n">xDomain</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Domain</span><span class="p">(</span><span class="n">chromosome</span><span class="o">=</span><span class="s2">"7"</span><span class="p">,</span>
+    <span class="n">interval</span><span class="o">=</span><span class="p">[</span><span class="mi">77700000</span><span class="p">,</span> <span class="mi">81000000</span><span class="p">]),</span>
+    <span class="n">spacing</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">linkingId</span><span class="o">=</span><span class="s2">"-"</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="genes.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Genes</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="circos.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Circos</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, Trevor Manz
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/gallery/comparative_matrices.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/pixi.js@5/dist/pixi.js"></script>
+    <script src="https://unpkg.com/gosling.js@0.9.4/dist/gosling.js"></script>
+    </body>
+</html>

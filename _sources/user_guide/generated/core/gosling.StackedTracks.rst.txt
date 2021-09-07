@@ -1,0 +1,30 @@
+﻿gosling.StackedTracks
+=====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: StackedTracks
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~StackedTracks.__init__
+      ~StackedTracks.copy
+      ~StackedTracks.from_dict
+      ~StackedTracks.from_json
+      ~StackedTracks.resolve_references
+      ~StackedTracks.to_dict
+      ~StackedTracks.to_json
+      ~StackedTracks.validate
+      ~StackedTracks.validate_property
+   
+   
+
+   
+   
+   

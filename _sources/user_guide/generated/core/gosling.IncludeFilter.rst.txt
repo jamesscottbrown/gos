@@ -1,0 +1,30 @@
+﻿gosling.IncludeFilter
+=====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: IncludeFilter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~IncludeFilter.__init__
+      ~IncludeFilter.copy
+      ~IncludeFilter.from_dict
+      ~IncludeFilter.from_json
+      ~IncludeFilter.resolve_references
+      ~IncludeFilter.to_dict
+      ~IncludeFilter.to_json
+      ~IncludeFilter.validate
+      ~IncludeFilter.validate_property
+   
+   
+
+   
+   
+   

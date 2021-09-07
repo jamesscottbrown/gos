@@ -1,0 +1,30 @@
+﻿gosling.MarkGlyph
+=================
+
+.. currentmodule:: gosling
+
+.. autoclass:: MarkGlyph
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MarkGlyph.__init__
+      ~MarkGlyph.copy
+      ~MarkGlyph.from_dict
+      ~MarkGlyph.from_json
+      ~MarkGlyph.resolve_references
+      ~MarkGlyph.to_dict
+      ~MarkGlyph.to_json
+      ~MarkGlyph.validate
+      ~MarkGlyph.validate_property
+   
+   
+
+   
+   
+   

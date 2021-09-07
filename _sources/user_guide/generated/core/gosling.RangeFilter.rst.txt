@@ -1,0 +1,30 @@
+﻿gosling.RangeFilter
+===================
+
+.. currentmodule:: gosling
+
+.. autoclass:: RangeFilter
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RangeFilter.__init__
+      ~RangeFilter.copy
+      ~RangeFilter.from_dict
+      ~RangeFilter.from_json
+      ~RangeFilter.resolve_references
+      ~RangeFilter.to_dict
+      ~RangeFilter.to_json
+      ~RangeFilter.validate
+      ~RangeFilter.validate_property
+   
+   
+
+   
+   
+   

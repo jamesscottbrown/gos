@@ -1,0 +1,30 @@
+﻿gosling.VectorData
+==================
+
+.. currentmodule:: gosling
+
+.. autoclass:: VectorData
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~VectorData.__init__
+      ~VectorData.copy
+      ~VectorData.from_dict
+      ~VectorData.from_json
+      ~VectorData.resolve_references
+      ~VectorData.to_dict
+      ~VectorData.to_json
+      ~VectorData.validate
+      ~VectorData.validate_property
+   
+   
+
+   
+   
+   

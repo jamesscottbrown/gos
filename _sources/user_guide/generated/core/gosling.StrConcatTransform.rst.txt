@@ -1,0 +1,30 @@
+﻿gosling.StrConcatTransform
+==========================
+
+.. currentmodule:: gosling
+
+.. autoclass:: StrConcatTransform
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~StrConcatTransform.__init__
+      ~StrConcatTransform.copy
+      ~StrConcatTransform.from_dict
+      ~StrConcatTransform.from_json
+      ~StrConcatTransform.resolve_references
+      ~StrConcatTransform.to_dict
+      ~StrConcatTransform.to_json
+      ~StrConcatTransform.validate
+      ~StrConcatTransform.validate_property
+   
+   
+
+   
+   
+   

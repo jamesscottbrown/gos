@@ -1,0 +1,30 @@
+﻿gosling.CoverageTransform
+=========================
+
+.. currentmodule:: gosling
+
+.. autoclass:: CoverageTransform
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CoverageTransform.__init__
+      ~CoverageTransform.copy
+      ~CoverageTransform.from_dict
+      ~CoverageTransform.from_json
+      ~CoverageTransform.resolve_references
+      ~CoverageTransform.to_dict
+      ~CoverageTransform.to_json
+      ~CoverageTransform.validate
+      ~CoverageTransform.validate_property
+   
+   
+
+   
+   
+   

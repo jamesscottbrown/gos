@@ -1,0 +1,30 @@
+﻿gosling.VisibilityCondition
+===========================
+
+.. currentmodule:: gosling
+
+.. autoclass:: VisibilityCondition
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~VisibilityCondition.__init__
+      ~VisibilityCondition.copy
+      ~VisibilityCondition.from_dict
+      ~VisibilityCondition.from_json
+      ~VisibilityCondition.resolve_references
+      ~VisibilityCondition.to_dict
+      ~VisibilityCondition.to_json
+      ~VisibilityCondition.validate
+      ~VisibilityCondition.validate_property
+   
+   
+
+   
+   
+   

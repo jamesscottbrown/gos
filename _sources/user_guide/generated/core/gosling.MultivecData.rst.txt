@@ -1,0 +1,30 @@
+﻿gosling.MultivecData
+====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: MultivecData
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MultivecData.__init__
+      ~MultivecData.copy
+      ~MultivecData.from_dict
+      ~MultivecData.from_json
+      ~MultivecData.resolve_references
+      ~MultivecData.to_dict
+      ~MultivecData.to_json
+      ~MultivecData.validate
+      ~MultivecData.validate_property
+   
+   
+
+   
+   
+   

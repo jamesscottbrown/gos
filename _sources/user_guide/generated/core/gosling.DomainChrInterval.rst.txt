@@ -1,0 +1,30 @@
+﻿gosling.DomainChrInterval
+=========================
+
+.. currentmodule:: gosling
+
+.. autoclass:: DomainChrInterval
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DomainChrInterval.__init__
+      ~DomainChrInterval.copy
+      ~DomainChrInterval.from_dict
+      ~DomainChrInterval.from_json
+      ~DomainChrInterval.resolve_references
+      ~DomainChrInterval.to_dict
+      ~DomainChrInterval.to_json
+      ~DomainChrInterval.validate
+      ~DomainChrInterval.validate_property
+   
+   
+
+   
+   
+   

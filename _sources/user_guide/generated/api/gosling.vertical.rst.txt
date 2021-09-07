@@ -1,0 +1,6 @@
+﻿gosling.vertical
+================
+
+.. currentmodule:: gosling
+
+.. autofunction:: vertical

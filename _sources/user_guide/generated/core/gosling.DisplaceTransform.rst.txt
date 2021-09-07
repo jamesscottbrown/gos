@@ -1,0 +1,30 @@
+﻿gosling.DisplaceTransform
+=========================
+
+.. currentmodule:: gosling
+
+.. autoclass:: DisplaceTransform
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DisplaceTransform.__init__
+      ~DisplaceTransform.copy
+      ~DisplaceTransform.from_dict
+      ~DisplaceTransform.from_json
+      ~DisplaceTransform.resolve_references
+      ~DisplaceTransform.to_dict
+      ~DisplaceTransform.to_json
+      ~DisplaceTransform.validate
+      ~DisplaceTransform.validate_property
+   
+   
+
+   
+   
+   

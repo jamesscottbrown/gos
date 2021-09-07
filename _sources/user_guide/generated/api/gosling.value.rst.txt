@@ -1,0 +1,6 @@
+﻿gosling.value
+=============
+
+.. currentmodule:: gosling
+
+.. autofunction:: value

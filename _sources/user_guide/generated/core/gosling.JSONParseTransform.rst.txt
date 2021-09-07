@@ -1,0 +1,30 @@
+﻿gosling.JSONParseTransform
+==========================
+
+.. currentmodule:: gosling
+
+.. autoclass:: JSONParseTransform
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~JSONParseTransform.__init__
+      ~JSONParseTransform.copy
+      ~JSONParseTransform.from_dict
+      ~JSONParseTransform.from_json
+      ~JSONParseTransform.resolve_references
+      ~JSONParseTransform.to_dict
+      ~JSONParseTransform.to_json
+      ~JSONParseTransform.validate
+      ~JSONParseTransform.validate_property
+   
+   
+
+   
+   
+   

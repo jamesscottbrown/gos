@@ -1,0 +1,6 @@
+﻿gosling.stack
+=============
+
+.. currentmodule:: gosling
+
+.. autofunction:: stack

@@ -1,0 +1,30 @@
+﻿gosling.MultipleViews
+=====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: MultipleViews
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MultipleViews.__init__
+      ~MultipleViews.copy
+      ~MultipleViews.from_dict
+      ~MultipleViews.from_json
+      ~MultipleViews.resolve_references
+      ~MultipleViews.to_dict
+      ~MultipleViews.to_json
+      ~MultipleViews.validate
+      ~MultipleViews.validate_property
+   
+   
+
+   
+   
+   

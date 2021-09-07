@@ -1,0 +1,30 @@
+﻿gosling.MatrixData
+==================
+
+.. currentmodule:: gosling
+
+.. autoclass:: MatrixData
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MatrixData.__init__
+      ~MatrixData.copy
+      ~MatrixData.from_dict
+      ~MatrixData.from_json
+      ~MatrixData.resolve_references
+      ~MatrixData.to_dict
+      ~MatrixData.to_json
+      ~MatrixData.validate
+      ~MatrixData.validate_property
+   
+   
+
+   
+   
+   

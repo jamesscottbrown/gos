@@ -1,0 +1,30 @@
+﻿gosling.GoslingSpec
+===================
+
+.. currentmodule:: gosling
+
+.. autoclass:: GoslingSpec
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GoslingSpec.__init__
+      ~GoslingSpec.copy
+      ~GoslingSpec.from_dict
+      ~GoslingSpec.from_json
+      ~GoslingSpec.resolve_references
+      ~GoslingSpec.to_dict
+      ~GoslingSpec.to_json
+      ~GoslingSpec.validate
+      ~GoslingSpec.validate_property
+   
+   
+
+   
+   
+   

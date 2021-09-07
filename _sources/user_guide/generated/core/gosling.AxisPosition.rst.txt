@@ -1,0 +1,30 @@
+﻿gosling.AxisPosition
+====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: AxisPosition
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AxisPosition.__init__
+      ~AxisPosition.copy
+      ~AxisPosition.from_dict
+      ~AxisPosition.from_json
+      ~AxisPosition.resolve_references
+      ~AxisPosition.to_dict
+      ~AxisPosition.to_json
+      ~AxisPosition.validate
+      ~AxisPosition.validate_property
+   
+   
+
+   
+   
+   

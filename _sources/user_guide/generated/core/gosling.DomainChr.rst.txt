@@ -1,0 +1,30 @@
+﻿gosling.DomainChr
+=================
+
+.. currentmodule:: gosling
+
+.. autoclass:: DomainChr
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DomainChr.__init__
+      ~DomainChr.copy
+      ~DomainChr.from_dict
+      ~DomainChr.from_json
+      ~DomainChr.resolve_references
+      ~DomainChr.to_dict
+      ~DomainChr.to_json
+      ~DomainChr.validate
+      ~DomainChr.validate_property
+   
+   
+
+   
+   
+   

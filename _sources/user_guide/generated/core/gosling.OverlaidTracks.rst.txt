@@ -1,0 +1,30 @@
+﻿gosling.OverlaidTracks
+======================
+
+.. currentmodule:: gosling
+
+.. autoclass:: OverlaidTracks
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~OverlaidTracks.__init__
+      ~OverlaidTracks.copy
+      ~OverlaidTracks.from_dict
+      ~OverlaidTracks.from_json
+      ~OverlaidTracks.resolve_references
+      ~OverlaidTracks.to_dict
+      ~OverlaidTracks.to_json
+      ~OverlaidTracks.validate
+      ~OverlaidTracks.validate_property
+   
+   
+
+   
+   
+   

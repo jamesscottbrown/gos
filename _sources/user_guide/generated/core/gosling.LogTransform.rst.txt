@@ -1,0 +1,30 @@
+﻿gosling.LogTransform
+====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: LogTransform
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LogTransform.__init__
+      ~LogTransform.copy
+      ~LogTransform.from_dict
+      ~LogTransform.from_json
+      ~LogTransform.resolve_references
+      ~LogTransform.to_dict
+      ~LogTransform.to_json
+      ~LogTransform.validate
+      ~LogTransform.validate_property
+   
+   
+
+   
+   
+   

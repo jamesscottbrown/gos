@@ -1,0 +1,30 @@
+﻿gosling.DataDeep
+================
+
+.. currentmodule:: gosling
+
+.. autoclass:: DataDeep
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DataDeep.__init__
+      ~DataDeep.copy
+      ~DataDeep.from_dict
+      ~DataDeep.from_json
+      ~DataDeep.resolve_references
+      ~DataDeep.to_dict
+      ~DataDeep.to_json
+      ~DataDeep.validate
+      ~DataDeep.validate_property
+   
+   
+
+   
+   
+   

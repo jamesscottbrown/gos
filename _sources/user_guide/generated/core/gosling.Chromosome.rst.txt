@@ -1,0 +1,30 @@
+﻿gosling.Chromosome
+==================
+
+.. currentmodule:: gosling
+
+.. autoclass:: Chromosome
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Chromosome.__init__
+      ~Chromosome.copy
+      ~Chromosome.from_dict
+      ~Chromosome.from_json
+      ~Chromosome.resolve_references
+      ~Chromosome.to_dict
+      ~Chromosome.to_json
+      ~Chromosome.validate
+      ~Chromosome.validate_property
+   
+   
+
+   
+   
+   

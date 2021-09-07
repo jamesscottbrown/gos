@@ -1,0 +1,30 @@
+﻿gosling.ChannelBind
+===================
+
+.. currentmodule:: gosling
+
+.. autoclass:: ChannelBind
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ChannelBind.__init__
+      ~ChannelBind.copy
+      ~ChannelBind.from_dict
+      ~ChannelBind.from_json
+      ~ChannelBind.resolve_references
+      ~ChannelBind.to_dict
+      ~ChannelBind.to_json
+      ~ChannelBind.validate
+      ~ChannelBind.validate_property
+   
+   
+
+   
+   
+   

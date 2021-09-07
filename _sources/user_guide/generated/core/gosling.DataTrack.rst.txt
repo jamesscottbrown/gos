@@ -1,0 +1,30 @@
+﻿gosling.DataTrack
+=================
+
+.. currentmodule:: gosling
+
+.. autoclass:: DataTrack
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DataTrack.__init__
+      ~DataTrack.copy
+      ~DataTrack.from_dict
+      ~DataTrack.from_json
+      ~DataTrack.resolve_references
+      ~DataTrack.to_dict
+      ~DataTrack.to_json
+      ~DataTrack.validate
+      ~DataTrack.validate_property
+   
+   
+
+   
+   
+   

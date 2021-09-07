@@ -1,0 +1,30 @@
+﻿gosling.StrReplaceTransform
+===========================
+
+.. currentmodule:: gosling
+
+.. autoclass:: StrReplaceTransform
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~StrReplaceTransform.__init__
+      ~StrReplaceTransform.copy
+      ~StrReplaceTransform.from_dict
+      ~StrReplaceTransform.from_json
+      ~StrReplaceTransform.resolve_references
+      ~StrReplaceTransform.to_dict
+      ~StrReplaceTransform.to_json
+      ~StrReplaceTransform.validate
+      ~StrReplaceTransform.validate_property
+   
+   
+
+   
+   
+   

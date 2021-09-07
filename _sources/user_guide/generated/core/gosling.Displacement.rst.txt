@@ -1,0 +1,30 @@
+﻿gosling.Displacement
+====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: Displacement
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Displacement.__init__
+      ~Displacement.copy
+      ~Displacement.from_dict
+      ~Displacement.from_json
+      ~Displacement.resolve_references
+      ~Displacement.to_dict
+      ~Displacement.to_json
+      ~Displacement.validate
+      ~Displacement.validate_property
+   
+   
+
+   
+   
+   

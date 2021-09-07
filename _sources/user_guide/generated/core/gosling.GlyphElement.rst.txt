@@ -1,0 +1,30 @@
+﻿gosling.GlyphElement
+====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: GlyphElement
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GlyphElement.__init__
+      ~GlyphElement.copy
+      ~GlyphElement.from_dict
+      ~GlyphElement.from_json
+      ~GlyphElement.resolve_references
+      ~GlyphElement.to_dict
+      ~GlyphElement.to_json
+      ~GlyphElement.validate
+      ~GlyphElement.validate_property
+   
+   
+
+   
+   
+   

@@ -1,0 +1,30 @@
+﻿gosling.GoslingSchema
+=====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: GoslingSchema
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GoslingSchema.__init__
+      ~GoslingSchema.copy
+      ~GoslingSchema.from_dict
+      ~GoslingSchema.from_json
+      ~GoslingSchema.resolve_references
+      ~GoslingSchema.to_dict
+      ~GoslingSchema.to_json
+      ~GoslingSchema.validate
+      ~GoslingSchema.validate_property
+   
+   
+
+   
+   
+   

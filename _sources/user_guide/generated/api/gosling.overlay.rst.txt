@@ -1,0 +1,6 @@
+﻿gosling.overlay
+===============
+
+.. currentmodule:: gosling
+
+.. autofunction:: overlay
