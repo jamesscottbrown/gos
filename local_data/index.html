@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Example Gallery" href="../gallery/index.html" /><link rel="prev" title="Installation" href="../getting_started/installation.html" />
 
     <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-4.1.2, furo 2021.08.31"/>
-        <title>Motivation - gos</title>
+        <title>Motivation &amp; Installation - gos</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=c7c65a82b42f6b978e58466c1e9ef2509836d916" />
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/higlass@1.11.3/dist/hglib.css" />
@@ -162,13 +162,11 @@
   <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html#dependencies">Dependencies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html#development-install">Development Install</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Local Data</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Motivation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Motivation &amp; Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#usage">Usage</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Gallery</span></p>
@@ -305,8 +303,8 @@
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <section id="motivation">
-<span id="local-data"></span><h1>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h1>
+        <section id="motivation-installation">
+<span id="local-data"></span><h1>Motivation &amp; Installation<a class="headerlink" href="#motivation-installation" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://gosling-lang.github.io/gosling-website/docs/data">Data sources</a> for the <a class="reference external" href="http://gosling-lang.org/">Gosling</a> specification are expected to be accessible via HTTP.
 Loading a local dataset can be challenging since it requires starting a web-server
 and/or a <a class="reference external" href="https://gosling-lang.github.io/gosling-website/docs/data#pre-aggregated-datasets-higlass-server">Higlass server</a> for some pre-aggregated datasets.</p>
@@ -318,11 +316,8 @@ the <cite>gosling.experimental.data</cite> module.</p>
 <span class="kn">from</span> <span class="nn">gosling.experimental.data</span> <span class="kn">import</span> <span class="n">beddb</span><span class="p">,</span> <span class="n">vector</span><span class="p">,</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">multivec</span> <span class="c1"># higlass tile resources</span>
 </pre></div>
 </div>
-</section>
-<section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>In order to use these utilities, you will need to install additional dependencies via:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install <span class="s2">"gosling[all]"</span> <span class="c1"># installs extra deps for background data-server</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install <span class="s1">'gosling[all]'</span> <span class="c1"># installs extra deps for background data-server</span>
 pip install clodius <span class="c1"># optional, required for higlass tile resources</span>
 </pre></div>
 </div>
@@ -480,8 +475,7 @@ data = multivec(
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Motivation</a></li>
-<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#">Motivation &amp; Installation</a></li>
 <li><a class="reference internal" href="#usage">Usage</a></li>
 </ul>
 

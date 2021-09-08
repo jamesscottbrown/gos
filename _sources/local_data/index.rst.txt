@@ -2,8 +2,8 @@
 
 .. _local_data:
 
-Motivation
-==========
+Motivation & Installation
+=========================
 
 `Data sources`_ for the Gosling_ specification are expected to be accessible via HTTP.
 Loading a local dataset can be challenging since it requires starting a web-server
@@ -20,14 +20,11 @@ the `gosling.experimental.data` module.
     from gosling.experimental.data import beddb, vector, matrix, multivec # higlass tile resources
 
 
-Installation
-============
-
 In order to use these utilities, you will need to install additional dependencies via:
 
 .. code-block:: bash
 
-    pip install "gosling[all]" # installs extra deps for background data-server
+    pip install 'gosling[all]' # installs extra deps for background data-server
     pip install clodius # optional, required for higlass tile resources
 
 

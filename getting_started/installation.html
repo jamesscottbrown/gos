@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Motivation" href="../local_data/index.html" /><link rel="prev" title="gos: (epi)genomic visualization in python" href="../index.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Motivation &amp; Installation" href="../local_data/index.html" /><link rel="prev" title="gos: (epi)genomic visualization in python" href="../index.html" />
 
     <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-4.1.2, furo 2021.08.31"/>
         <title>Installation - gos</title>
@@ -162,13 +162,11 @@
   <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#dependencies">Dependencies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#development-install">Development Install</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Local Data</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../local_data/index.html">Motivation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../local_data/index.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local_data/index.html">Motivation &amp; Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../local_data/index.html#usage">Usage</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Gallery</span></p>
@@ -311,25 +309,10 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install gosling
 </pre></div>
 </div>
-</section>
-<section id="dependencies">
-<h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h1>
-<p><strong>gos</strong> has the following dependencies, all of which are installed automatically
-with the above installation commands:</p>
-<ul class="simple">
-<li><p>python 3.7 or newer</p></li>
-<li><p><a class="reference external" href="https://github.com/Julian/jsonschema">jsonschema</a></p></li>
-<li><p><a class="reference external" href="http://www.numpy.org/">NumPy</a></p></li>
-<li><p><a class="reference external" href="http://pandas.pydata.org">Pandas</a></p></li>
-</ul>
-<p>To run the full test suite and build documentation requires a few additional dependencies:</p>
-<ul class="simple">
-<li><p>pytest</p></li>
-<li><p>jinja2</p></li>
-<li><p>sphinx</p></li>
-<li><p>m2r</p></li>
-<li><p>ipython</p></li>
-</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Further setup is required if you have <a class="reference internal" href="../local_data/index.html#local-data"><span class="std std-ref">local data</span></a></p>
+</div>
 </section>
 <section id="development-install">
 <h1>Development Install<a class="headerlink" href="#development-install" title="Permalink to this headline">¶</a></h1>
@@ -340,7 +323,7 @@ from the root of the repository to install the main version of <strong>gos</stro
 </pre></div>
 </div>
 <p>To install development dependencies as well, run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install -e .<span class="o">[</span>dev<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install -e <span class="s1">'.[dev]'</span>
 </pre></div>
 </div>
 </section>
@@ -354,7 +337,7 @@ from the root of the repository to install the main version of <strong>gos</stro
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Motivation</div>
+                <div class="title">Motivation &amp; Installation</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -400,7 +383,6 @@ from the root of the repository to install the main version of <strong>gos</stro
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Installation</a></li>
-<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
 <li><a class="reference internal" href="#development-install">Development Install</a></li>
 </ul>
 
