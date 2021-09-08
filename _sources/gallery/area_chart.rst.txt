@@ -4,7 +4,7 @@
 .. _gallery_area_chart:
 
 Area Chart
-=========
+==========
 
 .. gosling-plot::
     :code-below:

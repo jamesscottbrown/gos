@@ -3,6 +3,9 @@
 
 .. _example-gallery:
 
+Example Gallery
+---------------
+
 This gallery contains a selection of examples of the visualizations **gos** can create.
 
 
