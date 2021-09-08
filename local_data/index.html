@@ -400,9 +400,8 @@ pip install clodius <span class="c1"># optional, required for higlass tile resou
 </pre></div>
 </div>
 <p>In the example above, we can replace the remote Higlass server URL with a local path to the
-corresponding cistrome multivec file (<a class="reference external" href="https://s3.amazonaws.com/gosling-lang.org/data/cistrome.multires.mv5">https://s3.amazonaws.com/gosling-lang.org/data/cistrome.multires.mv5</a>, 4GB).
-<strong>gos</strong> automatically detects the local file and will starts a background Higlass server to
-power the visualization.</p>
+corresponding <a class="reference external" href="https://s3.amazonaws.com/gosling-lang.org/data/cistrome.multires.mv5">cistrome multivec file</a> (4GB). <strong>gos</strong> automatically detects the local
+file and will starts a background Higlass server to power the visualization.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>import gosling as gos
 <span class="gd">-from gosling.data import multivec</span>
 <span class="gi">+from gosling.experimental.data import multivec</span>
