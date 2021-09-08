@@ -317,6 +317,10 @@
         <article role="main">
           <section id="motivation-installation">
 <span id="local-data"></span><h1>Motivation &amp; Installation<a class="headerlink" href="#motivation-installation" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is only available in local environments and not for remove systems (like Colab or MyBinder).</p>
+</div>
 <p><a class="reference external" href="https://gosling-lang.github.io/gosling-website/docs/data">Data sources</a> for the <a class="reference external" href="http://gosling-lang.org/">Gosling</a> specification are expected to be accessible via HTTP.
 Loading a local dataset can be challenging since it requires starting a web-server
 and/or a <a class="reference external" href="https://gosling-lang.github.io/gosling-website/docs/data#pre-aggregated-datasets-higlass-server">Higlass server</a> for some pre-aggregated datasets.</p>
@@ -429,7 +433,10 @@ data = multivec(
 )
 </pre></div>
 </div>
-<p>Note that the visualizations will only render as long as your Python session is active.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Note that visualizations will only render as long as your Python session is active.</p>
+</div>
 </section>
 
         </article>
