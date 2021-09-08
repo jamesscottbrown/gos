@@ -4,13 +4,12 @@
 .. _gallery_comparative_matrices:
 
 Comparative Matrices
---------------------
-
-
+====================
 
 .. gosling-plot::
     :code-below:
 
+    
     import gosling as gos
     from gosling.data import bigwig, beddb, matrix, multivec
 

@@ -3,23 +3,46 @@
 
 .. _example-gallery:
 
-Example Gallery
----------------
-
 This gallery contains a selection of examples of the visualizations **gos** can create.
+
+
+
+Basic marks
+-----------
 
 .. toctree::
 
 
+    line_chart
     area_chart
+    text_marks
+    point_plot
     bar_chart
-    circos
-    comparative_matrices
+
+Composite visualizations
+------------------------
+
+.. toctree::
+
+
     genes
     ideograms
-    line_chart
+    comparative_matrices
+
+Interactive visualizations
+--------------------------
+
+.. toctree::
+
+
     multiscale_lollipop_plot
     multiscale_sequence
     overview_detail
-    point_plot
-    text_marks
+
+Others
+------
+
+.. toctree::
+
+
+    circos

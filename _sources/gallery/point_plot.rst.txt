@@ -4,13 +4,12 @@
 .. _gallery_point_plot:
 
 Point Plot
-----------
-
-
+==========
 
 .. gosling-plot::
     :code-below:
 
+    
     import gosling as gos
     from gosling.data import multivec
 

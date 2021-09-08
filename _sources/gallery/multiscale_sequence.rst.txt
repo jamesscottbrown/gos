@@ -3,14 +3,13 @@
 
 .. _gallery_multiscale_sequence:
 
-Multiscale Sequence
--------------------
-
-
+Multiscale Sequence Plot
+========================
 
 .. gosling-plot::
     :code-below:
 
+    
     import gosling as gos
     from gosling.data import multivec
 

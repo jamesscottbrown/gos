@@ -4,13 +4,12 @@
 .. _gallery_multiscale_lollipop_plot:
 
 Multiscale Lollipop Plot
-------------------------
-
-
+========================
 
 .. gosling-plot::
     :code-below:
 
+    
     import gosling as gos
     from gosling.data import beddb, multivec
      
