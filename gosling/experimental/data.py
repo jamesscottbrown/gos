@@ -1,5 +1,6 @@
 import pathlib
 from typing import Callable, Dict, Optional, Union
+from urllib import parse
 
 import gosling.experimental._tilesets as tilesets
 from gosling.experimental._provider import Provider, Resource, TilesetResource
@@ -10,6 +11,26 @@ def _hash_path(path: pathlib.Path):
     return _compute_data_hash(str(path))
 
 
+def transform_url_colab(url: str) -> str:
+    from google.colab.output import eval_js
+
+    url_parts = parse.urlparse(url)
+    url_path = eval_js(f"google.colab.kernel.proxyPort({url_parts.port})").rstrip("/")
+    url = f"{url_path}/{url_parts.path}"
+    if url_parts.query:
+        url += "?" + url_parts.query
+    return url
+
+
+def transform_url_jupyter_proxy(url: str) -> str:
+    url_parts = parse.urlparse(url)
+    urlpath = ".."
+    url = f"{urlpath}/proxy/{url_parts.port}{url_parts.path}"
+    if url_parts.query:
+        url += "?" + url_parts.query
+    return url
+
+
 class GoslingDataServer:
     """Backend server for Gosling datasets."""
 
@@ -18,6 +39,7 @@ class GoslingDataServer:
         # We need to keep references to served resources, because the background
         # server uses weakrefs.
         self._resources: Dict[str, Union[Resource, TilesetResource]] = {}
+        self._active: str = "default"
 
     @property
     def port(self):
@@ -29,6 +51,9 @@ class GoslingDataServer:
         if self._provider is not None:
             self._provider.stop()
         self._resources = {}
+
+    def enable(self, name: str):
+        self._active = name
 
     def __call__(
         self, data: Union[pathlib.Path, tilesets.Tileset], port: Optional[int] = None
@@ -50,7 +75,13 @@ class GoslingDataServer:
         if resource_id not in self._resources:
             self._resources[resource_id] = self._provider.create(**{key: data})
 
-        return self._resources[resource_id].url
+        url = self._resources[resource_id].url
+
+        if self._active == "colab":
+            return transform_url_colab(url)
+        if self._active == "jupyter":
+            return transform_url_jupyter_proxy(url)
+        return url
 
     def __rich_repr__(self):
         yield "resources", self._resources
