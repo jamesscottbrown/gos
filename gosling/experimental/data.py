@@ -16,7 +16,7 @@ def transform_url_colab(url: str) -> str:
 
     url_parts = parse.urlparse(url)
     url_path = eval_js(f"google.colab.kernel.proxyPort({url_parts.port})").rstrip("/")
-    url = f"{url_path}/{url_parts.path}"
+    url = f"{url_path}{url_parts.path}"
     if url_parts.query:
         url += "?" + url_parts.query
     return url
