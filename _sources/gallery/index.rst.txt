@@ -17,6 +17,7 @@ Basic marks
 
 
     line_chart
+    brushing_and_linking
     area_chart
     text_marks
     point_plot
