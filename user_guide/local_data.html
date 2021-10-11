@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="gosling.ZoomLevelVisibilityCondition" href="generated/core/gosling.ZoomLevelVisibilityCondition.html" />
 
-    <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.09.08"/>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>Local Data - gos</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=c7c65a82b42f6b978e58466c1e9ef2509836d916" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/higlass@1.11.3/dist/hglib.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/theme_overrides.css" />
@@ -168,29 +168,29 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../gallery/index.html">Example Gallery</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../gallery/index.html#basic-marks">Basic marks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/brushing_and_linking.html">Brushing and Linking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/text_marks.html">Text Marks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/point_plot.html">Point Plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/line_chart.html">Line Chart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/bar_chart.html">Bar Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/text_marks.html">Text Marks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/area_chart.html">Area Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/brushing_and_linking.html">Brushing and Linking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/line_chart.html">Line Chart</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../gallery/index.html#composite-visualizations">Composite visualizations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/ideograms.html">Ideograms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/comparative_matrices.html">Comparative Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/genes.html">Gene Annotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/comparative_matrices.html">Comparative Matrices</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../gallery/index.html#interactive-visualizations">Interactive visualizations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/multiscale_lollipop_plot.html">Multiscale Lollipop Plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/multiscale_sequence.html">Multiscale Sequence Plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/overview_detail.html">Overview + Details</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/multiscale_lollipop_plot.html">Multiscale Lollipop Plot</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../gallery/index.html#others">Others</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/circos.html">Circos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/corces.html">Single-cell Epigenomic Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/circos.html">Circos</a></li>
 </ul>
 </li>
 </ul>
@@ -321,19 +321,17 @@
 <p><a class="reference external" href="https://gosling-lang.github.io/gosling-website/docs/data">Data sources</a> for the <a class="reference external" href="http://gosling-lang.org/">Gosling</a> specification are expected to be accessible via HTTP.
 Loading a local dataset can be challenging since it requires starting a web-server
 and/or a <a class="reference external" href="https://gosling-lang.github.io/gosling-website/docs/data#pre-aggregated-datasets-higlass-server">Higlass server</a> for some pre-aggregated datasets.</p>
-<p><strong>gos</strong> provides an experimental module that transparently serves data via a
-background ASGI server. The various data utilites are imported from
-the <cite>gosling.experimental.data</cite> module.</p>
+<p>The data utilities in <strong>gos</strong> will transparently serve data via a
+background ASGI server if a local file path is detected.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
-<span class="kn">from</span> <span class="nn">gosling.experimental.data</span> <span class="kn">import</span> <span class="n">bam</span><span class="p">,</span> <span class="n">csv</span><span class="p">,</span> <span class="n">bigwig</span> <span class="c1"># file resources</span>
-<span class="kn">from</span> <span class="nn">gosling.experimental.data</span> <span class="kn">import</span> <span class="n">beddb</span><span class="p">,</span> <span class="n">vector</span><span class="p">,</span> <span class="n">matrix</span><span class="p">,</span> <span class="n">multivec</span> <span class="c1"># higlass tile resources</span>
+<span class="c1"># gos.bam, gos.csv, gos.bigwig # file resources</span>
+<span class="c1"># gos.beddb, gos.vector, gos.matrix, gos.multivec # higlass tile resources</span>
 </pre></div>
 </div>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>You will need to install additional dependencies to use this feature via:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install <span class="s1">'gosling[all]'</span> <span class="c1"># installs extra deps for background data-server</span>
-pip install clodius <span class="c1"># optional, required for higlass tile resources</span>
+<p>You will need to install <a class="reference external" href="https://github.com/higlass/clodius">Clodius</a> for any higlass tile resources:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install clodius <span class="c1"># optional, required for higlass tile resources</span>
 </pre></div>
 </div>
 </section>
@@ -393,9 +391,8 @@ pip install clodius <span class="c1"># optional, required for higlass tile resou
   });
 </script>
 </div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
-<span class="kn">from</span> <span class="nn">gosling.data</span> <span class="kn">import</span> <span class="n">multivec</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">multivec</span><span class="p">(</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">multivec</span><span class="p">(</span>
     <span class="n">url</span><span class="o">=</span><span class="s2">"https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec"</span><span class="p">,</span>
     <span class="n">row</span><span class="o">=</span><span class="s2">"sample"</span><span class="p">,</span>
     <span class="n">column</span><span class="o">=</span><span class="s2">"position"</span><span class="p">,</span>
@@ -414,14 +411,12 @@ pip install clodius <span class="c1"># optional, required for higlass tile resou
 <span class="n">track</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>By changing the <code class="code docutils literal notranslate"><span class="pre">data</span></code> import and replacing the Higlass server URL with a local path
-corresponding <a class="reference external" href="https://s3.amazonaws.com/gosling-lang.org/data/cistrome.multires.mv5">cistrome multivec file</a> (4GB), <strong>gos</strong> automatically detects the local
+<p>By replacing the Higlass server URL with a local path corresponding
+<a class="reference external" href="https://s3.amazonaws.com/gosling-lang.org/data/cistrome.multires.mv5">cistrome multivec file</a> (4GB), <strong>gos</strong> automatically detects the local
 file and will starts a background Higlass server to power the visualization.</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>import gosling as gos
-<span class="gd">-from gosling.data import multivec</span>
-<span class="gi">+from gosling.experimental.data import multivec</span>
 
-data = multivec(
+data = gos.multivec(
 <span class="gd">-   url="https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",</span>
 <span class="gi">+   url='../data/cistrome.multires.mv5', # path to local multivec</span>
     row="sample",
