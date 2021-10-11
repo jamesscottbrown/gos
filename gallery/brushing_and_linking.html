@@ -314,7 +314,118 @@
         <article role="main">
           <section id="brushing-and-linking">
 <span id="gallery-brushing-and-linking"></span><h1>Brushing and Linking<a class="headerlink" href="#brushing-and-linking" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
+<div id="brushing_and_linking-rst-gosling-plot-0">
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+      var spec = {
+  "alignment": "stack",
+  "tracks": [
+    {
+      "alignment": "overlay",
+      "height": 200,
+      "tracks": [
+        {
+          "data": {
+            "categories": [
+              "sample 1"
+            ],
+            "column": "position",
+            "row": "sample",
+            "type": "multivec",
+            "url": "https://resgen.io/api/v1/tileset_info/?d=UvVPeLHuRDiYA3qwFlm7xQ",
+            "value": "peak"
+          },
+          "mark": "line",
+          "x": {
+            "axis": "top",
+            "domain": {
+              "chromosome": "1"
+            },
+            "field": "position",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "color": {
+            "value": "steelBlue"
+          },
+          "data": {
+            "categories": [
+              "sample 1"
+            ],
+            "column": "position",
+            "row": "sample",
+            "type": "multivec",
+            "url": "https://resgen.io/api/v1/tileset_info/?d=UvVPeLHuRDiYA3qwFlm7xQ",
+            "value": "peak"
+          },
+          "mark": "brush",
+          "x": {
+            "axis": "top",
+            "domain": {
+              "chromosome": "1"
+            },
+            "field": "position",
+            "linkingId": "linking-with-brush",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative"
+          }
+        }
+      ],
+      "width": 800
+    },
+    {
+      "data": {
+        "categories": [
+          "sample 1"
+        ],
+        "column": "position",
+        "row": "sample",
+        "type": "multivec",
+        "url": "https://resgen.io/api/v1/tileset_info/?d=UvVPeLHuRDiYA3qwFlm7xQ",
+        "value": "peak"
+      },
+      "height": 200,
+      "mark": "line",
+      "style": {
+        "background": "steelBlue",
+        "backgroundOpacity": 0.1
+      },
+      "width": 800,
+      "x": {
+        "axis": "top",
+        "domain": {
+          "chromosome": "1",
+          "interval": [
+            200000000,
+            220000000
+          ]
+        },
+        "field": "position",
+        "linkingId": "linking-with-brush",
+        "type": "genomic"
+      },
+      "y": {
+        "field": "peak",
+        "type": "quantitative"
+      }
+    }
+  ]
+};
+      console.log(spec);
+      var opt = { padding: 0 };
+      var el = document.querySelector('#brushing_and_linking-rst-gosling-plot-0');
+      gosling.embed(el, spec, opt).catch(console.err);
+  });
+</script>
+</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">multivec</span><span class="p">(</span>
     <span class="n">url</span><span class="o">=</span><span class="s2">"https://resgen.io/api/v1/tileset_info/?d=UvVPeLHuRDiYA3qwFlm7xQ"</span><span class="p">,</span>

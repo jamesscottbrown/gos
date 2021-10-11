@@ -314,7 +314,125 @@
         <article role="main">
           <section id="multiscale-sequence-plot">
 <span id="gallery-multiscale-sequence"></span><h1>Multiscale Sequence Plot<a class="headerlink" href="#multiscale-sequence-plot" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
+<div id="multiscale_sequence-rst-gosling-plot-0">
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+      var spec = {
+  "alignment": "overlay",
+  "height": 100,
+  "title": "Multi-Scale Sequence Plot",
+  "tracks": [
+    {
+      "color": {
+        "domain": [
+          "A",
+          "T",
+          "G",
+          "C"
+        ],
+        "field": "base",
+        "legend": true,
+        "type": "nominal"
+      },
+      "data": {
+        "categories": [
+          "A",
+          "T",
+          "G",
+          "C"
+        ],
+        "column": "position",
+        "row": "base",
+        "type": "multivec",
+        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=sequence-multivec",
+        "value": "count"
+      },
+      "mark": "bar",
+      "x": {
+        "field": "position",
+        "type": "genomic"
+      },
+      "y": {
+        "axis": "none",
+        "field": "count",
+        "type": "quantitative"
+      }
+    },
+    {
+      "color": {
+        "value": "white"
+      },
+      "data": {
+        "categories": [
+          "A",
+          "T",
+          "G",
+          "C"
+        ],
+        "column": "position",
+        "row": "base",
+        "type": "multivec",
+        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=sequence-multivec",
+        "value": "count"
+      },
+      "dataTransform": [
+        {
+          "field": "count",
+          "not": true,
+          "oneOf": [
+            0
+          ],
+          "type": "filter"
+        }
+      ],
+      "mark": "text",
+      "size": {
+        "value": 24
+      },
+      "text": {
+        "field": "base",
+        "type": "nominal"
+      },
+      "visibility": [
+        {
+          "measure": "width",
+          "operation": "LT",
+          "target": "mark",
+          "threshold": "|xe-x|",
+          "transitionPadding": 30
+        },
+        {
+          "measure": "zoomLevel",
+          "operation": "LT",
+          "target": "track",
+          "threshold": 10
+        }
+      ],
+      "x": {
+        "field": "start",
+        "type": "genomic"
+      },
+      "xe": {
+        "field": "end",
+        "type": "genomic"
+      }
+    }
+  ],
+  "width": 725,
+  "xDomain": {
+    "interval": [
+      1000000,
+      1000010
+    ]
+  }
+};
+      console.log(spec);
+      var opt = { padding: 0 };
+      var el = document.querySelector('#multiscale_sequence-rst-gosling-plot-0');
+      gosling.embed(el, spec, opt).catch(console.err);
+  });
+</script>
+</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">multivec</span><span class="p">(</span>
     <span class="n">url</span><span class="o">=</span><span class="s2">"https://server.gosling-lang.org/api/v1/tileset_info/?d=sequence-multivec"</span><span class="p">,</span>

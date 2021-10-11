@@ -315,7 +315,706 @@
           <section id="gene-annotation">
 <span id="gallery-genes"></span><h1>Gene Annotation<a class="headerlink" href="#gene-annotation" title="Permalink to this headline">¶</a></h1>
 <p>Re-implementation of <a class="reference external" href="https://docs.higlass.io/track_types.html#gene-annotations">Higlass gene-annotations track</a></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
+<div id="genes-rst-gosling-plot-0">
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+      var spec = {
+  "alignment": "overlay",
+  "assembly": "hg38",
+  "centerRadius": 0.7,
+  "height": 100,
+  "layout": "linear",
+  "title": "Gene Annotation",
+  "tracks": [
+    {
+      "color": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "range": [
+          "#7585FF",
+          "#FF8A85"
+        ],
+        "type": "nominal"
+      },
+      "data": {
+        "exonIntervalFields": [
+          {
+            "index": 12,
+            "name": "start"
+          },
+          {
+            "index": 13,
+            "name": "end"
+          }
+        ],
+        "genomicFields": [
+          {
+            "index": 1,
+            "name": "start"
+          },
+          {
+            "index": 2,
+            "name": "end"
+          }
+        ],
+        "type": "beddb",
+        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+        "valueFields": [
+          {
+            "index": 5,
+            "name": "strand",
+            "type": "nominal"
+          },
+          {
+            "index": 3,
+            "name": "name",
+            "type": "nominal"
+          }
+        ]
+      },
+      "dataTransform": [
+        {
+          "field": "type",
+          "oneOf": [
+            "gene"
+          ],
+          "type": "filter"
+        },
+        {
+          "field": "strand",
+          "oneOf": [
+            "+"
+          ],
+          "type": "filter"
+        }
+      ],
+      "mark": "rule",
+      "row": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "type": "nominal"
+      },
+      "strokeWidth": {
+        "value": 3
+      },
+      "style": {
+        "linePattern": {
+          "size": 5,
+          "type": "triangleRight"
+        }
+      },
+      "title": "Genes | hg38",
+      "tooltip": [
+        {
+          "alt": "Start Position",
+          "field": "start",
+          "type": "genomic"
+        },
+        {
+          "alt": "End Position",
+          "field": "end",
+          "type": "genomic"
+        },
+        {
+          "alt": "Strand",
+          "field": "strand",
+          "type": "nominal"
+        },
+        {
+          "alt": "Name",
+          "field": "name",
+          "type": "nominal"
+        }
+      ],
+      "x": {
+        "axis": "top",
+        "field": "start",
+        "type": "genomic"
+      },
+      "xe": {
+        "field": "end",
+        "type": "genomic"
+      }
+    },
+    {
+      "color": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "range": [
+          "#7585FF",
+          "#FF8A85"
+        ],
+        "type": "nominal"
+      },
+      "data": {
+        "exonIntervalFields": [
+          {
+            "index": 12,
+            "name": "start"
+          },
+          {
+            "index": 13,
+            "name": "end"
+          }
+        ],
+        "genomicFields": [
+          {
+            "index": 1,
+            "name": "start"
+          },
+          {
+            "index": 2,
+            "name": "end"
+          }
+        ],
+        "type": "beddb",
+        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+        "valueFields": [
+          {
+            "index": 5,
+            "name": "strand",
+            "type": "nominal"
+          },
+          {
+            "index": 3,
+            "name": "name",
+            "type": "nominal"
+          }
+        ]
+      },
+      "dataTransform": [
+        {
+          "field": "type",
+          "oneOf": [
+            "gene"
+          ],
+          "type": "filter"
+        },
+        {
+          "field": "strand",
+          "oneOf": [
+            "-"
+          ],
+          "type": "filter"
+        }
+      ],
+      "mark": "rule",
+      "row": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "type": "nominal"
+      },
+      "strokeWidth": {
+        "value": 3
+      },
+      "style": {
+        "linePattern": {
+          "size": 5,
+          "type": "triangleLeft"
+        }
+      },
+      "title": "Genes | hg38",
+      "tooltip": [
+        {
+          "alt": "Start Position",
+          "field": "start",
+          "type": "genomic"
+        },
+        {
+          "alt": "End Position",
+          "field": "end",
+          "type": "genomic"
+        },
+        {
+          "alt": "Strand",
+          "field": "strand",
+          "type": "nominal"
+        },
+        {
+          "alt": "Name",
+          "field": "name",
+          "type": "nominal"
+        }
+      ],
+      "x": {
+        "axis": "top",
+        "field": "start",
+        "type": "genomic"
+      },
+      "xe": {
+        "field": "end",
+        "type": "genomic"
+      }
+    },
+    {
+      "color": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "range": [
+          "#7585FF",
+          "#FF8A85"
+        ],
+        "type": "nominal"
+      },
+      "data": {
+        "exonIntervalFields": [
+          {
+            "index": 12,
+            "name": "start"
+          },
+          {
+            "index": 13,
+            "name": "end"
+          }
+        ],
+        "genomicFields": [
+          {
+            "index": 1,
+            "name": "start"
+          },
+          {
+            "index": 2,
+            "name": "end"
+          }
+        ],
+        "type": "beddb",
+        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+        "valueFields": [
+          {
+            "index": 5,
+            "name": "strand",
+            "type": "nominal"
+          },
+          {
+            "index": 3,
+            "name": "name",
+            "type": "nominal"
+          }
+        ]
+      },
+      "dataTransform": [
+        {
+          "field": "type",
+          "oneOf": [
+            "exon"
+          ],
+          "type": "filter"
+        }
+      ],
+      "mark": "rect",
+      "row": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "type": "nominal"
+      },
+      "size": {
+        "value": 15
+      },
+      "title": "Genes | hg38",
+      "tooltip": [
+        {
+          "alt": "Start Position",
+          "field": "start",
+          "type": "genomic"
+        },
+        {
+          "alt": "End Position",
+          "field": "end",
+          "type": "genomic"
+        },
+        {
+          "alt": "Strand",
+          "field": "strand",
+          "type": "nominal"
+        },
+        {
+          "alt": "Name",
+          "field": "name",
+          "type": "nominal"
+        }
+      ],
+      "x": {
+        "axis": "top",
+        "field": "start",
+        "type": "genomic"
+      },
+      "xe": {
+        "field": "end",
+        "type": "genomic"
+      }
+    },
+    {
+      "color": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "range": [
+          "#7585FF",
+          "#FF8A85"
+        ],
+        "type": "nominal"
+      },
+      "data": {
+        "exonIntervalFields": [
+          {
+            "index": 12,
+            "name": "start"
+          },
+          {
+            "index": 13,
+            "name": "end"
+          }
+        ],
+        "genomicFields": [
+          {
+            "index": 1,
+            "name": "start"
+          },
+          {
+            "index": 2,
+            "name": "end"
+          }
+        ],
+        "type": "beddb",
+        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+        "valueFields": [
+          {
+            "index": 5,
+            "name": "strand",
+            "type": "nominal"
+          },
+          {
+            "index": 3,
+            "name": "name",
+            "type": "nominal"
+          }
+        ]
+      },
+      "dataTransform": [
+        {
+          "field": "type",
+          "oneOf": [
+            "gene"
+          ],
+          "type": "filter"
+        },
+        {
+          "field": "strand",
+          "oneOf": [
+            "+"
+          ],
+          "type": "filter"
+        }
+      ],
+      "mark": "triangleRight",
+      "row": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "type": "nominal"
+      },
+      "size": {
+        "value": 15
+      },
+      "style": {
+        "align": "left"
+      },
+      "title": "Genes | hg38",
+      "tooltip": [
+        {
+          "alt": "Start Position",
+          "field": "start",
+          "type": "genomic"
+        },
+        {
+          "alt": "End Position",
+          "field": "end",
+          "type": "genomic"
+        },
+        {
+          "alt": "Strand",
+          "field": "strand",
+          "type": "nominal"
+        },
+        {
+          "alt": "Name",
+          "field": "name",
+          "type": "nominal"
+        }
+      ],
+      "x": {
+        "axis": "top",
+        "field": "end",
+        "type": "genomic"
+      }
+    },
+    {
+      "color": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "range": [
+          "#7585FF",
+          "#FF8A85"
+        ],
+        "type": "nominal"
+      },
+      "data": {
+        "exonIntervalFields": [
+          {
+            "index": 12,
+            "name": "start"
+          },
+          {
+            "index": 13,
+            "name": "end"
+          }
+        ],
+        "genomicFields": [
+          {
+            "index": 1,
+            "name": "start"
+          },
+          {
+            "index": 2,
+            "name": "end"
+          }
+        ],
+        "type": "beddb",
+        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+        "valueFields": [
+          {
+            "index": 5,
+            "name": "strand",
+            "type": "nominal"
+          },
+          {
+            "index": 3,
+            "name": "name",
+            "type": "nominal"
+          }
+        ]
+      },
+      "dataTransform": [
+        {
+          "field": "type",
+          "oneOf": [
+            "gene"
+          ],
+          "type": "filter"
+        },
+        {
+          "field": "strand",
+          "oneOf": [
+            "-"
+          ],
+          "type": "filter"
+        }
+      ],
+      "mark": "triangleLeft",
+      "row": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "type": "nominal"
+      },
+      "size": {
+        "value": 15
+      },
+      "style": {
+        "align": "right"
+      },
+      "title": "Genes | hg38",
+      "tooltip": [
+        {
+          "alt": "Start Position",
+          "field": "start",
+          "type": "genomic"
+        },
+        {
+          "alt": "End Position",
+          "field": "end",
+          "type": "genomic"
+        },
+        {
+          "alt": "Strand",
+          "field": "strand",
+          "type": "nominal"
+        },
+        {
+          "alt": "Name",
+          "field": "name",
+          "type": "nominal"
+        }
+      ],
+      "x": {
+        "axis": "top",
+        "field": "start",
+        "type": "genomic"
+      }
+    },
+    {
+      "color": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "range": [
+          "#7585FF",
+          "#FF8A85"
+        ],
+        "type": "nominal"
+      },
+      "data": {
+        "exonIntervalFields": [
+          {
+            "index": 12,
+            "name": "start"
+          },
+          {
+            "index": 13,
+            "name": "end"
+          }
+        ],
+        "genomicFields": [
+          {
+            "index": 1,
+            "name": "start"
+          },
+          {
+            "index": 2,
+            "name": "end"
+          }
+        ],
+        "type": "beddb",
+        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+        "valueFields": [
+          {
+            "index": 5,
+            "name": "strand",
+            "type": "nominal"
+          },
+          {
+            "index": 3,
+            "name": "name",
+            "type": "nominal"
+          }
+        ]
+      },
+      "dataTransform": [
+        {
+          "field": "type",
+          "oneOf": [
+            "gene"
+          ],
+          "type": "filter"
+        }
+      ],
+      "mark": "text",
+      "row": {
+        "domain": [
+          "+",
+          "-"
+        ],
+        "field": "strand",
+        "type": "nominal"
+      },
+      "size": {
+        "value": 15
+      },
+      "style": {
+        "dy": 15
+      },
+      "text": {
+        "field": "name",
+        "type": "nominal"
+      },
+      "title": "Genes | hg38",
+      "tooltip": [
+        {
+          "alt": "Start Position",
+          "field": "start",
+          "type": "genomic"
+        },
+        {
+          "alt": "End Position",
+          "field": "end",
+          "type": "genomic"
+        },
+        {
+          "alt": "Strand",
+          "field": "strand",
+          "type": "nominal"
+        },
+        {
+          "alt": "Name",
+          "field": "name",
+          "type": "nominal"
+        }
+      ],
+      "visibility": [
+        {
+          "measure": "width",
+          "operation": "LT",
+          "target": "mark",
+          "threshold": "|xe-x|",
+          "transitionPadding": 10
+        }
+      ],
+      "x": {
+        "axis": "top",
+        "field": "start",
+        "type": "genomic"
+      },
+      "xe": {
+        "field": "end",
+        "type": "genomic"
+      }
+    }
+  ],
+  "width": 725,
+  "xDomain": {
+    "chromosome": "1",
+    "interval": [
+      103400000,
+      103700000
+    ]
+  }
+};
+      console.log(spec);
+      var opt = { padding: 0 };
+      var el = document.querySelector('#genes-rst-gosling-plot-0');
+      gosling.embed(el, spec, opt).catch(console.err);
+  });
+</script>
+</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
 
 <span class="n">genes</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">beddb</span><span class="p">(</span>
     <span class="n">url</span><span class="o">=</span><span class="s2">"https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation"</span><span class="p">,</span>

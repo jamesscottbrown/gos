@@ -315,7 +315,1214 @@
           <section id="single-cell-epigenomic-analysis">
 <span id="gallery-corces"></span><h1>Single-cell Epigenomic Analysis<a class="headerlink" href="#single-cell-epigenomic-analysis" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://www.nature.com/articles/s41588-020-00721-x">Corces et al. 2020</a></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
+<div id="corces-rst-gosling-plot-0">
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+      var spec = {
+  "arrangement": "vertical",
+  "views": [
+    {
+      "centerRadius": 0.8,
+      "layout": "linear",
+      "tracks": [
+        {
+          "alignment": "overlay",
+          "height": 25,
+          "title": "chr3",
+          "tracks": [
+            {
+              "color": {
+                "domain": [
+                  "",
+                  "25",
+                  "50",
+                  "75",
+                  "100"
+                ],
+                "field": "Density",
+                "range": [
+                  "white",
+                  "#D9D9D9",
+                  "#979797",
+                  "#636363",
+                  "black"
+                ],
+                "type": "nominal"
+              },
+              "data": {
+                "chromosomeField": "Chr.",
+                "genomicFields": [
+                  "ISCN_start",
+                  "ISCN_stop",
+                  "Basepair_start",
+                  "Basepair_stop"
+                ],
+                "quantitativeFields": [
+                  "Band",
+                  "Density"
+                ],
+                "type": "csv",
+                "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/cytogenetic_band.csv"
+              },
+              "dataTransform": [
+                {
+                  "field": "Stain",
+                  "not": true,
+                  "oneOf": [
+                    "acen-1",
+                    "acen-2"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "rect",
+              "size": {
+                "value": 20
+              },
+              "stroke": {
+                "value": "black"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "style": {
+                "outlineWidth": 1
+              },
+              "x": {
+                "axis": "none",
+                "field": "Basepair_start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "Basepair_stop",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "value": "#A0A0F2"
+              },
+              "data": {
+                "chromosomeField": "Chr.",
+                "genomicFields": [
+                  "ISCN_start",
+                  "ISCN_stop",
+                  "Basepair_start",
+                  "Basepair_stop"
+                ],
+                "quantitativeFields": [
+                  "Band",
+                  "Density"
+                ],
+                "type": "csv",
+                "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/cytogenetic_band.csv"
+              },
+              "dataTransform": [
+                {
+                  "field": "Stain",
+                  "oneOf": [
+                    "gvar"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "rect",
+              "size": {
+                "value": 20
+              },
+              "stroke": {
+                "value": "black"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "style": {
+                "outlineWidth": 1
+              },
+              "x": {
+                "axis": "none",
+                "field": "Basepair_start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "Basepair_stop",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "value": "#B40101"
+              },
+              "data": {
+                "chromosomeField": "Chr.",
+                "genomicFields": [
+                  "ISCN_start",
+                  "ISCN_stop",
+                  "Basepair_start",
+                  "Basepair_stop"
+                ],
+                "quantitativeFields": [
+                  "Band",
+                  "Density"
+                ],
+                "type": "csv",
+                "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/cytogenetic_band.csv"
+              },
+              "dataTransform": [
+                {
+                  "field": "Stain",
+                  "oneOf": [
+                    "acen-1"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "triangleRight",
+              "size": {
+                "value": 20
+              },
+              "stroke": {
+                "value": "black"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "style": {
+                "outlineWidth": 1
+              },
+              "x": {
+                "axis": "none",
+                "field": "Basepair_start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "Basepair_stop",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "value": "#B40101"
+              },
+              "data": {
+                "chromosomeField": "Chr.",
+                "genomicFields": [
+                  "ISCN_start",
+                  "ISCN_stop",
+                  "Basepair_start",
+                  "Basepair_stop"
+                ],
+                "quantitativeFields": [
+                  "Band",
+                  "Density"
+                ],
+                "type": "csv",
+                "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/cytogenetic_band.csv"
+              },
+              "dataTransform": [
+                {
+                  "field": "Stain",
+                  "oneOf": [
+                    "acen-2"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "triangleLeft",
+              "size": {
+                "value": 20
+              },
+              "stroke": {
+                "value": "black"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "style": {
+                "outlineWidth": 1
+              },
+              "x": {
+                "axis": "none",
+                "field": "Basepair_start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "Basepair_stop",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "value": "red"
+              },
+              "data": {
+                "chromosomeField": "Chr.",
+                "genomicFields": [
+                  "ISCN_start",
+                  "ISCN_stop",
+                  "Basepair_start",
+                  "Basepair_stop"
+                ],
+                "quantitativeFields": [
+                  "Band",
+                  "Density"
+                ],
+                "type": "csv",
+                "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/cytogenetic_band.csv"
+              },
+              "mark": "brush",
+              "opacity": {
+                "value": 1
+              },
+              "stroke": {
+                "value": "red"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "style": {
+                "outlineWidth": 1
+              },
+              "x": {
+                "linkingId": "detail"
+              },
+              "xe": {
+                "field": "Basepair_stop",
+                "type": "genomic"
+              }
+            }
+          ],
+          "width": 600
+        }
+      ],
+      "xDomain": {
+        "chromosome": "3"
+      }
+    },
+    {
+      "linkingId": "detail",
+      "tracks": [
+        {
+          "color": {
+            "value": "#F29B67"
+          },
+          "data": {
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw",
+            "value": "peak"
+          },
+          "height": 40,
+          "mark": "bar",
+          "style": {
+            "outline": "#20102F"
+          },
+          "title": "Excitatory neurons",
+          "width": 600,
+          "x": {
+            "field": "position",
+            "type": "genomic"
+          },
+          "y": {
+            "axis": "right",
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "color": {
+            "value": "#3DC491"
+          },
+          "data": {
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw",
+            "value": "peak"
+          },
+          "height": 40,
+          "mark": "bar",
+          "style": {
+            "outline": "#20102F"
+          },
+          "title": "Inhibitory neurons",
+          "width": 600,
+          "x": {
+            "field": "position",
+            "type": "genomic"
+          },
+          "y": {
+            "axis": "right",
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "color": {
+            "value": "#565C8B"
+          },
+          "data": {
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/DopaNeurons_Cluster10_AllFrags_projSUNI2_insertions_bin100_RIPnorm.bw",
+            "value": "peak"
+          },
+          "height": 40,
+          "mark": "bar",
+          "style": {
+            "outline": "#20102F"
+          },
+          "title": "Dopaminergic neurons",
+          "width": 600,
+          "x": {
+            "field": "position",
+            "type": "genomic"
+          },
+          "y": {
+            "axis": "right",
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "color": {
+            "value": "#77C0FA"
+          },
+          "data": {
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/Microglia-insertions_bin100_RIPnorm.bw",
+            "value": "peak"
+          },
+          "height": 40,
+          "mark": "bar",
+          "style": {
+            "outline": "#20102F"
+          },
+          "title": "Microglia",
+          "width": 600,
+          "x": {
+            "field": "position",
+            "type": "genomic"
+          },
+          "y": {
+            "axis": "right",
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "color": {
+            "value": "#9B46E5"
+          },
+          "data": {
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/Oligodendrocytes-insertions_bin100_RIPnorm.bw",
+            "value": "peak"
+          },
+          "height": 40,
+          "mark": "bar",
+          "style": {
+            "outline": "#20102F"
+          },
+          "title": "Oligodendrocytes",
+          "width": 600,
+          "x": {
+            "field": "position",
+            "type": "genomic"
+          },
+          "y": {
+            "axis": "right",
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "color": {
+            "value": "#D73636"
+          },
+          "data": {
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/Astrocytes-insertions_bin100_RIPnorm.bw",
+            "value": "peak"
+          },
+          "height": 40,
+          "mark": "bar",
+          "style": {
+            "outline": "#20102F"
+          },
+          "title": "Astrocytes",
+          "width": 600,
+          "x": {
+            "field": "position",
+            "type": "genomic"
+          },
+          "y": {
+            "axis": "right",
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "color": {
+            "value": "#E38ADC"
+          },
+          "data": {
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/OPCs-insertions_bin100_RIPnorm.bw",
+            "value": "peak"
+          },
+          "height": 40,
+          "mark": "bar",
+          "style": {
+            "outline": "#20102F"
+          },
+          "title": "OPCs",
+          "width": 600,
+          "x": {
+            "field": "position",
+            "type": "genomic"
+          },
+          "y": {
+            "axis": "right",
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "alignment": "overlay",
+          "height": 80,
+          "title": "Genes",
+          "tracks": [
+            {
+              "color": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "range": [
+                  "#012DB8",
+                  "#BE1E2C"
+                ],
+                "type": "nominal"
+              },
+              "data": {
+                "exonIntervalFields": [
+                  {
+                    "index": 12,
+                    "name": "start"
+                  },
+                  {
+                    "index": 13,
+                    "name": "end"
+                  }
+                ],
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                "valueFields": [
+                  {
+                    "index": 5,
+                    "name": "strand",
+                    "type": "nominal"
+                  },
+                  {
+                    "index": 3,
+                    "name": "name",
+                    "type": "nominal"
+                  }
+                ]
+              },
+              "dataTransform": [
+                {
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ],
+                  "type": "filter"
+                },
+                {
+                  "field": "strand",
+                  "oneOf": [
+                    "+"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "text",
+              "row": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "type": "nominal"
+              },
+              "size": {
+                "value": 8
+              },
+              "style": {
+                "dy": -12,
+                "outline": "#20102F",
+                "textFontSize": 8
+              },
+              "text": {
+                "field": "name",
+                "type": "nominal"
+              },
+              "visibility": [
+                {
+                  "measure": "width",
+                  "operation": "LT",
+                  "target": "mark",
+                  "threshold": "|xe-x|",
+                  "transitionPadding": 10
+                }
+              ],
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "range": [
+                  "#012DB8",
+                  "#BE1E2C"
+                ],
+                "type": "nominal"
+              },
+              "data": {
+                "exonIntervalFields": [
+                  {
+                    "index": 12,
+                    "name": "start"
+                  },
+                  {
+                    "index": 13,
+                    "name": "end"
+                  }
+                ],
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                "valueFields": [
+                  {
+                    "index": 5,
+                    "name": "strand",
+                    "type": "nominal"
+                  },
+                  {
+                    "index": 3,
+                    "name": "name",
+                    "type": "nominal"
+                  }
+                ]
+              },
+              "dataTransform": [
+                {
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ],
+                  "type": "filter"
+                },
+                {
+                  "field": "strand",
+                  "oneOf": [
+                    "-"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "text",
+              "row": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "type": "nominal"
+              },
+              "size": {
+                "value": 8
+              },
+              "style": {
+                "dy": 10,
+                "outline": "#20102F",
+                "textFontSize": 8
+              },
+              "text": {
+                "field": "name",
+                "type": "nominal"
+              },
+              "visibility": [
+                {
+                  "measure": "width",
+                  "operation": "LT",
+                  "target": "mark",
+                  "threshold": "|xe-x|",
+                  "transitionPadding": 10
+                }
+              ],
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "range": [
+                  "#012DB8",
+                  "#BE1E2C"
+                ],
+                "type": "nominal"
+              },
+              "data": {
+                "exonIntervalFields": [
+                  {
+                    "index": 12,
+                    "name": "start"
+                  },
+                  {
+                    "index": 13,
+                    "name": "end"
+                  }
+                ],
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                "valueFields": [
+                  {
+                    "index": 5,
+                    "name": "strand",
+                    "type": "nominal"
+                  },
+                  {
+                    "index": 3,
+                    "name": "name",
+                    "type": "nominal"
+                  }
+                ]
+              },
+              "dataTransform": [
+                {
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ],
+                  "type": "filter"
+                },
+                {
+                  "field": "strand",
+                  "oneOf": [
+                    "+"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "rect",
+              "row": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "type": "nominal"
+              },
+              "size": {
+                "value": 7
+              },
+              "style": {
+                "outline": "#20102F"
+              },
+              "visibility": [
+                {
+                  "measure": "width",
+                  "operation": "LT",
+                  "target": "mark",
+                  "threshold": "|xe-x|",
+                  "transitionPadding": 10
+                }
+              ],
+              "x": {
+                "field": "end",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "range": [
+                  "#012DB8",
+                  "#BE1E2C"
+                ],
+                "type": "nominal"
+              },
+              "data": {
+                "exonIntervalFields": [
+                  {
+                    "index": 12,
+                    "name": "start"
+                  },
+                  {
+                    "index": 13,
+                    "name": "end"
+                  }
+                ],
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                "valueFields": [
+                  {
+                    "index": 5,
+                    "name": "strand",
+                    "type": "nominal"
+                  },
+                  {
+                    "index": 3,
+                    "name": "name",
+                    "type": "nominal"
+                  }
+                ]
+              },
+              "dataTransform": [
+                {
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ],
+                  "type": "filter"
+                },
+                {
+                  "field": "strand",
+                  "oneOf": [
+                    "-"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "rect",
+              "row": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "type": "nominal"
+              },
+              "size": {
+                "value": 7
+              },
+              "style": {
+                "outline": "#20102F"
+              },
+              "visibility": [
+                {
+                  "measure": "width",
+                  "operation": "LT",
+                  "target": "mark",
+                  "threshold": "|xe-x|",
+                  "transitionPadding": 10
+                }
+              ],
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "range": [
+                  "#012DB8",
+                  "#BE1E2C"
+                ],
+                "type": "nominal"
+              },
+              "data": {
+                "exonIntervalFields": [
+                  {
+                    "index": 12,
+                    "name": "start"
+                  },
+                  {
+                    "index": 13,
+                    "name": "end"
+                  }
+                ],
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                "valueFields": [
+                  {
+                    "index": 5,
+                    "name": "strand",
+                    "type": "nominal"
+                  },
+                  {
+                    "index": 3,
+                    "name": "name",
+                    "type": "nominal"
+                  }
+                ]
+              },
+              "dataTransform": [
+                {
+                  "field": "type",
+                  "oneOf": [
+                    "exon"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "rect",
+              "row": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "type": "nominal"
+              },
+              "size": {
+                "value": 14
+              },
+              "style": {
+                "outline": "#20102F"
+              },
+              "visibility": [
+                {
+                  "measure": "width",
+                  "operation": "LT",
+                  "target": "mark",
+                  "threshold": "|xe-x|",
+                  "transitionPadding": 10
+                }
+              ],
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "range": [
+                  "#012DB8",
+                  "#BE1E2C"
+                ],
+                "type": "nominal"
+              },
+              "data": {
+                "exonIntervalFields": [
+                  {
+                    "index": 12,
+                    "name": "start"
+                  },
+                  {
+                    "index": 13,
+                    "name": "end"
+                  }
+                ],
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                "valueFields": [
+                  {
+                    "index": 5,
+                    "name": "strand",
+                    "type": "nominal"
+                  },
+                  {
+                    "index": 3,
+                    "name": "name",
+                    "type": "nominal"
+                  }
+                ]
+              },
+              "dataTransform": [
+                {
+                  "field": "type",
+                  "oneOf": [
+                    "exon"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "rule",
+              "row": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "type": "nominal"
+              },
+              "strokeWidth": {
+                "value": 3
+              },
+              "style": {
+                "outline": "#20102F"
+              },
+              "visibility": [
+                {
+                  "measure": "width",
+                  "operation": "LT",
+                  "target": "mark",
+                  "threshold": "|xe-x|",
+                  "transitionPadding": 10
+                }
+              ],
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              }
+            }
+          ],
+          "width": 600
+        },
+        {
+          "alignment": "overlay",
+          "height": 60,
+          "title": "PLAC-seq (H3K4me3) Nott et al.",
+          "tracks": [
+            {
+              "color": {
+                "value": "none"
+              },
+              "data": {
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=oligodendrocyte-plac-seq-bedpe"
+              },
+              "mark": "withinLink",
+              "opacity": {
+                "value": 0.1
+              },
+              "stroke": {
+                "value": "#F97E2A"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "flip": true
+              }
+            },
+            {
+              "color": {
+                "value": "none"
+              },
+              "data": {
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=microglia-plac-seq-bedpe"
+              },
+              "mark": "withinLink",
+              "opacity": {
+                "value": 0.1
+              },
+              "stroke": {
+                "value": "#50ADF9"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "flip": true
+              }
+            },
+            {
+              "color": {
+                "value": "none"
+              },
+              "data": {
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=neuron-plac-seq-bedpe"
+              },
+              "mark": "withinLink",
+              "opacity": {
+                "value": 0.1
+              },
+              "stroke": {
+                "value": "#7B0EDC"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "flip": true
+              }
+            }
+          ],
+          "width": 600
+        }
+      ],
+      "xDomain": {
+        "chromosome": "3",
+        "interval": [
+          52168000,
+          52890000
+        ]
+      }
+    }
+  ]
+};
+      console.log(spec);
+      var opt = { padding: 0 };
+      var el = document.querySelector('#corces-rst-gosling-plot-0');
+      gosling.embed(el, spec, opt).catch(console.err);
+  });
+</script>
+</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
 
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">600</span>
 
