@@ -20,6 +20,7 @@
       ~View.from_json
       ~View.properties
       ~View.resolve_references
+      ~View.save
       ~View.to_dict
       ~View.to_json
       ~View.validate
