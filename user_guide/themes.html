@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Themes" href="themes.html" /><link rel="prev" title="gosling.ZoomLevelVisibilityCondition" href="generated/core/gosling.ZoomLevelVisibilityCondition.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="Local Data" href="local_data.html" />
 
     <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Local Data - gos</title>
+        <title>Themes - gos</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/higlass@1.11.3/dist/hglib.css" />
@@ -136,7 +136,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -285,8 +285,8 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.ZoomLevelVisibilityCondition.html">gosling.ZoomLevelVisibilityCondition</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Local Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="themes.html">Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="local_data.html">Local Data</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Themes</a></li>
 </ul>
 
 </div>
@@ -307,132 +307,23 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="local-data">
-<span id="id1"></span><h1>Local Data<a class="headerlink" href="#local-data" title="Permalink to this headline">¶</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This feature is only available in local environments and not for remove systems (like Colab or MyBinder).</p>
-</div>
-<p><a class="reference external" href="https://gosling-lang.github.io/gosling-website/docs/data">Data sources</a> for the <a class="reference external" href="http://gosling-lang.org/">Gosling</a> specification are expected to be accessible via HTTP.
-Loading a local dataset can be challenging since it requires starting a web-server
-and/or a <a class="reference external" href="https://gosling-lang.github.io/gosling-website/docs/data#pre-aggregated-datasets-higlass-server">Higlass server</a> for some pre-aggregated datasets.</p>
-<p>The data utilities in <strong>gos</strong> will transparently serve data via a
-background ASGI server if a local file path is detected.</p>
+          <section id="themes">
+<span id="id1"></span><h1>Themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h1>
+<p>Themes customize the look of Gosling visualizations. To enable themes with <strong>gos</strong>, use
+the <code class="code docutils literal notranslate"><span class="pre">gos.themes</span></code> namespace:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
-<span class="c1"># gos.bam, gos.csv, gos.bigwig # file resources</span>
-<span class="c1"># gos.beddb, gos.vector, gos.matrix, gos.multivec # higlass tile resources</span>
+<span class="n">gos</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="s2">"dark"</span><span class="p">)</span> <span class="c1"># sets theme globally</span>
+
+<span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
 </pre></div>
 </div>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>You will need to install <a class="reference external" href="https://github.com/higlass/clodius">Clodius</a> for any higlass tile resources:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install clodius <span class="c1"># optional, required for higlass tile resources</span>
-</pre></div>
-</div>
-</section>
-<section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>The <strong>gos</strong> example below incudes a <a class="reference external" href="http://gosling-lang.org/docs/data/#multivec">multivec data source</a>; the url points to a
-<a class="reference external" href="https://gosling-lang.github.io/gosling-website/docs/data#pre-aggregated-datasets-higlass-server">Higlass server</a> endpoint for the corresponding tileset information.</p>
-<div id="local_data-rst-gosling-plot-0">
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-      var spec = {
-  "tracks": [
-    {
-      "color": {
-        "field": "peak",
-        "legend": true,
-        "type": "quantitative"
-      },
-      "data": {
-        "binSize": 5,
-        "categories": [
-          "sample 1",
-          "sample 2",
-          "sample 3",
-          "sample 4"
-        ],
-        "column": "position",
-        "row": "sample",
-        "type": "multivec",
-        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
-        "value": "peak"
-      },
-      "height": 100,
-      "mark": "rect",
-      "row": {
-        "field": "sample",
-        "legend": true,
-        "type": "nominal"
-      },
-      "width": 725,
-      "x": {
-        "axis": "top",
-        "field": "start",
-        "type": "genomic"
-      },
-      "xe": {
-        "field": "end",
-        "type": "genomic"
-      }
-    }
-  ]
-};
-      console.log(spec);
-      var opt = { padding: 0 };
-      var el = document.querySelector('#local_data-rst-gosling-plot-0');
-      gosling.embed(el, spec, opt).catch(console.err);
-  });
-</script>
-</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">multivec</span><span class="p">(</span>
-    <span class="n">url</span><span class="o">=</span><span class="s2">"https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec"</span><span class="p">,</span>
-    <span class="n">row</span><span class="o">=</span><span class="s2">"sample"</span><span class="p">,</span>
-    <span class="n">column</span><span class="o">=</span><span class="s2">"position"</span><span class="p">,</span>
-    <span class="n">value</span><span class="o">=</span><span class="s2">"peak"</span><span class="p">,</span>
-    <span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="s2">"sample 1"</span><span class="p">,</span> <span class="s2">"sample 2"</span><span class="p">,</span> <span class="s2">"sample 3"</span><span class="p">,</span> <span class="s2">"sample 4"</span><span class="p">],</span>
-    <span class="n">binSize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="n">track</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"start:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"top"</span><span class="p">),</span>
-    <span class="n">xe</span><span class="o">=</span><span class="s2">"end:G"</span><span class="p">,</span>
-    <span class="n">row</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"sample:N"</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"peak:Q"</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">725</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-
-<span class="n">track</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>By replacing the Higlass server URL with a local path corresponding
-<a class="reference external" href="https://s3.amazonaws.com/gosling-lang.org/data/cistrome.multires.mv5">cistrome multivec file</a> (4GB), <strong>gos</strong> automatically detects the local
-file and will starts a background Higlass server to power the visualization.</p>
-<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span>import gosling as gos
-
-data = gos.multivec(
-<span class="gd">-   url="https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",</span>
-<span class="gi">+   url='../data/cistrome.multires.mv5', # path to local multivec</span>
-    row="sample",
-    column="position",
-    value="peak",
-    categories=["sample 1", "sample 2", "sample 3", "sample 4"],
-    binSize=4,
-)
-</pre></div>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Note that visualizations will only render as long as your Python session is active.</p>
-</div>
-</section>
+<p>You can explore supported themes in the <a class="reference external" href="http://gosling-lang.org/themes/">Theme Playground</a>.</p>
 </section>
 
         </article>
@@ -440,23 +331,15 @@ data = gos.multivec(
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="themes.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Themes</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="generated/core/gosling.ZoomLevelVisibilityCondition.html">
+          
+          <a class="prev-page" href="local_data.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">gosling.ZoomLevelVisibilityCondition</div>
+                <div class="title">Local Data</div>
                 
               </div>
             </a>
@@ -468,7 +351,7 @@ data = gos.multivec(
               and
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="../_sources/user_guide/local_data.rst.txt"
+            <a class="muted-link" href="../_sources/user_guide/themes.rst.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -476,28 +359,8 @@ data = gos.multivec(
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contents
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Local Data</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#usage">Usage</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
