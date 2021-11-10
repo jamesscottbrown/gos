@@ -16,12 +16,13 @@ Basic marks
 .. toctree::
 
 
+    brushing_and_linking
+    line_chart
+    heatmap
+    area_chart
     point_plot
     bar_chart
     text_marks
-    area_chart
-    brushing_and_linking
-    line_chart
 
 Composite visualizations
 ------------------------
