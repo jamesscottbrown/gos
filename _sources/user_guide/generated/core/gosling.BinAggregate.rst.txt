@@ -1,0 +1,30 @@
+﻿gosling.BinAggregate
+====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: BinAggregate
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BinAggregate.__init__
+      ~BinAggregate.copy
+      ~BinAggregate.from_dict
+      ~BinAggregate.from_json
+      ~BinAggregate.resolve_references
+      ~BinAggregate.to_dict
+      ~BinAggregate.to_json
+      ~BinAggregate.validate
+      ~BinAggregate.validate_property
+   
+   
+
+   
+   
+   

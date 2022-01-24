@@ -1,0 +1,30 @@
+﻿gosling.X1Value
+===============
+
+.. currentmodule:: gosling
+
+.. autoclass:: X1Value
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~X1Value.__init__
+      ~X1Value.copy
+      ~X1Value.from_dict
+      ~X1Value.from_json
+      ~X1Value.resolve_references
+      ~X1Value.to_dict
+      ~X1Value.to_json
+      ~X1Value.validate
+      ~X1Value.validate_property
+   
+   
+
+   
+   
+   

@@ -1,0 +1,30 @@
+﻿gosling.GenomicLengthTransform
+==============================
+
+.. currentmodule:: gosling
+
+.. autoclass:: GenomicLengthTransform
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GenomicLengthTransform.__init__
+      ~GenomicLengthTransform.copy
+      ~GenomicLengthTransform.from_dict
+      ~GenomicLengthTransform.from_json
+      ~GenomicLengthTransform.resolve_references
+      ~GenomicLengthTransform.to_dict
+      ~GenomicLengthTransform.to_json
+      ~GenomicLengthTransform.validate
+      ~GenomicLengthTransform.validate_property
+   
+   
+
+   
+   
+   

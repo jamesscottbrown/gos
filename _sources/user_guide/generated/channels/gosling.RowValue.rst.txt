@@ -1,0 +1,30 @@
+﻿gosling.RowValue
+================
+
+.. currentmodule:: gosling
+
+.. autoclass:: RowValue
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RowValue.__init__
+      ~RowValue.copy
+      ~RowValue.from_dict
+      ~RowValue.from_json
+      ~RowValue.resolve_references
+      ~RowValue.to_dict
+      ~RowValue.to_json
+      ~RowValue.validate
+      ~RowValue.validate_property
+   
+   
+
+   
+   
+   

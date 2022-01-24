@@ -1,0 +1,30 @@
+﻿gosling.Color
+=============
+
+.. currentmodule:: gosling
+
+.. autoclass:: Color
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Color.__init__
+      ~Color.copy
+      ~Color.from_dict
+      ~Color.from_json
+      ~Color.resolve_references
+      ~Color.to_dict
+      ~Color.to_json
+      ~Color.validate
+      ~Color.validate_property
+   
+   
+
+   
+   
+   

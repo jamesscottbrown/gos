@@ -1,0 +1,30 @@
+﻿gosling.ZoomLimits
+==================
+
+.. currentmodule:: gosling
+
+.. autoclass:: ZoomLimits
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ZoomLimits.__init__
+      ~ZoomLimits.copy
+      ~ZoomLimits.from_dict
+      ~ZoomLimits.from_json
+      ~ZoomLimits.resolve_references
+      ~ZoomLimits.to_dict
+      ~ZoomLimits.to_json
+      ~ZoomLimits.validate
+      ~ZoomLimits.validate_property
+   
+   
+
+   
+   
+   

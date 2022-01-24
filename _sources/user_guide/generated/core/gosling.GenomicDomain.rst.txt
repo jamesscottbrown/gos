@@ -1,0 +1,30 @@
+﻿gosling.GenomicDomain
+=====================
+
+.. currentmodule:: gosling
+
+.. autoclass:: GenomicDomain
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GenomicDomain.__init__
+      ~GenomicDomain.copy
+      ~GenomicDomain.from_dict
+      ~GenomicDomain.from_json
+      ~GenomicDomain.resolve_references
+      ~GenomicDomain.to_dict
+      ~GenomicDomain.to_json
+      ~GenomicDomain.validate
+      ~GenomicDomain.validate_property
+   
+   
+
+   
+   
+   

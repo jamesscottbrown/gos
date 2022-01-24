@@ -1,0 +1,30 @@
+﻿gosling.ValueExtent
+===================
+
+.. currentmodule:: gosling
+
+.. autoclass:: ValueExtent
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ValueExtent.__init__
+      ~ValueExtent.copy
+      ~ValueExtent.from_dict
+      ~ValueExtent.from_json
+      ~ValueExtent.resolve_references
+      ~ValueExtent.to_dict
+      ~ValueExtent.to_json
+      ~ValueExtent.validate
+      ~ValueExtent.validate_property
+   
+   
+
+   
+   
+   

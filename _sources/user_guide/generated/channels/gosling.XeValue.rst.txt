@@ -1,0 +1,30 @@
+﻿gosling.XeValue
+===============
+
+.. currentmodule:: gosling
+
+.. autoclass:: XeValue
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~XeValue.__init__
+      ~XeValue.copy
+      ~XeValue.from_dict
+      ~XeValue.from_json
+      ~XeValue.resolve_references
+      ~XeValue.to_dict
+      ~XeValue.to_json
+      ~XeValue.validate
+      ~XeValue.validate_property
+   
+   
+
+   
+   
+   

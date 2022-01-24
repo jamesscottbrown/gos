@@ -1,0 +1,30 @@
+﻿gosling.Y1e
+===========
+
+.. currentmodule:: gosling
+
+.. autoclass:: Y1e
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Y1e.__init__
+      ~Y1e.copy
+      ~Y1e.from_dict
+      ~Y1e.from_json
+      ~Y1e.resolve_references
+      ~Y1e.to_dict
+      ~Y1e.to_json
+      ~Y1e.validate
+      ~Y1e.validate_property
+   
+   
+
+   
+   
+   

@@ -1,0 +1,30 @@
+﻿gosling.Ye
+==========
+
+.. currentmodule:: gosling
+
+.. autoclass:: Ye
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Ye.__init__
+      ~Ye.copy
+      ~Ye.from_dict
+      ~Ye.from_json
+      ~Ye.resolve_references
+      ~Ye.to_dict
+      ~Ye.to_json
+      ~Ye.validate
+      ~Ye.validate_property
+   
+   
+
+   
+   
+   
