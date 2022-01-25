@@ -357,6 +357,7 @@
     {
       "color": {
         "field": "value",
+        "legend": true,
         "range": "warm",
         "type": "quantitative"
       },
@@ -365,14 +366,24 @@
         "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=hffc6-microc-hg38"
       },
       "height": 500,
-      "mark": "rect",
+      "mark": "bar",
       "width": 500,
       "x": {
-        "field": "position1",
+        "axis": "bottom",
+        "field": "xs",
+        "type": "genomic"
+      },
+      "xe": {
+        "field": "xe",
         "type": "genomic"
       },
       "y": {
-        "field": "position2",
+        "axis": "left",
+        "field": "ys",
+        "type": "genomic"
+      },
+      "ye": {
+        "field": "ye",
         "type": "genomic"
       }
     }
@@ -390,10 +401,12 @@
 <span class="n">data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="s2">"https://server.gosling-lang.org/api/v1/tileset_info/?d=hffc6-microc-hg38"</span><span class="p">)</span>
 <span class="c1"># data = gos.matrix('/path/to/dataset.cool') # local dataset</span>
 
-<span class="n">track</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-  <span class="n">x</span><span class="o">=</span><span class="s2">"position1:G"</span><span class="p">,</span>
-  <span class="n">y</span><span class="o">=</span><span class="s2">"position2:G"</span><span class="p">,</span>
-  <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">"value:Q"</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="s2">"warm"</span><span class="p">),</span>
+<span class="n">track</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+  <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">"xs:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">),</span>
+  <span class="n">xe</span><span class="o">=</span><span class="s2">"xe:G"</span><span class="p">,</span>
+  <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">"ys:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"left"</span><span class="p">),</span>
+  <span class="n">ye</span><span class="o">=</span><span class="s2">"ye:G"</span><span class="p">,</span>
+  <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">"value:Q"</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="s2">"warm"</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
 
 <span class="n">track</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
@@ -455,6 +468,6 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js"></script>
     <script src="https://unpkg.com/higlass@1.11/dist/hglib.js"></script>
-    <script src="https://unpkg.com/gosling.js@0.9.14/dist/gosling.js"></script>
+    <script src="https://unpkg.com/gosling.js@0.9.15/dist/gosling.js"></script>
     </body>
 </html>

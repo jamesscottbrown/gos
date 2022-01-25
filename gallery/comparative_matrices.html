@@ -587,7 +587,7 @@
           "width": 25.0
         }
       ],
-      "yOffset": 102.73972602739727
+      "yOffset": 134.89208633093526
     },
     {
       "spacing": 30,
@@ -841,13 +841,19 @@
                   "title": "HFFc6_Micro-C",
                   "width": 375,
                   "x": {
-                    "axis": "none",
-                    "field": "position1",
+                    "field": "xs",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "xe",
                     "type": "genomic"
                   },
                   "y": {
-                    "axis": "none",
-                    "field": "position2",
+                    "field": "ys",
+                    "type": "genomic"
+                  },
+                  "ye": {
+                    "field": "ye",
                     "type": "genomic"
                   }
                 }
@@ -1184,13 +1190,19 @@
                   "title": "HFFc6_Hi-C",
                   "width": 375,
                   "x": {
-                    "axis": "none",
-                    "field": "position1",
+                    "field": "xs",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "xe",
                     "type": "genomic"
                   },
                   "y": {
-                    "axis": "none",
-                    "field": "position2",
+                    "field": "ys",
+                    "type": "genomic"
+                  },
+                  "ye": {
+                    "field": "ye",
                     "type": "genomic"
                   }
                 }
@@ -1397,7 +1409,7 @@
 
 <span class="n">left</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">track1</span><span class="p">,</span> <span class="n">track2</span><span class="p">,</span> <span class="n">gene_overlay</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
     <span class="n">orientation</span><span class="o">=</span><span class="s2">"vertical"</span><span class="p">,</span>
-    <span class="n">yOffset</span><span class="o">=</span><span class="n">size</span> <span class="o">/</span> <span class="mf">3.65</span><span class="p">,</span>
+    <span class="n">yOffset</span><span class="o">=</span><span class="n">size</span> <span class="o">/</span> <span class="mf">2.78</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">top</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span>
@@ -1407,8 +1419,10 @@
 <span class="p">)</span>
 
 <span class="n">matrix</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">micro_c</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">"position1:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"none"</span><span class="p">),</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">"position2:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"none"</span><span class="p">),</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">"xs:G"</span><span class="p">,</span>
+    <span class="n">xe</span><span class="o">=</span><span class="s2">"xe:G"</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">"ys:G"</span><span class="p">,</span>
+    <span class="n">ye</span><span class="o">=</span><span class="s2">"ye:G"</span><span class="p">,</span>
     <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">"value:Q"</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="s2">"warm"</span><span class="p">),</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"HFFc6_Micro-C"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
 
@@ -1505,6 +1519,6 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js"></script>
     <script src="https://unpkg.com/higlass@1.11/dist/hglib.js"></script>
-    <script src="https://unpkg.com/gosling.js@0.9.14/dist/gosling.js"></script>
+    <script src="https://unpkg.com/gosling.js@0.9.15/dist/gosling.js"></script>
     </body>
 </html>
