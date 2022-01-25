@@ -374,7 +374,58 @@ background ASGI server if a local file path is detected.</p>
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>The <strong>gos</strong> example below incudes a <a class="reference external" href="http://gosling-lang.org/docs/data/#multivec">multivec data source</a>; the url points to a
 <a class="reference external" href="https://gosling-lang.github.io/gosling-website/docs/data#pre-aggregated-datasets-higlass-server">Higlass server</a> endpoint for the corresponding tileset information.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
+<div id="local_data-rst-gosling-plot-0">
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+      var spec = {
+  "tracks": [
+    {
+      "color": {
+        "field": "peak",
+        "legend": true,
+        "type": "quantitative"
+      },
+      "data": {
+        "binSize": 5,
+        "categories": [
+          "sample 1",
+          "sample 2",
+          "sample 3",
+          "sample 4"
+        ],
+        "column": "position",
+        "row": "sample",
+        "type": "multivec",
+        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+        "value": "peak"
+      },
+      "height": 100,
+      "mark": "rect",
+      "row": {
+        "field": "sample",
+        "legend": true,
+        "type": "nominal"
+      },
+      "width": 725,
+      "x": {
+        "axis": "top",
+        "field": "start",
+        "type": "genomic"
+      },
+      "xe": {
+        "field": "end",
+        "type": "genomic"
+      }
+    }
+  ]
+};
+      console.log(spec);
+      var opt = { padding: 0 };
+      var el = document.querySelector('#local_data-rst-gosling-plot-0');
+      gosling.embed(el, spec, opt).catch(console.err);
+  });
+</script>
+</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">multivec</span><span class="p">(</span>
     <span class="n">url</span><span class="o">=</span><span class="s2">"https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec"</span><span class="p">,</span>
@@ -386,10 +437,10 @@ background ASGI server if a local file path is detected.</p>
 <span class="p">)</span>
 
 <span class="n">track</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"start:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"top"</span><span class="p">),</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">"start:G"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">"top"</span><span class="p">),</span>
     <span class="n">xe</span><span class="o">=</span><span class="s2">"end:G"</span><span class="p">,</span>
-    <span class="n">row</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"sample:N"</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Channel</span><span class="p">(</span><span class="s2">"peak:Q"</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">row</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span><span class="s2">"sample:N"</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">"peak:Q"</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">725</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 
 <span class="n">track</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
