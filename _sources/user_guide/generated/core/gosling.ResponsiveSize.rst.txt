@@ -1,0 +1,30 @@
+﻿gosling.ResponsiveSize
+======================
+
+.. currentmodule:: gosling
+
+.. autoclass:: ResponsiveSize
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ResponsiveSize.__init__
+      ~ResponsiveSize.copy
+      ~ResponsiveSize.from_dict
+      ~ResponsiveSize.from_json
+      ~ResponsiveSize.resolve_references
+      ~ResponsiveSize.to_dict
+      ~ResponsiveSize.to_json
+      ~ResponsiveSize.validate
+      ~ResponsiveSize.validate_property
+   
+   
+
+   
+   
+   

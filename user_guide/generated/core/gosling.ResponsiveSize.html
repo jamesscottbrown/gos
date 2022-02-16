@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="gosling.stack" href="gosling.stack.html" /><link rel="prev" title="gosling.parallel" href="gosling.parallel.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="gosling.Root" href="gosling.Root.html" /><link rel="prev" title="gosling.RangeFilter" href="gosling.RangeFilter.html" />
 
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.1"/>
-        <title>gosling.serial - gos</title>
+        <title>gosling.ResponsiveSize - gos</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=a8f031f701c6af50c9919b48f173a5785af06fac" />
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/higlass@1.11/dist/hglib.css" />
@@ -226,93 +226,93 @@
 <li class="toctree-l2"><a class="reference internal" href="../channels/gosling.YValue.html">gosling.YValue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../channels/gosling.Ye.html">gosling.Ye</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../channels/gosling.YeValue.html">gosling.YeValue</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gosling.horizontal.html">gosling.horizontal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gosling.overlay.html">gosling.overlay</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gosling.parallel.html">gosling.parallel</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">gosling.serial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gosling.stack.html">gosling.stack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gosling.value.html">gosling.value</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gosling.vertical.html">gosling.vertical</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Aggregate.html">gosling.Aggregate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Assembly.html">gosling.Assembly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.AxisPosition.html">gosling.AxisPosition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.BAMData.html">gosling.BAMData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.BEDDBData.html">gosling.BEDDBData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.BIGWIGData.html">gosling.BIGWIGData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.BinAggregate.html">gosling.BinAggregate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.CSVData.html">gosling.CSVData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Channel.html">gosling.Channel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.ChannelDeep.html">gosling.ChannelDeep</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.ChannelValue.html">gosling.ChannelValue</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Chromosome.html">gosling.Chromosome</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Color.html">gosling.Color</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.CoverageTransform.html">gosling.CoverageTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.DataDeep.html">gosling.DataDeep</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.DataTrack.html">gosling.DataTrack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.DataTransform.html">gosling.DataTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Datum.html">gosling.Datum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.DisplaceTransform.html">gosling.DisplaceTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Displacement.html">gosling.Displacement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.DisplacementType.html">gosling.DisplacementType</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.DomainChr.html">gosling.DomainChr</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.DomainChrInterval.html">gosling.DomainChrInterval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.DomainGene.html">gosling.DomainGene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.DomainInterval.html">gosling.DomainInterval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.ExonSplitTransform.html">gosling.ExonSplitTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.FieldType.html">gosling.FieldType</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.FilterTransform.html">gosling.FilterTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.FlatTracks.html">gosling.FlatTracks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.GenomicDomain.html">gosling.GenomicDomain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.GenomicLengthTransform.html">gosling.GenomicLengthTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.GoslingSchema.html">gosling.GoslingSchema</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.GoslingSpec.html">gosling.GoslingSpec</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.IncludeFilter.html">gosling.IncludeFilter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.JSONData.html">gosling.JSONData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.JSONParseTransform.html">gosling.JSONParseTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Layout.html">gosling.Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.LogBase.html">gosling.LogBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.LogTransform.html">gosling.LogTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.LogicalOperation.html">gosling.LogicalOperation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Mark.html">gosling.Mark</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.MatrixData.html">gosling.MatrixData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.MultipleViews.html">gosling.MultipleViews</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.MultivecData.html">gosling.MultivecData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.OneOfFilter.html">gosling.OneOfFilter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Opacity.html">gosling.Opacity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Orientation.html">gosling.Orientation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.OverlaidTrack.html">gosling.OverlaidTrack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.OverlaidTracks.html">gosling.OverlaidTracks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.PREDEFINED_COLORS.html">gosling.PREDEFINED_COLORS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.PartialTrack.html">gosling.PartialTrack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Range.html">gosling.Range</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.RangeFilter.html">gosling.RangeFilter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.ResponsiveSize.html">gosling.ResponsiveSize</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Root.html">gosling.Root</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.RootSpecWithMultipleViews.html">gosling.RootSpecWithMultipleViews</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.RootSpecWithSingleView.html">gosling.RootSpecWithSingleView</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Row.html">gosling.Row</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.SchemaBase.html">gosling.SchemaBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.SingleTrack.html">gosling.SingleTrack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.SingleView.html">gosling.SingleView</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Size.html">gosling.Size</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.SizeVisibilityCondition.html">gosling.SizeVisibilityCondition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.StackedTracks.html">gosling.StackedTracks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.StrConcatTransform.html">gosling.StrConcatTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.StrReplaceTransform.html">gosling.StrReplaceTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Stroke.html">gosling.Stroke</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.StrokeWidth.html">gosling.StrokeWidth</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Style.html">gosling.Style</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.TemplateTrack.html">gosling.TemplateTrack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Text.html">gosling.Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Tooltip.html">gosling.Tooltip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Track.html">gosling.Track</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.ValueExtent.html">gosling.ValueExtent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.VectorData.html">gosling.VectorData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.VisibilityCondition.html">gosling.VisibilityCondition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.X.html">gosling.X</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.Y.html">gosling.Y</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.ZoomLevelVisibilityCondition.html">gosling.ZoomLevelVisibilityCondition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/gosling.ZoomLimits.html">gosling.ZoomLimits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/gosling.horizontal.html">gosling.horizontal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/gosling.overlay.html">gosling.overlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/gosling.parallel.html">gosling.parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/gosling.serial.html">gosling.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/gosling.stack.html">gosling.stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/gosling.value.html">gosling.value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/gosling.vertical.html">gosling.vertical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Aggregate.html">gosling.Aggregate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Assembly.html">gosling.Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.AxisPosition.html">gosling.AxisPosition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.BAMData.html">gosling.BAMData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.BEDDBData.html">gosling.BEDDBData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.BIGWIGData.html">gosling.BIGWIGData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.BinAggregate.html">gosling.BinAggregate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.CSVData.html">gosling.CSVData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Channel.html">gosling.Channel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.ChannelDeep.html">gosling.ChannelDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.ChannelValue.html">gosling.ChannelValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Chromosome.html">gosling.Chromosome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Color.html">gosling.Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.CoverageTransform.html">gosling.CoverageTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.DataDeep.html">gosling.DataDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.DataTrack.html">gosling.DataTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.DataTransform.html">gosling.DataTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Datum.html">gosling.Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.DisplaceTransform.html">gosling.DisplaceTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Displacement.html">gosling.Displacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.DisplacementType.html">gosling.DisplacementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.DomainChr.html">gosling.DomainChr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.DomainChrInterval.html">gosling.DomainChrInterval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.DomainGene.html">gosling.DomainGene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.DomainInterval.html">gosling.DomainInterval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.ExonSplitTransform.html">gosling.ExonSplitTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.FieldType.html">gosling.FieldType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.FilterTransform.html">gosling.FilterTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.FlatTracks.html">gosling.FlatTracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.GenomicDomain.html">gosling.GenomicDomain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.GenomicLengthTransform.html">gosling.GenomicLengthTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.GoslingSchema.html">gosling.GoslingSchema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.GoslingSpec.html">gosling.GoslingSpec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.IncludeFilter.html">gosling.IncludeFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.JSONData.html">gosling.JSONData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.JSONParseTransform.html">gosling.JSONParseTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Layout.html">gosling.Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.LogBase.html">gosling.LogBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.LogTransform.html">gosling.LogTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.LogicalOperation.html">gosling.LogicalOperation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Mark.html">gosling.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.MatrixData.html">gosling.MatrixData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.MultipleViews.html">gosling.MultipleViews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.MultivecData.html">gosling.MultivecData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.OneOfFilter.html">gosling.OneOfFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Opacity.html">gosling.Opacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Orientation.html">gosling.Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.OverlaidTrack.html">gosling.OverlaidTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.OverlaidTracks.html">gosling.OverlaidTracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.PREDEFINED_COLORS.html">gosling.PREDEFINED_COLORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.PartialTrack.html">gosling.PartialTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Range.html">gosling.Range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.RangeFilter.html">gosling.RangeFilter</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">gosling.ResponsiveSize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Root.html">gosling.Root</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.RootSpecWithMultipleViews.html">gosling.RootSpecWithMultipleViews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.RootSpecWithSingleView.html">gosling.RootSpecWithSingleView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Row.html">gosling.Row</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.SchemaBase.html">gosling.SchemaBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.SingleTrack.html">gosling.SingleTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.SingleView.html">gosling.SingleView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Size.html">gosling.Size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.SizeVisibilityCondition.html">gosling.SizeVisibilityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.StackedTracks.html">gosling.StackedTracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.StrConcatTransform.html">gosling.StrConcatTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.StrReplaceTransform.html">gosling.StrReplaceTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Stroke.html">gosling.Stroke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.StrokeWidth.html">gosling.StrokeWidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Style.html">gosling.Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.TemplateTrack.html">gosling.TemplateTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Text.html">gosling.Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Tooltip.html">gosling.Tooltip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Track.html">gosling.Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.ValueExtent.html">gosling.ValueExtent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.VectorData.html">gosling.VectorData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.VisibilityCondition.html">gosling.VisibilityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.X.html">gosling.X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.Y.html">gosling.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.ZoomLevelVisibilityCondition.html">gosling.ZoomLevelVisibilityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.ZoomLimits.html">gosling.ZoomLimits</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../local_data.html">Local Data</a></li>
@@ -344,12 +344,53 @@
           </label>
         </div>
         <article role="main">
-          <section id="gosling-serial">
-<h1>gosling.serial<a class="headerlink" href="#gosling-serial" title="Permalink to this headline">#</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="gosling.serial">
-<span class="sig-prename descclassname"><span class="pre">gosling.</span></span><span class="sig-name descname"><span class="pre">serial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">views</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../toplevel/gosling.View.html#gosling.View" title="gosling.api.View"><span class="pre">gosling.api.View</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../toplevel/gosling.Track.html#gosling.Track" title="gosling.api.Track"><span class="pre">gosling.api.Track</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="../toplevel/gosling.View.html#gosling.View" title="gosling.api.View"><span class="pre">gosling.api.View</span></a></span></span><a class="headerlink" href="#gosling.serial" title="Permalink to this definition">#</a></dt>
-<dd><p>Arrange multiple views in serial.</p>
+          <section id="gosling-responsivesize">
+<h1>gosling.ResponsiveSize<a class="headerlink" href="#gosling-responsivesize" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="gosling.ResponsiveSize">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gosling.</span></span><span class="sig-name descname"><span class="pre">ResponsiveSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gosling.ResponsiveSize" title="Permalink to this definition">#</a></dt>
+<dd><p>ResponsiveSize schema wrapper</p>
+<p>anyOf(boolean, Mapping(required=[]))</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gosling.ResponsiveSize.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gosling.ResponsiveSize.__init__" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gosling.ResponsiveSize.__init__" title="gosling.ResponsiveSize.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args, **kwds)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code>([deep, ignore])</p></td>
+<td><p>Return a copy of the object</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_dict</span></code>(dct[, validate, _wrapper_classes])</p></td>
+<td><p>Construct class from a dictionary representation</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code>(json_string[, validate])</p></td>
+<td><p>Instantiate the object from a valid JSON string</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_references</span></code>([schema])</p></td>
+<td><p>Resolve references in the context of this object's schema or root schema.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dict</span></code>([validate, ignore, context])</p></td>
+<td><p>Return a dictionary representation of the object</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code>([validate, ignore, context, indent, ...])</p></td>
+<td><p>Emit the JSON representation for this object as a string.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate</span></code>(instance[, schema])</p></td>
+<td><p>Validate the instance against the class schema in the context of the rootschema.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_property</span></code>(name, value[, schema])</p></td>
+<td><p>Validate a property against property schema in the context of the rootschema</p></td>
+</tr>
+</tbody>
+</table></div>
 </dd></dl>
 </section>
 
@@ -358,23 +399,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="gosling.stack.html">
+          <a class="next-page" href="gosling.Root.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">gosling.stack</div>
+                <div class="title">gosling.Root</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="gosling.parallel.html">
+          <a class="prev-page" href="gosling.RangeFilter.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">gosling.parallel</div>
+                <div class="title">gosling.RangeFilter</div>
                 
               </div>
             </a>

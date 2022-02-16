@@ -16,12 +16,12 @@ Basic marks
 .. toctree::
 
 
-    line_chart
     bar_chart
+    line_chart
     text_marks
-    area_chart
     point_plot
     heatmap
+    area_chart
     brushing_and_linking
 
 Composite visualizations
@@ -30,8 +30,8 @@ Composite visualizations
 .. toctree::
 
 
-    ideograms
     genes
+    ideograms
     comparative_matrices
 
 Interactive visualizations
@@ -41,8 +41,8 @@ Interactive visualizations
 
 
     multiscale_sequence
-    multiscale_lollipop_plot
     overview_detail
+    multiscale_lollipop_plot
 
 Others
 ------
