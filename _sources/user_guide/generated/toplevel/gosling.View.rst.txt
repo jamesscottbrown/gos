@@ -25,6 +25,7 @@
       ~View.to_json
       ~View.validate
       ~View.validate_property
+      ~View.widget
    
    
 

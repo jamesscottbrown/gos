@@ -3,14 +3,14 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="gosling.View" href="generated/toplevel/gosling.View.html" /><link rel="prev" title="Circos" href="../gallery/circos.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="gosling.View" href="generated/toplevel/gosling.View.html" /><link rel="prev" title="Single-cell Epigenomic Analysis" href="../gallery/corces.html" />
 
-    <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.03.04"/>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.04.07"/>
         <title>API Reference - gos</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/higlass@1.11/dist/hglib.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     <link rel="stylesheet" type="text/css" href="../_static/theme_overrides.css" />
     
     
@@ -38,10 +38,12 @@
   }
 </style></head>
   <body>
+    
     <script>
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
@@ -166,19 +168,19 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../gallery/index.html">Example Gallery</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../gallery/index.html#basic-marks">Basic marks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/bar_chart.html">Bar Chart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/line_chart.html">Line Chart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/text_marks.html">Text Marks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/point_plot.html">Point Plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/heatmap.html">Hi-C Heatmap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/area_chart.html">Area Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/line_chart.html">Line Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/point_plot.html">Point Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/text_marks.html">Text Marks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/bar_chart.html">Bar Chart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/brushing_and_linking.html">Brushing and Linking</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../gallery/index.html#composite-visualizations">Composite visualizations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/genes.html">Gene Annotation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/ideograms.html">Ideograms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/comparative_matrices.html">Comparative Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/ideograms.html">Ideograms</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../gallery/index.html#interactive-visualizations">Interactive visualizations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -188,8 +190,8 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../gallery/index.html#others">Others</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../gallery/corces.html">Single-cell Epigenomic Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/circos.html">Circos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/corces.html">Single-cell Epigenomic Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -359,7 +361,7 @@ is generated automatically from the code documentation strings.
 This low-level documentation may not be enough to give full guidelines on their use.</p>
 <section id="top-level-objects">
 <h2>Top-Level Objects<a class="headerlink" href="#top-level-objects" title="Permalink to this headline">#</a></h2>
-<div class="table-wrapper"><table class="longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%"/>
 <col style="width: 90%"/>
@@ -376,7 +378,7 @@ This low-level documentation may not be enough to give full guidelines on their 
 </section>
 <section id="encoding-channels">
 <h2>Encoding Channels<a class="headerlink" href="#encoding-channels" title="Permalink to this headline">#</a></h2>
-<div class="table-wrapper"><table class="longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%"/>
 <col style="width: 90%"/>
@@ -477,7 +479,7 @@ This low-level documentation may not be enough to give full guidelines on their 
 </section>
 <section id="api-functions">
 <h2>API Functions<a class="headerlink" href="#api-functions" title="Permalink to this headline">#</a></h2>
-<div class="table-wrapper"><table class="longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%"/>
 <col style="width: 90%"/>
@@ -509,7 +511,7 @@ This low-level documentation may not be enough to give full guidelines on their 
 </section>
 <section id="low-level-schema-wrappers">
 <h2>Low-Level Schema Wrappers<a class="headerlink" href="#low-level-schema-wrappers" title="Permalink to this headline">#</a></h2>
-<div class="table-wrapper"><table class="longtable docutils align-default">
+<div class="table-wrapper"><table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%"/>
 <col style="width: 90%"/>
@@ -774,14 +776,14 @@ This low-level documentation may not be enough to give full guidelines on their 
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../gallery/circos.html">
+          <a class="prev-page" href="../gallery/corces.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Circos</div>
+                <div class="title">Single-cell Epigenomic Analysis</div>
                 
               </div>
             </a>
