@@ -1,0 +1,30 @@
+﻿gosling.SelectivityCondition
+============================
+
+.. currentmodule:: gosling
+
+.. autoclass:: SelectivityCondition
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SelectivityCondition.__init__
+      ~SelectivityCondition.copy
+      ~SelectivityCondition.from_dict
+      ~SelectivityCondition.from_json
+      ~SelectivityCondition.resolve_references
+      ~SelectivityCondition.to_dict
+      ~SelectivityCondition.to_json
+      ~SelectivityCondition.validate
+      ~SelectivityCondition.validate_property
+   
+   
+
+   
+   
+   

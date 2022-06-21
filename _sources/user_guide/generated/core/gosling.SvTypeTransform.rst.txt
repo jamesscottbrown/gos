@@ -1,0 +1,30 @@
+﻿gosling.SvTypeTransform
+=======================
+
+.. currentmodule:: gosling
+
+.. autoclass:: SvTypeTransform
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SvTypeTransform.__init__
+      ~SvTypeTransform.copy
+      ~SvTypeTransform.from_dict
+      ~SvTypeTransform.from_json
+      ~SvTypeTransform.resolve_references
+      ~SvTypeTransform.to_dict
+      ~SvTypeTransform.to_json
+      ~SvTypeTransform.validate
+      ~SvTypeTransform.validate_property
+   
+   
+
+   
+   
+   
