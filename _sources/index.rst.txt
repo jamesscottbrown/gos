@@ -1,4 +1,4 @@
-**gos**: genomic visualization in python
+**gos**: declarative genomics visualization in python
 =============================================
 .. role:: raw-html(raw)
    :format: html
