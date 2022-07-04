@@ -1,0 +1,30 @@
+﻿gosling.MouseEventsDeep
+=======================
+
+.. currentmodule:: gosling
+
+.. autoclass:: MouseEventsDeep
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MouseEventsDeep.__init__
+      ~MouseEventsDeep.copy
+      ~MouseEventsDeep.from_dict
+      ~MouseEventsDeep.from_json
+      ~MouseEventsDeep.resolve_references
+      ~MouseEventsDeep.to_dict
+      ~MouseEventsDeep.to_json
+      ~MouseEventsDeep.validate
+      ~MouseEventsDeep.validate_property
+   
+   
+
+   
+   
+   

@@ -1,0 +1,30 @@
+﻿gosling.PredefinedColors
+========================
+
+.. currentmodule:: gosling
+
+.. autoclass:: PredefinedColors
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PredefinedColors.__init__
+      ~PredefinedColors.copy
+      ~PredefinedColors.from_dict
+      ~PredefinedColors.from_json
+      ~PredefinedColors.resolve_references
+      ~PredefinedColors.to_dict
+      ~PredefinedColors.to_json
+      ~PredefinedColors.validate
+      ~PredefinedColors.validate_property
+   
+   
+
+   
+   
+   

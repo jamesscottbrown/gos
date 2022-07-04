@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="gosling.RangeFilter" href="gosling.RangeFilter.html" /><link rel="prev" title="gosling.PartialTrack" href="gosling.PartialTrack.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="gosling.RangeFilter" href="gosling.RangeFilter.html" /><link rel="prev" title="gosling.PredefinedColors" href="gosling.PredefinedColors.html" />
 
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
         <title>gosling.Range - gos</title>
@@ -262,6 +262,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gosling.DomainChrInterval.html">gosling.DomainChrInterval</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.DomainGene.html">gosling.DomainGene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.DomainInterval.html">gosling.DomainInterval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.EventStyle.html">gosling.EventStyle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.ExonSplitTransform.html">gosling.ExonSplitTransform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.FieldType.html">gosling.FieldType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.FilterTransform.html">gosling.FilterTransform</a></li>
@@ -278,6 +279,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gosling.LogicalOperation.html">gosling.LogicalOperation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.Mark.html">gosling.Mark</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.MatrixData.html">gosling.MatrixData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.MouseEventsDeep.html">gosling.MouseEventsDeep</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.MultipleViews.html">gosling.MultipleViews</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.MultivecData.html">gosling.MultivecData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.OneOfFilter.html">gosling.OneOfFilter</a></li>
@@ -285,8 +287,8 @@
 <li class="toctree-l2"><a class="reference internal" href="gosling.Orientation.html">gosling.Orientation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.OverlaidTrack.html">gosling.OverlaidTrack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.OverlaidTracks.html">gosling.OverlaidTracks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gosling.PREDEFINED_COLORS.html">gosling.PREDEFINED_COLORS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.PartialTrack.html">gosling.PartialTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.PredefinedColors.html">gosling.PredefinedColors</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">gosling.Range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.RangeFilter.html">gosling.RangeFilter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.ResponsiveSize.html">gosling.ResponsiveSize</a></li>
@@ -308,6 +310,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gosling.Text.html">gosling.Text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.Tooltip.html">gosling.Tooltip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.Track.html">gosling.Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gosling.VCFData.html">gosling.VCFData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.ValueExtent.html">gosling.ValueExtent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.VectorData.html">gosling.VectorData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.VisibilityCondition.html">gosling.VisibilityCondition</a></li>
@@ -359,7 +362,7 @@
 <dt class="sig sig-object py" id="gosling.Range">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gosling.</span></span><span class="sig-name descname"><span class="pre">Range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gosling.Range" title="Permalink to this definition">#</a></dt>
 <dd><p>Range schema wrapper</p>
-<p>anyOf(<a class="reference internal" href="gosling.ValueExtent.html#gosling.ValueExtent" title="gosling.ValueExtent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueExtent</span></code></a>, <a class="reference internal" href="gosling.PREDEFINED_COLORS.html#gosling.PREDEFINED_COLORS" title="gosling.PREDEFINED_COLORS"><code class="xref py py-class docutils literal notranslate"><span class="pre">PREDEFINED_COLORS</span></code></a>)</p>
+<p>anyOf(<a class="reference internal" href="gosling.ValueExtent.html#gosling.ValueExtent" title="gosling.ValueExtent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueExtent</span></code></a>, <a class="reference internal" href="gosling.PredefinedColors.html#gosling.PredefinedColors" title="gosling.PredefinedColors"><code class="xref py py-class docutils literal notranslate"><span class="pre">PredefinedColors</span></code></a>)</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="gosling.Range.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gosling.Range.__init__" title="Permalink to this definition">#</a></dt>
@@ -417,14 +420,14 @@
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="gosling.PartialTrack.html">
+          <a class="prev-page" href="gosling.PredefinedColors.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">gosling.PartialTrack</div>
+                <div class="title">gosling.PredefinedColors</div>
                 
               </div>
             </a>
@@ -464,6 +467,6 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js"></script>
     <script src="https://unpkg.com/higlass@1.11/dist/hglib.js"></script>
-    <script src="https://unpkg.com/gosling.js@0.9.18/dist/gosling.js"></script>
+    <script src="https://unpkg.com/gosling.js@0.9.20/dist/gosling.js"></script>
     </body>
 </html>

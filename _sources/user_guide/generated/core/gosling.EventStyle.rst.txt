@@ -1,0 +1,30 @@
+﻿gosling.EventStyle
+==================
+
+.. currentmodule:: gosling
+
+.. autoclass:: EventStyle
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~EventStyle.__init__
+      ~EventStyle.copy
+      ~EventStyle.from_dict
+      ~EventStyle.from_json
+      ~EventStyle.resolve_references
+      ~EventStyle.to_dict
+      ~EventStyle.to_json
+      ~EventStyle.validate
+      ~EventStyle.validate_property
+   
+   
+
+   
+   
+   

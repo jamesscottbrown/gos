@@ -1,0 +1,30 @@
+﻿gosling.VCFData
+===============
+
+.. currentmodule:: gosling
+
+.. autoclass:: VCFData
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~VCFData.__init__
+      ~VCFData.copy
+      ~VCFData.from_dict
+      ~VCFData.from_json
+      ~VCFData.resolve_references
+      ~VCFData.to_dict
+      ~VCFData.to_json
+      ~VCFData.validate
+      ~VCFData.validate_property
+   
+   
+
+   
+   
+   
