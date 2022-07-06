@@ -214,6 +214,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../channels/gosling.StrokeWidthValue.html">gosling.StrokeWidthValue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../channels/gosling.Text.html">gosling.Text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../channels/gosling.TextValue.html">gosling.TextValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../channels/gosling.Tooltip.html">gosling.Tooltip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../channels/gosling.X.html">gosling.X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../channels/gosling.X1.html">gosling.X1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../channels/gosling.X1Value.html">gosling.X1Value</a></li>
@@ -360,29 +361,31 @@
 <h1>gosling.Tooltip<a class="headerlink" href="#gosling-tooltip" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="gosling.Tooltip">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gosling.</span></span><span class="sig-name descname"><span class="pre">Tooltip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gosling.Tooltip" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gosling.</span></span><span class="sig-name descname"><span class="pre">Tooltip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shorthand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gosling.Tooltip" title="Permalink to this definition">#</a></dt>
 <dd><p>Tooltip schema wrapper</p>
-<p>Mapping(required=[field, type])</p>
+<p>Mapping(required=[shorthand])</p>
 <dl class="field-list">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>field</strong><span class="classifier">string</span></dt><dd></dd>
-<dt><strong>type</strong><span class="classifier"><a class="reference internal" href="gosling.FieldType.html#gosling.FieldType" title="gosling.FieldType"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldType</span></code></a></span></dt><dd></dd>
+<dt><strong>shorthand</strong><span class="classifier">string</span></dt><dd><p>shorthand for field, aggregate, and type</p>
+</dd>
 <dt><strong>alt</strong><span class="classifier">string</span></dt><dd></dd>
+<dt><strong>field</strong><span class="classifier">string</span></dt><dd></dd>
 <dt><strong>format</strong><span class="classifier">string</span></dt><dd></dd>
+<dt><strong>type</strong><span class="classifier"><a class="reference internal" href="gosling.FieldType.html#gosling.FieldType" title="gosling.FieldType"><code class="xref py py-class docutils literal notranslate"><span class="pre">FieldType</span></code></a></span></dt><dd></dd>
 </dl>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="gosling.Tooltip.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gosling.Tooltip.__init__" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shorthand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gosling.Tooltip.__init__" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gosling.Tooltip.__init__" title="gosling.Tooltip.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([field, type, alt, format])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gosling.Tooltip.__init__" title="gosling.Tooltip.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([shorthand, alt, field, format, type])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code>([deep, ignore])</p></td>

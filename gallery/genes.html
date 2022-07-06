@@ -214,6 +214,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.StrokeWidthValue.html">gosling.StrokeWidthValue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Text.html">gosling.Text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.TextValue.html">gosling.TextValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Tooltip.html">gosling.Tooltip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.X.html">gosling.X</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.X1.html">gosling.X1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.X1Value.html">gosling.X1Value</a></li>
@@ -457,22 +458,18 @@
       "title": "Genes | hg38",
       "tooltip": [
         {
-          "alt": "Start Position",
           "field": "start",
           "type": "genomic"
         },
         {
-          "alt": "End Position",
           "field": "end",
           "type": "genomic"
         },
         {
-          "alt": "Strand",
           "field": "strand",
           "type": "nominal"
         },
         {
-          "alt": "Name",
           "field": "name",
           "type": "nominal"
         }
@@ -573,22 +570,18 @@
       "title": "Genes | hg38",
       "tooltip": [
         {
-          "alt": "Start Position",
           "field": "start",
           "type": "genomic"
         },
         {
-          "alt": "End Position",
           "field": "end",
           "type": "genomic"
         },
         {
-          "alt": "Strand",
           "field": "strand",
           "type": "nominal"
         },
         {
-          "alt": "Name",
           "field": "name",
           "type": "nominal"
         }
@@ -676,22 +669,18 @@
       "title": "Genes | hg38",
       "tooltip": [
         {
-          "alt": "Start Position",
           "field": "start",
           "type": "genomic"
         },
         {
-          "alt": "End Position",
           "field": "end",
           "type": "genomic"
         },
         {
-          "alt": "Strand",
           "field": "strand",
           "type": "nominal"
         },
         {
-          "alt": "Name",
           "field": "name",
           "type": "nominal"
         }
@@ -789,22 +778,18 @@
       "title": "Genes | hg38",
       "tooltip": [
         {
-          "alt": "Start Position",
           "field": "start",
           "type": "genomic"
         },
         {
-          "alt": "End Position",
           "field": "end",
           "type": "genomic"
         },
         {
-          "alt": "Strand",
           "field": "strand",
           "type": "nominal"
         },
         {
-          "alt": "Name",
           "field": "name",
           "type": "nominal"
         }
@@ -898,22 +883,18 @@
       "title": "Genes | hg38",
       "tooltip": [
         {
-          "alt": "Start Position",
           "field": "start",
           "type": "genomic"
         },
         {
-          "alt": "End Position",
           "field": "end",
           "type": "genomic"
         },
         {
-          "alt": "Strand",
           "field": "strand",
           "type": "nominal"
         },
         {
-          "alt": "Name",
           "field": "name",
           "type": "nominal"
         }
@@ -1004,22 +985,18 @@
       "title": "Genes | hg38",
       "tooltip": [
         {
-          "alt": "Start Position",
           "field": "start",
           "type": "genomic"
         },
         {
-          "alt": "End Position",
           "field": "end",
           "type": "genomic"
         },
         {
-          "alt": "Strand",
           "field": "strand",
           "type": "nominal"
         },
         {
-          "alt": "Name",
           "field": "name",
           "type": "nominal"
         }
@@ -1080,12 +1057,7 @@
 <span class="n">base</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">genes</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">row</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span><span class="s2">&quot;strand:N&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">]),</span>
     <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;strand:N&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">],</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#7585FF&quot;</span><span class="p">,</span> <span class="s2">&quot;#FF8A85&quot;</span><span class="p">]),</span>
-    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span>
-        <span class="n">gos</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;start&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;genomic&quot;</span><span class="p">,</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;Start Position&quot;</span><span class="p">),</span>
-        <span class="n">gos</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;genomic&quot;</span><span class="p">,</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;End Position&quot;</span><span class="p">),</span>
-        <span class="n">gos</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;strand&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;nominal&quot;</span><span class="p">,</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;Strand&quot;</span><span class="p">),</span>
-        <span class="n">gos</span><span class="o">.</span><span class="n">Tooltip</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;nominal&quot;</span><span class="p">,</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;Name&quot;</span><span class="p">)</span>
-    <span class="p">]</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;start:G&quot;</span><span class="p">,</span> <span class="s2">&quot;end:G&quot;</span><span class="p">,</span> <span class="s2">&quot;strand:N&quot;</span><span class="p">,</span> <span class="s2">&quot;name:N&quot;</span><span class="p">],</span>
 <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Genes | hg38&quot;</span><span class="p">,</span>
 <span class="p">)</span>
