@@ -1,0 +1,30 @@
+﻿gosling.BamData
+===============
+
+.. currentmodule:: gosling
+
+.. autoclass:: BamData
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BamData.__init__
+      ~BamData.copy
+      ~BamData.from_dict
+      ~BamData.from_json
+      ~BamData.resolve_references
+      ~BamData.to_dict
+      ~BamData.to_json
+      ~BamData.validate
+      ~BamData.validate_property
+   
+   
+
+   
+   
+   

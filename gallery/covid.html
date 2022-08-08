@@ -1,0 +1,814 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Single-cell Epigenomic Analysis" href="corces.html" /><link rel="prev" title="Circos" href="circos.html" />
+
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+        <title>SARS-CoV-2 - gos</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/higlass@1.11/dist/hglib.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme_overrides.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">gos</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/favicon.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">gos</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html#development-install">Development Install</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Gallery</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Example Gallery</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="index.html#basic-marks">Basic marks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="brushing_and_linking.html">Brushing and Linking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bar_chart.html">Bar Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="area_chart.html">Area Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heatmap.html">Hi-C Heatmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="line_chart.html">Line Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="point_plot.html">Point Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text_marks.html">Text Marks</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="index.html#composite-visualizations">Composite visualizations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="comparative_matrices.html">Comparative Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genes.html">Gene Annotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideograms.html">Ideograms</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="index.html#interactive-visualizations">Interactive visualizations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="multiscale_sequence.html">Multiscale Sequence Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview_detail.html">Overview + Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiscale_lollipop_plot.html">Multiscale Lollipop Plot</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html#others">Others</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="circos.html">Circos</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">SARS-CoV-2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="corces.html">Single-cell Epigenomic Analysis</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../user_guide/API.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/toplevel/gosling.View.html">gosling.View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/toplevel/gosling.Track.html">gosling.Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Color.html">gosling.Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.ColorValue.html">gosling.ColorValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Opacity.html">gosling.Opacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.OpacityValue.html">gosling.OpacityValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Row.html">gosling.Row</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.RowValue.html">gosling.RowValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Size.html">gosling.Size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.SizeValue.html">gosling.SizeValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Stroke.html">gosling.Stroke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.StrokeValue.html">gosling.StrokeValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.StrokeWidth.html">gosling.StrokeWidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.StrokeWidthValue.html">gosling.StrokeWidthValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Text.html">gosling.Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.TextValue.html">gosling.TextValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Tooltip.html">gosling.Tooltip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.X.html">gosling.X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.X1.html">gosling.X1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.X1Value.html">gosling.X1Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.X1e.html">gosling.X1e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.X1eValue.html">gosling.X1eValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.XValue.html">gosling.XValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Xe.html">gosling.Xe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.XeValue.html">gosling.XeValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Y.html">gosling.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Y1.html">gosling.Y1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Y1Value.html">gosling.Y1Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Y1e.html">gosling.Y1e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Y1eValue.html">gosling.Y1eValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.YValue.html">gosling.YValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.Ye.html">gosling.Ye</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/channels/gosling.YeValue.html">gosling.YeValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.horizontal.html">gosling.horizontal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.overlay.html">gosling.overlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.parallel.html">gosling.parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.serial.html">gosling.serial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.stack.html">gosling.stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.value.html">gosling.value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/api/gosling.vertical.html">gosling.vertical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Aggregate.html">gosling.Aggregate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Assembly.html">gosling.Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.AxisPosition.html">gosling.AxisPosition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.BamData.html">gosling.BamData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.BeddbData.html">gosling.BeddbData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.BigWigData.html">gosling.BigWigData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.BinAggregate.html">gosling.BinAggregate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Channel.html">gosling.Channel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ChannelDeep.html">gosling.ChannelDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ChannelValue.html">gosling.ChannelValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ChromSizes.html">gosling.ChromSizes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Chromosome.html">gosling.Chromosome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Color.html">gosling.Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.CoverageTransform.html">gosling.CoverageTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.CsvData.html">gosling.CsvData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DataDeep.html">gosling.DataDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DataTrack.html">gosling.DataTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DataTransform.html">gosling.DataTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Datum.html">gosling.Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DisplaceTransform.html">gosling.DisplaceTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Displacement.html">gosling.Displacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DisplacementType.html">gosling.DisplacementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DomainChr.html">gosling.DomainChr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DomainChrInterval.html">gosling.DomainChrInterval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DomainGene.html">gosling.DomainGene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.DomainInterval.html">gosling.DomainInterval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.EventStyle.html">gosling.EventStyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ExonSplitTransform.html">gosling.ExonSplitTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.FieldType.html">gosling.FieldType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.FilterTransform.html">gosling.FilterTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.GenomicDomain.html">gosling.GenomicDomain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.GenomicLengthTransform.html">gosling.GenomicLengthTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.GoslingSchema.html">gosling.GoslingSchema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.GoslingSpec.html">gosling.GoslingSpec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.IncludeFilter.html">gosling.IncludeFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.JsonData.html">gosling.JsonData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.JsonParseTransform.html">gosling.JsonParseTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Layout.html">gosling.Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.LogBase.html">gosling.LogBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.LogTransform.html">gosling.LogTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.LogicalOperation.html">gosling.LogicalOperation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Mark.html">gosling.Mark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MatrixData.html">gosling.MatrixData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MouseEventsDeep.html">gosling.MouseEventsDeep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MultipleViews.html">gosling.MultipleViews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.MultivecData.html">gosling.MultivecData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.OneOfFilter.html">gosling.OneOfFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Opacity.html">gosling.Opacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Orientation.html">gosling.Orientation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.OverlaidTrack.html">gosling.OverlaidTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.OverlaidTracks.html">gosling.OverlaidTracks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.PartialTrack.html">gosling.PartialTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.PredefinedColors.html">gosling.PredefinedColors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Range.html">gosling.Range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.RangeFilter.html">gosling.RangeFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ResponsiveSize.html">gosling.ResponsiveSize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Root.html">gosling.Root</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Row.html">gosling.Row</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.SchemaBase.html">gosling.SchemaBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.SelectivityCondition.html">gosling.SelectivityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.SingleTrack.html">gosling.SingleTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.SingleView.html">gosling.SingleView</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Size.html">gosling.Size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.SizeVisibilityCondition.html">gosling.SizeVisibilityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.StrConcatTransform.html">gosling.StrConcatTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.StrReplaceTransform.html">gosling.StrReplaceTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Stroke.html">gosling.Stroke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.StrokeWidth.html">gosling.StrokeWidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Style.html">gosling.Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.SvTypeTransform.html">gosling.SvTypeTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.TemplateTrack.html">gosling.TemplateTrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Text.html">gosling.Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Tooltip.html">gosling.Tooltip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Track.html">gosling.Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ValueExtent.html">gosling.ValueExtent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.VcfData.html">gosling.VcfData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.VectorData.html">gosling.VectorData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.VisibilityCondition.html">gosling.VisibilityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.X.html">gosling.X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.Y.html">gosling.Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ZoomLevelVisibilityCondition.html">gosling.ZoomLevelVisibilityCondition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user_guide/generated/core/gosling.ZoomLimits.html">gosling.ZoomLimits</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/local_data.html">Local Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/themes.html">Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/themes.html#custom-themes">Custom Themes</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="sars-cov-2">
+<span id="gallery-covid"></span><h1>SARS-CoV-2<a class="headerlink" href="#sars-cov-2" title="Permalink to this heading">#</a></h1>
+<p>Data Source: WashU Virus Genome Browser, NCBI, GISAID</p>
+
+<div id="covid-rst-gosling-plot-0">
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+      var spec = {
+  "alignment": "stack",
+  "assembly": [
+    [
+      "NC_045512.2",
+      29903
+    ]
+  ],
+  "tracks": [
+    {
+      "alignment": "overlay",
+      "height": 30,
+      "title": "NC_045512.2 Genes",
+      "tracks": [
+        {
+          "color": {
+            "value": "#0072B2"
+          },
+          "data": {
+            "chromosomeField": "Accession",
+            "genomicFields": [
+              "Start",
+              "Stop"
+            ],
+            "type": "csv",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/COVID/NC_045512.2-Genes.csv"
+          },
+          "mark": "rect",
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 2
+          },
+          "x": {
+            "field": "Start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "Stop",
+            "type": "genomic"
+          }
+        },
+        {
+          "color": {
+            "value": "white"
+          },
+          "data": {
+            "chromosomeField": "Accession",
+            "genomicFields": [
+              "Start",
+              "Stop"
+            ],
+            "type": "csv",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/COVID/NC_045512.2-Genes.csv"
+          },
+          "mark": "rule",
+          "opacity": {
+            "value": 0.6
+          },
+          "strokeWidth": {
+            "value": 0
+          },
+          "style": {
+            "linePattern": {
+              "size": 10,
+              "type": "triangleRight"
+            }
+          },
+          "x": {
+            "field": "Start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "Stop",
+            "type": "genomic"
+          }
+        },
+        {
+          "color": {
+            "value": "black"
+          },
+          "data": {
+            "chromosomeField": "Accession",
+            "genomicFields": [
+              "Start",
+              "Stop"
+            ],
+            "type": "csv",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/COVID/NC_045512.2-Genes.csv"
+          },
+          "mark": "text",
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 3
+          },
+          "text": {
+            "field": "Gene symbol",
+            "type": "nominal"
+          },
+          "visibility": [
+            {
+              "measure": "width",
+              "operation": "LTET",
+              "target": "mark",
+              "threshold": "|xe-x|",
+              "transitionPadding": 30
+            }
+          ],
+          "x": {
+            "field": "Start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "Stop",
+            "type": "genomic"
+          }
+        }
+      ],
+      "width": 800
+    },
+    {
+      "alignment": "overlay",
+      "height": 80,
+      "title": "S Protein Annotation",
+      "tracks": [
+        {
+          "color": {
+            "domain": [
+              "receptor-binding domain (RBD)",
+              "receptor-binding motif (RBM)",
+              "S1/S2 cleavage site",
+              "heptad repeat 1 (HR1)",
+              "heptad repeat 2 (HR2)"
+            ],
+            "field": "Protein",
+            "type": "nominal"
+          },
+          "data": {
+            "chromosomeField": "Accession",
+            "genomicFields": [
+              "Start",
+              "Stop"
+            ],
+            "type": "csv",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/COVID/sars-cov-2_Sprot_annot_sorted.bed"
+          },
+          "mark": "rect",
+          "row": {
+            "domain": [
+              "receptor-binding domain (RBD)",
+              "receptor-binding motif (RBM)",
+              "S1/S2 cleavage site",
+              "heptad repeat 1 (HR1)",
+              "heptad repeat 2 (HR2)"
+            ],
+            "field": "Protein",
+            "type": "nominal"
+          },
+          "x": {
+            "field": "Start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "Stop",
+            "type": "genomic"
+          }
+        },
+        {
+          "color": {
+            "value": "#333"
+          },
+          "data": {
+            "chromosomeField": "Accession",
+            "genomicFields": [
+              "Start",
+              "Stop"
+            ],
+            "type": "csv",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/COVID/sars-cov-2_Sprot_annot_sorted.bed"
+          },
+          "mark": "text",
+          "row": {
+            "domain": [
+              "receptor-binding domain (RBD)",
+              "receptor-binding motif (RBM)",
+              "S1/S2 cleavage site",
+              "heptad repeat 1 (HR1)",
+              "heptad repeat 2 (HR2)"
+            ],
+            "field": "Protein",
+            "type": "nominal"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 3
+          },
+          "style": {
+            "textAnchor": "end"
+          },
+          "text": {
+            "field": "Protein",
+            "type": "nominal"
+          },
+          "x": {
+            "field": "Start",
+            "type": "genomic"
+          }
+        }
+      ],
+      "width": 800
+    },
+    {
+      "color": {
+        "value": "#0072B2"
+      },
+      "data": {
+        "chromosomeField": "Accession",
+        "genomicFields": [
+          "Start1",
+          "Stop1",
+          "Start2",
+          "Stop2"
+        ],
+        "sampleLength": 100,
+        "type": "csv",
+        "url": "https://s3.amazonaws.com/gosling-lang.org/data/COVID/TRS-L-dependent_recombinationEvents_sorted.bed"
+      },
+      "height": 400,
+      "mark": "withinLink",
+      "opacity": {
+        "value": 0.1
+      },
+      "stroke": {
+        "value": "#0072B2"
+      },
+      "title": "TRS-L-Dependent Recombination Events",
+      "width": 800,
+      "x": {
+        "field": "Start1",
+        "type": "genomic"
+      },
+      "x1": {
+        "field": "Start2",
+        "type": "genomic"
+      },
+      "x1e": {
+        "field": "Stop2",
+        "type": "genomic"
+      },
+      "xe": {
+        "field": "Stop1",
+        "type": "genomic"
+      }
+    }
+  ],
+  "xDomain": {
+    "interval": [
+      1,
+      29903
+    ]
+  }
+};
+      console.log(spec);
+      var opt = { padding: 0 };
+      var el = document.querySelector('#covid-rst-gosling-plot-0');
+      gosling.embed(el, spec, opt).catch(console.err);
+  });
+</script>
+</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
+
+<span class="n">gene_data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://s3.amazonaws.com/gosling-lang.org/data/COVID/NC_045512.2-Genes.csv&quot;</span><span class="p">,</span>
+    <span class="n">chromosomeField</span><span class="o">=</span><span class="s2">&quot;Accession&quot;</span><span class="p">,</span>
+    <span class="n">genomicFields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Start&quot;</span><span class="p">,</span> <span class="s2">&quot;Stop&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">genes_base</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">gene_data</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;Start:G&quot;</span><span class="p">),</span>
+    <span class="n">xe</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Xe</span><span class="p">(</span><span class="s2">&quot;Stop:G&quot;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+<span class="p">)</span>
+
+
+<span class="n">genes</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span>
+    <span class="n">genes_base</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;#0072B2&quot;</span><span class="p">),</span>
+        <span class="n">stroke</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">),</span>
+        <span class="n">strokeWidth</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">genes_base</span><span class="o">.</span><span class="n">mark_rule</span><span class="p">(</span><span class="n">linePattern</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;triangleRight&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">),</span>
+        <span class="n">opacity</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.6</span><span class="p">),</span>
+        <span class="n">strokeWidth</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">genes_base</span><span class="o">.</span><span class="n">mark_text</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;Gene symbol:N&quot;</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">),</span>
+        <span class="n">stroke</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">),</span>
+        <span class="n">strokeWidth</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">visibility_le</span><span class="p">(</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;mark&quot;</span><span class="p">,</span>
+        <span class="n">measure</span><span class="o">=</span><span class="s2">&quot;width&quot;</span><span class="p">,</span>
+        <span class="n">threshold</span><span class="o">=</span><span class="s2">&quot;|xe-x|&quot;</span><span class="p">,</span>
+        <span class="n">transitionPadding</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;NC_045512.2 Genes&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">protein_data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://s3.amazonaws.com/gosling-lang.org/data/COVID/sars-cov-2_Sprot_annot_sorted.bed&quot;</span><span class="p">,</span>
+    <span class="n">chromosomeField</span><span class="o">=</span><span class="s2">&quot;Accession&quot;</span><span class="p">,</span>
+    <span class="n">genomicFields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Start&quot;</span><span class="p">,</span> <span class="s2">&quot;Stop&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">domain</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;receptor-binding domain (RBD)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;receptor-binding motif (RBM)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;S1/S2 cleavage site&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;heptad repeat 1 (HR1)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;heptad repeat 2 (HR2)&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">proteins_base</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">protein_data</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;Start:G&quot;</span><span class="p">),</span>
+    <span class="n">row</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span><span class="s2">&quot;Protein:N&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">domain</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">proteins</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span>
+    <span class="n">proteins_base</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;Protein:N&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">domain</span><span class="p">),</span>
+        <span class="n">xe</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Xe</span><span class="p">(</span><span class="s2">&quot;Stop:G&quot;</span><span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">proteins_base</span><span class="o">.</span><span class="n">mark_text</span><span class="p">(</span><span class="n">textAnchor</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;Protein:N&quot;</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;#333&quot;</span><span class="p">),</span>
+        <span class="n">stroke</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">),</span>
+        <span class="n">strokeWidth</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;S Protein Annotation&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">recomb_data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://s3.amazonaws.com/gosling-lang.org/data/COVID/TRS-L-dependent_recombinationEvents_sorted.bed&quot;</span><span class="p">,</span>
+    <span class="n">chromosomeField</span><span class="o">=</span><span class="s2">&quot;Accession&quot;</span><span class="p">,</span>
+    <span class="n">genomicFields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Start1&quot;</span><span class="p">,</span> <span class="s2">&quot;Stop1&quot;</span><span class="p">,</span> <span class="s2">&quot;Start2&quot;</span><span class="p">,</span> <span class="s2">&quot;Stop2&quot;</span><span class="p">],</span>
+    <span class="n">sampleLength</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">recomb</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">recomb_data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_withinLink</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;Start1:G&quot;</span><span class="p">),</span>
+    <span class="n">xe</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Xe</span><span class="p">(</span><span class="s2">&quot;Stop1:G&quot;</span><span class="p">),</span>
+    <span class="n">x1</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X1</span><span class="p">(</span><span class="s2">&quot;Start2:G&quot;</span><span class="p">),</span>
+    <span class="n">x1e</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X1e</span><span class="p">(</span><span class="s2">&quot;Stop2:G&quot;</span><span class="p">),</span>
+    <span class="n">stroke</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;#0072B2&quot;</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;#0072B2&quot;</span><span class="p">),</span>
+    <span class="n">opacity</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.1</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;TRS-L-Dependent Recombination Events&quot;</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">gos</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">genes</span><span class="p">,</span> <span class="n">proteins</span><span class="p">,</span> <span class="n">recomb</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">assembly</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;NC_045512.2&quot;</span><span class="p">,</span> <span class="mi">29903</span><span class="p">]],</span>
+    <span class="n">xDomain</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">DomainInterval</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">29903</span><span class="p">]),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="corces.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Single-cell Epigenomic Analysis</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="circos.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Circos</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2021, Trevor Manz
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js"></script>
+    <script src="https://unpkg.com/higlass@1.11/dist/hglib.js"></script>
+    <script src="https://unpkg.com/gosling.js@0.9.22/dist/gosling.js"></script>
+    </body>
+</html>

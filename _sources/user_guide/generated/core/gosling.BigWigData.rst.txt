@@ -1,0 +1,30 @@
+﻿gosling.BigWigData
+==================
+
+.. currentmodule:: gosling
+
+.. autoclass:: BigWigData
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BigWigData.__init__
+      ~BigWigData.copy
+      ~BigWigData.from_dict
+      ~BigWigData.from_json
+      ~BigWigData.resolve_references
+      ~BigWigData.to_dict
+      ~BigWigData.to_json
+      ~BigWigData.validate
+      ~BigWigData.validate_property
+   
+   
+
+   
+   
+   

@@ -1,0 +1,30 @@
+﻿gosling.BeddbData
+=================
+
+.. currentmodule:: gosling
+
+.. autoclass:: BeddbData
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BeddbData.__init__
+      ~BeddbData.copy
+      ~BeddbData.from_dict
+      ~BeddbData.from_json
+      ~BeddbData.resolve_references
+      ~BeddbData.to_dict
+      ~BeddbData.to_json
+      ~BeddbData.validate
+      ~BeddbData.validate_property
+   
+   
+
+   
+   
+   

@@ -1,0 +1,30 @@
+﻿gosling.CsvData
+===============
+
+.. currentmodule:: gosling
+
+.. autoclass:: CsvData
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CsvData.__init__
+      ~CsvData.copy
+      ~CsvData.from_dict
+      ~CsvData.from_json
+      ~CsvData.resolve_references
+      ~CsvData.to_dict
+      ~CsvData.to_json
+      ~CsvData.validate
+      ~CsvData.validate_property
+   
+   
+
+   
+   
+   

@@ -1,0 +1,30 @@
+﻿gosling.ChromSizes
+==================
+
+.. currentmodule:: gosling
+
+.. autoclass:: ChromSizes
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ChromSizes.__init__
+      ~ChromSizes.copy
+      ~ChromSizes.from_dict
+      ~ChromSizes.from_json
+      ~ChromSizes.resolve_references
+      ~ChromSizes.to_dict
+      ~ChromSizes.to_json
+      ~ChromSizes.validate
+      ~ChromSizes.validate_property
+   
+   
+
+   
+   
+   

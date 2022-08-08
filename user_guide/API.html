@@ -2,10 +2,10 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="gosling.View" href="generated/toplevel/gosling.View.html" /><link rel="prev" title="Single-cell Epigenomic Analysis" href="../gallery/corces.html" />
 
-    <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
         <title>API Reference - gos</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
@@ -191,6 +191,7 @@
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../gallery/index.html#others">Others</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/circos.html">Circos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gallery/covid.html">SARS-CoV-2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gallery/corces.html">Single-cell Epigenomic Analysis</a></li>
 </ul>
 </li>
@@ -241,17 +242,18 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.Aggregate.html">gosling.Aggregate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.Assembly.html">gosling.Assembly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.AxisPosition.html">gosling.AxisPosition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.BAMData.html">gosling.BAMData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.BEDDBData.html">gosling.BEDDBData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.BIGWIGData.html">gosling.BIGWIGData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.BamData.html">gosling.BamData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.BeddbData.html">gosling.BeddbData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.BigWigData.html">gosling.BigWigData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.BinAggregate.html">gosling.BinAggregate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.CSVData.html">gosling.CSVData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.Channel.html">gosling.Channel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.ChannelDeep.html">gosling.ChannelDeep</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.ChannelValue.html">gosling.ChannelValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.ChromSizes.html">gosling.ChromSizes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.Chromosome.html">gosling.Chromosome</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.Color.html">gosling.Color</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.CoverageTransform.html">gosling.CoverageTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.CsvData.html">gosling.CsvData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.DataDeep.html">gosling.DataDeep</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.DataTrack.html">gosling.DataTrack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.DataTransform.html">gosling.DataTransform</a></li>
@@ -272,8 +274,8 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.GoslingSchema.html">gosling.GoslingSchema</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.GoslingSpec.html">gosling.GoslingSpec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.IncludeFilter.html">gosling.IncludeFilter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.JSONData.html">gosling.JSONData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.JSONParseTransform.html">gosling.JSONParseTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.JsonData.html">gosling.JsonData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.JsonParseTransform.html">gosling.JsonParseTransform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.Layout.html">gosling.Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.LogBase.html">gosling.LogBase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.LogTransform.html">gosling.LogTransform</a></li>
@@ -311,8 +313,8 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.Text.html">gosling.Text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.Tooltip.html">gosling.Tooltip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.Track.html">gosling.Track</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.VCFData.html">gosling.VCFData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.ValueExtent.html">gosling.ValueExtent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.VcfData.html">gosling.VcfData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.VectorData.html">gosling.VectorData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.VisibilityCondition.html">gosling.VisibilityCondition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/core/gosling.X.html">gosling.X</a></li>
@@ -523,29 +525,29 @@ This low-level documentation may not be enough to give full guidelines on their 
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.AxisPosition.html#gosling.AxisPosition" title="gosling.AxisPosition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AxisPosition</span></code></a></p></td>
 <td><p>AxisPosition schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.BAMData.html#gosling.BAMData" title="gosling.BAMData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BAMData</span></code></a></p></td>
-<td><p>BAMData schema wrapper</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.BamData.html#gosling.BamData" title="gosling.BamData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BamData</span></code></a></p></td>
+<td><p>BamData schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.BEDDBData.html#gosling.BEDDBData" title="gosling.BEDDBData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BEDDBData</span></code></a></p></td>
-<td><p>BEDDBData schema wrapper</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.BeddbData.html#gosling.BeddbData" title="gosling.BeddbData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeddbData</span></code></a></p></td>
+<td><p>BeddbData schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.BIGWIGData.html#gosling.BIGWIGData" title="gosling.BIGWIGData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BIGWIGData</span></code></a></p></td>
-<td><p>BIGWIGData schema wrapper</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.BigWigData.html#gosling.BigWigData" title="gosling.BigWigData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BigWigData</span></code></a></p></td>
+<td><p>BigWigData schema wrapper</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.BinAggregate.html#gosling.BinAggregate" title="gosling.BinAggregate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BinAggregate</span></code></a></p></td>
 <td><p>BinAggregate schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.CSVData.html#gosling.CSVData" title="gosling.CSVData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CSVData</span></code></a></p></td>
-<td><p>CSVData schema wrapper</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Channel.html#gosling.Channel" title="gosling.Channel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Channel</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Channel.html#gosling.Channel" title="gosling.Channel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Channel</span></code></a></p></td>
 <td><p>Channel schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.ChannelDeep.html#gosling.ChannelDeep" title="gosling.ChannelDeep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChannelDeep</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.ChannelDeep.html#gosling.ChannelDeep" title="gosling.ChannelDeep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChannelDeep</span></code></a></p></td>
 <td><p>ChannelDeep schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.ChannelValue.html#gosling.ChannelValue" title="gosling.ChannelValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChannelValue</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.ChannelValue.html#gosling.ChannelValue" title="gosling.ChannelValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChannelValue</span></code></a></p></td>
 <td><p>ChannelValue schema wrapper</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.ChromSizes.html#gosling.ChromSizes" title="gosling.ChromSizes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChromSizes</span></code></a></p></td>
+<td><p>ChromSizes schema wrapper</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Chromosome.html#gosling.Chromosome" title="gosling.Chromosome"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Chromosome</span></code></a></p></td>
 <td><p>Chromosome schema wrapper</p></td>
@@ -556,205 +558,208 @@ This low-level documentation may not be enough to give full guidelines on their 
 <tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.CoverageTransform.html#gosling.CoverageTransform" title="gosling.CoverageTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoverageTransform</span></code></a></p></td>
 <td><p>CoverageTransform schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.DataDeep.html#gosling.DataDeep" title="gosling.DataDeep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataDeep</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.CsvData.html#gosling.CsvData" title="gosling.CsvData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CsvData</span></code></a></p></td>
+<td><p>CsvData schema wrapper</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.DataDeep.html#gosling.DataDeep" title="gosling.DataDeep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataDeep</span></code></a></p></td>
 <td><p>DataDeep schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.DataTrack.html#gosling.DataTrack" title="gosling.DataTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataTrack</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.DataTrack.html#gosling.DataTrack" title="gosling.DataTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataTrack</span></code></a></p></td>
 <td><p>DataTrack schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.DataTransform.html#gosling.DataTransform" title="gosling.DataTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataTransform</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.DataTransform.html#gosling.DataTransform" title="gosling.DataTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataTransform</span></code></a></p></td>
 <td><p>DataTransform schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Datum.html#gosling.Datum" title="gosling.Datum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Datum</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Datum.html#gosling.Datum" title="gosling.Datum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Datum</span></code></a></p></td>
 <td><p>Datum schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.DisplaceTransform.html#gosling.DisplaceTransform" title="gosling.DisplaceTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisplaceTransform</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.DisplaceTransform.html#gosling.DisplaceTransform" title="gosling.DisplaceTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisplaceTransform</span></code></a></p></td>
 <td><p>DisplaceTransform schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Displacement.html#gosling.Displacement" title="gosling.Displacement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Displacement</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Displacement.html#gosling.Displacement" title="gosling.Displacement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Displacement</span></code></a></p></td>
 <td><p>Displacement schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.DisplacementType.html#gosling.DisplacementType" title="gosling.DisplacementType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisplacementType</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.DisplacementType.html#gosling.DisplacementType" title="gosling.DisplacementType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisplacementType</span></code></a></p></td>
 <td><p>DisplacementType schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.DomainChr.html#gosling.DomainChr" title="gosling.DomainChr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DomainChr</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.DomainChr.html#gosling.DomainChr" title="gosling.DomainChr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DomainChr</span></code></a></p></td>
 <td><p>DomainChr schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.DomainChrInterval.html#gosling.DomainChrInterval" title="gosling.DomainChrInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DomainChrInterval</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.DomainChrInterval.html#gosling.DomainChrInterval" title="gosling.DomainChrInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DomainChrInterval</span></code></a></p></td>
 <td><p>DomainChrInterval schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.DomainGene.html#gosling.DomainGene" title="gosling.DomainGene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DomainGene</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.DomainGene.html#gosling.DomainGene" title="gosling.DomainGene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DomainGene</span></code></a></p></td>
 <td><p>DomainGene schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.DomainInterval.html#gosling.DomainInterval" title="gosling.DomainInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DomainInterval</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.DomainInterval.html#gosling.DomainInterval" title="gosling.DomainInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DomainInterval</span></code></a></p></td>
 <td><p>DomainInterval schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.EventStyle.html#gosling.EventStyle" title="gosling.EventStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EventStyle</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.EventStyle.html#gosling.EventStyle" title="gosling.EventStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EventStyle</span></code></a></p></td>
 <td><p>EventStyle schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.ExonSplitTransform.html#gosling.ExonSplitTransform" title="gosling.ExonSplitTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExonSplitTransform</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.ExonSplitTransform.html#gosling.ExonSplitTransform" title="gosling.ExonSplitTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExonSplitTransform</span></code></a></p></td>
 <td><p>ExonSplitTransform schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.FieldType.html#gosling.FieldType" title="gosling.FieldType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FieldType</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.FieldType.html#gosling.FieldType" title="gosling.FieldType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FieldType</span></code></a></p></td>
 <td><p>FieldType schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.FilterTransform.html#gosling.FilterTransform" title="gosling.FilterTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FilterTransform</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.FilterTransform.html#gosling.FilterTransform" title="gosling.FilterTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FilterTransform</span></code></a></p></td>
 <td><p>FilterTransform schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.GenomicDomain.html#gosling.GenomicDomain" title="gosling.GenomicDomain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenomicDomain</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.GenomicDomain.html#gosling.GenomicDomain" title="gosling.GenomicDomain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenomicDomain</span></code></a></p></td>
 <td><p>GenomicDomain schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.GenomicLengthTransform.html#gosling.GenomicLengthTransform" title="gosling.GenomicLengthTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenomicLengthTransform</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.GenomicLengthTransform.html#gosling.GenomicLengthTransform" title="gosling.GenomicLengthTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenomicLengthTransform</span></code></a></p></td>
 <td><p>GenomicLengthTransform schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.GoslingSchema.html#gosling.GoslingSchema" title="gosling.GoslingSchema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoslingSchema</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.GoslingSchema.html#gosling.GoslingSchema" title="gosling.GoslingSchema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoslingSchema</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.GoslingSpec.html#gosling.GoslingSpec" title="gosling.GoslingSpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoslingSpec</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.GoslingSpec.html#gosling.GoslingSpec" title="gosling.GoslingSpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GoslingSpec</span></code></a></p></td>
 <td><p>GoslingSpec schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.IncludeFilter.html#gosling.IncludeFilter" title="gosling.IncludeFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IncludeFilter</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.IncludeFilter.html#gosling.IncludeFilter" title="gosling.IncludeFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IncludeFilter</span></code></a></p></td>
 <td><p>IncludeFilter schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.JSONData.html#gosling.JSONData" title="gosling.JSONData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JSONData</span></code></a></p></td>
-<td><p>JSONData schema wrapper</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.JsonData.html#gosling.JsonData" title="gosling.JsonData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JsonData</span></code></a></p></td>
+<td><p>JsonData schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.JSONParseTransform.html#gosling.JSONParseTransform" title="gosling.JSONParseTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JSONParseTransform</span></code></a></p></td>
-<td><p>JSONParseTransform schema wrapper</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.JsonParseTransform.html#gosling.JsonParseTransform" title="gosling.JsonParseTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JsonParseTransform</span></code></a></p></td>
+<td><p>JsonParseTransform schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Layout.html#gosling.Layout" title="gosling.Layout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Layout</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Layout.html#gosling.Layout" title="gosling.Layout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Layout</span></code></a></p></td>
 <td><p>Layout schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.LogBase.html#gosling.LogBase" title="gosling.LogBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogBase</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.LogBase.html#gosling.LogBase" title="gosling.LogBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogBase</span></code></a></p></td>
 <td><p>LogBase schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.LogTransform.html#gosling.LogTransform" title="gosling.LogTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogTransform</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.LogTransform.html#gosling.LogTransform" title="gosling.LogTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogTransform</span></code></a></p></td>
 <td><p>LogTransform schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.LogicalOperation.html#gosling.LogicalOperation" title="gosling.LogicalOperation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogicalOperation</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.LogicalOperation.html#gosling.LogicalOperation" title="gosling.LogicalOperation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogicalOperation</span></code></a></p></td>
 <td><p>LogicalOperation schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Mark.html#gosling.Mark" title="gosling.Mark"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mark</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Mark.html#gosling.Mark" title="gosling.Mark"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mark</span></code></a></p></td>
 <td><p>Mark schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.MatrixData.html#gosling.MatrixData" title="gosling.MatrixData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MatrixData</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.MatrixData.html#gosling.MatrixData" title="gosling.MatrixData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MatrixData</span></code></a></p></td>
 <td><p>MatrixData schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.MouseEventsDeep.html#gosling.MouseEventsDeep" title="gosling.MouseEventsDeep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MouseEventsDeep</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.MouseEventsDeep.html#gosling.MouseEventsDeep" title="gosling.MouseEventsDeep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MouseEventsDeep</span></code></a></p></td>
 <td><p>MouseEventsDeep schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.MultipleViews.html#gosling.MultipleViews" title="gosling.MultipleViews"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultipleViews</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.MultipleViews.html#gosling.MultipleViews" title="gosling.MultipleViews"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultipleViews</span></code></a></p></td>
 <td><p>MultipleViews schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.MultivecData.html#gosling.MultivecData" title="gosling.MultivecData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultivecData</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.MultivecData.html#gosling.MultivecData" title="gosling.MultivecData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultivecData</span></code></a></p></td>
 <td><p>MultivecData schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.OneOfFilter.html#gosling.OneOfFilter" title="gosling.OneOfFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OneOfFilter</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.OneOfFilter.html#gosling.OneOfFilter" title="gosling.OneOfFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OneOfFilter</span></code></a></p></td>
 <td><p>OneOfFilter schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Opacity.html#gosling.Opacity" title="gosling.Opacity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Opacity</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Opacity.html#gosling.Opacity" title="gosling.Opacity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Opacity</span></code></a></p></td>
 <td><p>Opacity schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Orientation.html#gosling.Orientation" title="gosling.Orientation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Orientation</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Orientation.html#gosling.Orientation" title="gosling.Orientation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Orientation</span></code></a></p></td>
 <td><p>Orientation schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.OverlaidTrack.html#gosling.OverlaidTrack" title="gosling.OverlaidTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OverlaidTrack</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.OverlaidTrack.html#gosling.OverlaidTrack" title="gosling.OverlaidTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OverlaidTrack</span></code></a></p></td>
 <td><p>OverlaidTrack schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.OverlaidTracks.html#gosling.OverlaidTracks" title="gosling.OverlaidTracks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OverlaidTracks</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.OverlaidTracks.html#gosling.OverlaidTracks" title="gosling.OverlaidTracks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OverlaidTracks</span></code></a></p></td>
 <td><p>OverlaidTracks schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.PartialTrack.html#gosling.PartialTrack" title="gosling.PartialTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PartialTrack</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.PartialTrack.html#gosling.PartialTrack" title="gosling.PartialTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PartialTrack</span></code></a></p></td>
 <td><p>PartialTrack schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.PredefinedColors.html#gosling.PredefinedColors" title="gosling.PredefinedColors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PredefinedColors</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.PredefinedColors.html#gosling.PredefinedColors" title="gosling.PredefinedColors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PredefinedColors</span></code></a></p></td>
 <td><p>PredefinedColors schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Range.html#gosling.Range" title="gosling.Range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Range</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Range.html#gosling.Range" title="gosling.Range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Range</span></code></a></p></td>
 <td><p>Range schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.RangeFilter.html#gosling.RangeFilter" title="gosling.RangeFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeFilter</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.RangeFilter.html#gosling.RangeFilter" title="gosling.RangeFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeFilter</span></code></a></p></td>
 <td><p>RangeFilter schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.ResponsiveSize.html#gosling.ResponsiveSize" title="gosling.ResponsiveSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResponsiveSize</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.ResponsiveSize.html#gosling.ResponsiveSize" title="gosling.ResponsiveSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResponsiveSize</span></code></a></p></td>
 <td><p>ResponsiveSize schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Root.html#gosling.Root" title="gosling.Root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Root</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Root.html#gosling.Root" title="gosling.Root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Root</span></code></a></p></td>
 <td><p>Root schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Row.html#gosling.Row" title="gosling.Row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Row</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Row.html#gosling.Row" title="gosling.Row"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Row</span></code></a></p></td>
 <td><p>Row schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.SchemaBase.html#gosling.SchemaBase" title="gosling.SchemaBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SchemaBase</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.SchemaBase.html#gosling.SchemaBase" title="gosling.SchemaBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SchemaBase</span></code></a></p></td>
 <td><p>Base class for schema wrappers.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.SelectivityCondition.html#gosling.SelectivityCondition" title="gosling.SelectivityCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SelectivityCondition</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.SelectivityCondition.html#gosling.SelectivityCondition" title="gosling.SelectivityCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SelectivityCondition</span></code></a></p></td>
 <td><p>SelectivityCondition schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.SingleTrack.html#gosling.SingleTrack" title="gosling.SingleTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SingleTrack</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.SingleTrack.html#gosling.SingleTrack" title="gosling.SingleTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SingleTrack</span></code></a></p></td>
 <td><p>SingleTrack schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.SingleView.html#gosling.SingleView" title="gosling.SingleView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SingleView</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.SingleView.html#gosling.SingleView" title="gosling.SingleView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SingleView</span></code></a></p></td>
 <td><p>SingleView schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Size.html#gosling.Size" title="gosling.Size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Size</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Size.html#gosling.Size" title="gosling.Size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Size</span></code></a></p></td>
 <td><p>Size schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.SizeVisibilityCondition.html#gosling.SizeVisibilityCondition" title="gosling.SizeVisibilityCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SizeVisibilityCondition</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.SizeVisibilityCondition.html#gosling.SizeVisibilityCondition" title="gosling.SizeVisibilityCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SizeVisibilityCondition</span></code></a></p></td>
 <td><p>SizeVisibilityCondition schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.StrConcatTransform.html#gosling.StrConcatTransform" title="gosling.StrConcatTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StrConcatTransform</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.StrConcatTransform.html#gosling.StrConcatTransform" title="gosling.StrConcatTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StrConcatTransform</span></code></a></p></td>
 <td><p>StrConcatTransform schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.StrReplaceTransform.html#gosling.StrReplaceTransform" title="gosling.StrReplaceTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StrReplaceTransform</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.StrReplaceTransform.html#gosling.StrReplaceTransform" title="gosling.StrReplaceTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StrReplaceTransform</span></code></a></p></td>
 <td><p>StrReplaceTransform schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Stroke.html#gosling.Stroke" title="gosling.Stroke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stroke</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Stroke.html#gosling.Stroke" title="gosling.Stroke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stroke</span></code></a></p></td>
 <td><p>Stroke schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.StrokeWidth.html#gosling.StrokeWidth" title="gosling.StrokeWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StrokeWidth</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.StrokeWidth.html#gosling.StrokeWidth" title="gosling.StrokeWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StrokeWidth</span></code></a></p></td>
 <td><p>StrokeWidth schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Style.html#gosling.Style" title="gosling.Style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Style</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Style.html#gosling.Style" title="gosling.Style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Style</span></code></a></p></td>
 <td><p>Style schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.SvTypeTransform.html#gosling.SvTypeTransform" title="gosling.SvTypeTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SvTypeTransform</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.SvTypeTransform.html#gosling.SvTypeTransform" title="gosling.SvTypeTransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SvTypeTransform</span></code></a></p></td>
 <td><p>SvTypeTransform schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.TemplateTrack.html#gosling.TemplateTrack" title="gosling.TemplateTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TemplateTrack</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.TemplateTrack.html#gosling.TemplateTrack" title="gosling.TemplateTrack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TemplateTrack</span></code></a></p></td>
 <td><p>TemplateTrack schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Text.html#gosling.Text" title="gosling.Text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Text</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Text.html#gosling.Text" title="gosling.Text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Text</span></code></a></p></td>
 <td><p>Text schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Tooltip.html#gosling.Tooltip" title="gosling.Tooltip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tooltip</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Tooltip.html#gosling.Tooltip" title="gosling.Tooltip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tooltip</span></code></a></p></td>
 <td><p>Tooltip schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/toplevel/gosling.Track.html#gosling.Track" title="gosling.Track"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Track</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/toplevel/gosling.Track.html#gosling.Track" title="gosling.Track"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Track</span></code></a></p></td>
 <td><p>Create a basic Gosling Track.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.VCFData.html#gosling.VCFData" title="gosling.VCFData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VCFData</span></code></a></p></td>
-<td><p>VCFData schema wrapper</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.ValueExtent.html#gosling.ValueExtent" title="gosling.ValueExtent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueExtent</span></code></a></p></td>
 <td><p>ValueExtent schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.VectorData.html#gosling.VectorData" title="gosling.VectorData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VectorData</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.VcfData.html#gosling.VcfData" title="gosling.VcfData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VcfData</span></code></a></p></td>
+<td><p>VcfData schema wrapper</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.VectorData.html#gosling.VectorData" title="gosling.VectorData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VectorData</span></code></a></p></td>
 <td><p>VectorData schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.VisibilityCondition.html#gosling.VisibilityCondition" title="gosling.VisibilityCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VisibilityCondition</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.VisibilityCondition.html#gosling.VisibilityCondition" title="gosling.VisibilityCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VisibilityCondition</span></code></a></p></td>
 <td><p>VisibilityCondition schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.X.html#gosling.X" title="gosling.X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">X</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.X.html#gosling.X" title="gosling.X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">X</span></code></a></p></td>
 <td><p>X schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.Y.html#gosling.Y" title="gosling.Y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Y</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.Y.html#gosling.Y" title="gosling.Y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Y</span></code></a></p></td>
 <td><p>Y schema wrapper</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.ZoomLevelVisibilityCondition.html#gosling.ZoomLevelVisibilityCondition" title="gosling.ZoomLevelVisibilityCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ZoomLevelVisibilityCondition</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.ZoomLevelVisibilityCondition.html#gosling.ZoomLevelVisibilityCondition" title="gosling.ZoomLevelVisibilityCondition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ZoomLevelVisibilityCondition</span></code></a></p></td>
 <td><p>ZoomLevelVisibilityCondition schema wrapper</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/core/gosling.ZoomLimits.html#gosling.ZoomLimits" title="gosling.ZoomLimits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ZoomLimits</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/core/gosling.ZoomLimits.html#gosling.ZoomLimits" title="gosling.ZoomLimits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ZoomLimits</span></code></a></p></td>
 <td><p>ZoomLimits schema wrapper</p></td>
 </tr>
 </tbody>
@@ -846,6 +851,6 @@ This low-level documentation may not be enough to give full guidelines on their 
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js"></script>
     <script src="https://unpkg.com/higlass@1.11/dist/hglib.js"></script>
-    <script src="https://unpkg.com/gosling.js@0.9.21/dist/gosling.js"></script>
+    <script src="https://unpkg.com/gosling.js@0.9.22/dist/gosling.js"></script>
     </body>
 </html>
