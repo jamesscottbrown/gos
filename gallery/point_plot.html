@@ -396,7 +396,7 @@
       "x": {
         "axis": "bottom",
         "domain": {
-          "chromosome": "1",
+          "chromosome": "chr1",
           "interval": [
             1,
             30005000
@@ -428,7 +428,7 @@
     <span class="n">binSize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">domain</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">GenomicDomain</span><span class="p">(</span><span class="n">chromosome</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30005000</span><span class="p">])</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">GenomicDomain</span><span class="p">(</span><span class="n">chromosome</span><span class="o">=</span><span class="s2">&quot;chr1&quot;</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30005000</span><span class="p">])</span>
 
 <span class="n">track</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
     <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;position:G&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">domain</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">),</span>
