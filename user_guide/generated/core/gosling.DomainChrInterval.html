@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="gosling.DomainGene" href="gosling.DomainGene.html" /><link rel="prev" title="gosling.DomainChr" href="gosling.DomainChr.html" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="gosling.DomainInterval" href="gosling.DomainInterval.html" /><link rel="prev" title="gosling.DomainChr" href="gosling.DomainChr.html" />
 
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/><meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
         <title>gosling.DomainChrInterval - gos</title>
@@ -250,7 +250,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gosling.ChannelDeep.html">gosling.ChannelDeep</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.ChannelValue.html">gosling.ChannelValue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.ChromSizes.html">gosling.ChromSizes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gosling.Chromosome.html">gosling.Chromosome</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.Color.html">gosling.Color</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.CoverageTransform.html">gosling.CoverageTransform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.CsvData.html">gosling.CsvData</a></li>
@@ -263,7 +262,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gosling.DisplacementType.html">gosling.DisplacementType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.DomainChr.html">gosling.DomainChr</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">gosling.DomainChrInterval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gosling.DomainGene.html">gosling.DomainGene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.DomainInterval.html">gosling.DomainInterval</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.EventStyle.html">gosling.EventStyle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gosling.ExonSplitTransform.html">gosling.ExonSplitTransform</a></li>
@@ -367,10 +365,10 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gosling.</span></span><span class="sig-name descname"><span class="pre">DomainChrInterval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chromosome</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Undefined</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gosling.DomainChrInterval" title="Permalink to this definition">#</a></dt>
 <dd><p>DomainChrInterval schema wrapper</p>
 <p>Mapping(required=[chromosome, interval])</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
-<dd class="field-odd"><dl>
-<dt><strong>chromosome</strong><span class="classifier"><a class="reference internal" href="gosling.Chromosome.html#gosling.Chromosome" title="gosling.Chromosome"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chromosome</span></code></a></span></dt><dd><p>If specified, only showing a certain interval in a chromosome.</p>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>chromosome</strong><span class="classifier">string</span></dt><dd><p>If specified, only showing a certain interval in a chromosome.</p>
 </dd>
 <dt><strong>interval</strong><span class="classifier">List(float)</span></dt><dd></dd>
 </dl>
@@ -424,12 +422,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="gosling.DomainGene.html">
+          <a class="next-page" href="gosling.DomainInterval.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">gosling.DomainGene</div>
+                <div class="title">gosling.DomainInterval</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -476,6 +474,6 @@
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/scripts/furo.js"></script>
-    <script type="module">import * as gosling from 'https://esm.sh/gosling.js@0.9.22?bundle&deps=react-dom@17,react@17,pixi.js@6,higlass@1.11';globalThis.gosling = gosling;</script>
+    <script type="module">import * as gosling from 'https://esm.sh/gosling.js@0.9.23?bundle&deps=react-dom@17,react@17,pixi.js@6,higlass@1.11';globalThis.gosling = gosling;</script>
     </body>
 </html>
